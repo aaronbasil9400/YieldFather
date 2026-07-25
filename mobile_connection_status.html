@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Phone Connection & System Status</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #070b13;
+      --panel: rgba(18, 27, 45, 0.86);
+      --panel-2: rgba(24, 35, 57, 0.92);
+      --text: #f4f7fb;
+      --muted: #9aa8bd;
+      --line: rgba(255,255,255,.09);
+      --good: #2ed47a;
+      --warn: #ffb020;
+      --bad: #ff5d6c;
+      --accent: #67a7ff;
+      --shadow: 0 18px 45px rgba(0,0,0,.28);
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(56,124,255,.16), transparent 32%),
+        radial-gradient(circle at 0% 45%, rgba(46,212,122,.09), transparent 28%),
+        var(--bg);
+      padding: max(16px, env(safe-area-inset-top)) 14px max(24px, env(safe-area-inset-bottom));
+    }
+
+    button, input { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+
+    .app { width: min(100%, 860px); margin: 0 auto; }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin: 4px 2px 18px;
+    }
+
+    h1 { font-size: clamp(1.45rem, 5vw, 2.15rem); line-height: 1.08; margin: 0; letter-spacing: -.04em; }
+    .subtitle { color: var(--muted); margin: 7px 0 0; font-size: .92rem; }
+
+    .icon-button, .primary-button, .secondary-button, .danger-button {
+      border: 0;
+      border-radius: 14px;
+      color: var(--text);
+      cursor: pointer;
+      min-height: 44px;
+      transition: transform .15s ease, opacity .15s ease, background .15s ease;
+    }
+    button:active { transform: scale(.97); }
+    button:disabled { opacity: .55; cursor: default; transform: none; }
+
+    .icon-button {
+      width: 46px;
+      flex: 0 0 46px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      font-size: 1.1rem;
+    }
+    .primary-button { background: linear-gradient(135deg, #397ef6, #65a8ff); padding: 0 18px; font-weight: 750; }
+    .secondary-button { background: rgba(255,255,255,.075); padding: 0 16px; border: 1px solid var(--line); }
+    .danger-button { background: rgba(255,93,108,.13); color: #ff9ca6; padding: 0 15px; border: 1px solid rgba(255,93,108,.22); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(22,34,57,.96), rgba(12,20,34,.94));
+      border-radius: 26px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 220px; height: 220px;
+      right: -105px; top: -115px;
+      border-radius: 50%;
+      background: var(--status-glow, rgba(103,167,255,.14));
+      filter: blur(4px);
+      pointer-events: none;
+    }
+
+    .overall-row { display: flex; align-items: center; gap: 14px; position: relative; z-index: 1; }
+    .overall-dot {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--muted);
+      box-shadow: 0 0 0 8px rgba(154,168,189,.12);
+      flex: 0 0 auto;
+    }
+    .overall-dot.good { background: var(--good); box-shadow: 0 0 0 8px rgba(46,212,122,.13), 0 0 24px rgba(46,212,122,.35); }
+    .overall-dot.warn { background: var(--warn); box-shadow: 0 0 0 8px rgba(255,176,32,.13), 0 0 24px rgba(255,176,32,.30); }
+    .overall-dot.bad { background: var(--bad); box-shadow: 0 0 0 8px rgba(255,93,108,.13), 0 0 24px rgba(255,93,108,.30); }
+    .overall-label { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
+    .overall-status { margin-top: 2px; font-size: clamp(1.5rem, 6vw, 2.4rem); font-weight: 850; letter-spacing: -.04em; }
+    .last-check { color: var(--muted); margin-top: 14px; font-size: .82rem; position: relative; z-index: 1; }
+
+    .controls { display: flex; gap: 10px; margin-top: 18px; position: relative; z-index: 1; }
+    .controls > button:first-child { flex: 1; }
+
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .card {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .card.full { grid-column: 1 / -1; }
+    .card-title { display: flex; justify-content: space-between; align-items: center; gap: 10px; color: var(--muted); font-size: .76rem; text-transform: uppercase; letter-spacing: .09em; font-weight: 800; }
+    .metric { margin-top: 9px; font-size: clamp(1.25rem, 5.8vw, 2rem); font-weight: 850; letter-spacing: -.035em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .metric.small { font-size: 1.1rem; white-space: normal; line-height: 1.25; }
+    .detail { color: var(--muted); margin-top: 6px; font-size: .8rem; line-height: 1.35; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 5px 9px; font-size: .72rem; font-weight: 800; background: rgba(255,255,255,.07); }
+    .pill.good { color: #83ecae; background: rgba(46,212,122,.1); }
+    .pill.warn { color: #ffd17b; background: rgba(255,176,32,.1); }
+    .pill.bad { color: #ff9da6; background: rgba(255,93,108,.1); }
+
+    .progress { height: 8px; background: rgba(255,255,255,.07); border-radius: 999px; overflow: hidden; margin-top: 12px; }
+    .progress > span { display: block; height: 100%; width: 0%; background: var(--accent); border-radius: inherit; transition: width .35s ease; }
+
+    .service-list { display: grid; gap: 10px; margin-top: 12px; }
+    .service-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 11px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
+      border-radius: 15px;
+    }
+    .service-light { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); }
+    .service-light.good { background: var(--good); box-shadow: 0 0 12px rgba(46,212,122,.5); }
+    .service-light.warn { background: var(--warn); }
+    .service-light.bad { background: var(--bad); }
+    .service-name { min-width: 0; font-weight: 750; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .service-url { color: var(--muted); font-size: .72rem; margin-top: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .service-result { text-align: right; font-size: .77rem; color: var(--muted); white-space: nowrap; }
+
+    canvas { width: 100%; height: 130px; display: block; margin-top: 12px; }
+
+    .settings {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.58);
+      display: none;
+      align-items: flex-end;
+      z-index: 20;
+      padding-top: env(safe-area-inset-top);
+    }
+    .settings.open { display: flex; }
+    .sheet {
+      width: 100%; max-height: 90dvh; overflow: auto;
+      background: #101827;
+      border-radius: 26px 26px 0 0;
+      border: 1px solid var(--line);
+      padding: 18px 16px max(24px, env(safe-area-inset-bottom));
+      box-shadow: 0 -25px 60px rgba(0,0,0,.45);
+    }
+    .sheet-handle { width: 44px; height: 5px; border-radius: 999px; background: rgba(255,255,255,.18); margin: 0 auto 16px; }
+    .sheet-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .sheet h2 { margin: 0; font-size: 1.25rem; }
+    .form-grid { display: grid; gap: 12px; margin-top: 16px; }
+    label { display: grid; gap: 7px; color: var(--muted); font-size: .82rem; font-weight: 700; }
+    input {
+      width: 100%; min-height: 46px;
+      border-radius: 13px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.055);
+      color: var(--text);
+      padding: 0 13px;
+      outline: none;
+    }
+    input:focus { border-color: rgba(103,167,255,.7); box-shadow: 0 0 0 3px rgba(103,167,255,.12); }
+    .service-editor { display: grid; grid-template-columns: .8fr 1.4fr auto; gap: 8px; align-items: end; }
+    .sheet-actions { display: flex; gap: 10px; margin-top: 16px; }
+    .sheet-actions button { flex: 1; }
+
+    .privacy-note { color: var(--muted); font-size: .76rem; line-height: 1.45; margin-top: 14px; }
+    .footer { text-align: center; color: var(--muted); font-size: .72rem; line-height: 1.45; padding: 18px 10px 4px; }
+
+    @media (min-width: 700px) {
+      body { padding-left: 24px; padding-right: 24px; }
+      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .card.span-2 { grid-column: span 2; }
+      .settings { align-items: center; justify-content: center; padding: 24px; }
+      .sheet { width: min(680px, 100%); border-radius: 26px; max-height: 86vh; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Connection & System Status</h1>
+        <p class="subtitle">Private, on-device diagnostics for your phone.</p>
+      </div>
+      <button class="icon-button" id="settingsBtn" aria-label="Open settings">⚙︎</button>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="overall-row">
+        <div class="overall-dot" id="overallDot"></div>
+        <div>
+          <div class="overall-label">Overall status</div>
+          <div class="overall-status" id="overallStatus">Ready to check</div>
+        </div>
+      </div>
+      <div class="last-check" id="lastCheck">No checks run yet</div>
+      <div class="controls">
+        <button class="primary-button" id="runBtn">Run full check</button>
+        <button class="secondary-button" id="copyBtn">Copy report</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <div class="card-title"><span>Internet</span><span class="pill" id="internetPill">Unknown</span></div>
+        <div class="metric" id="internetMetric">—</div>
+        <div class="detail" id="internetDetail">Uses browser online state and endpoint checks.</div>
+      </article>
+
+      <article class="card">
+        <div class="card-title"><span>Latency</span><span class="pill" id="latencyPill">—</span></div>
+        <div class="metric" id="latencyMetric">— ms</div>
+        <div class="detail" id="latencyDetail">Average round-trip time.</div>
+      </article>
+
+      <article class="card">
+        <div class="card-title"><span>Network</span><span class="pill" id="networkPill">Browser</span></div>
+        <div class="metric small" id="networkMetric">Unavailable</div>
+        <div class="detail" id="networkDetail">Connection details depend on browser support.</div>
+      </article>
+
+      <article class="card">
+        <div class="card-title"><span>Battery</span><span class="pill" id="batteryPill">Browser</span></div>
+        <div class="metric" id="batteryMetric">Unavailable</div>
+        <div class="progress"><span id="batteryBar"></span></div>
+        <div class="detail" id="batteryDetail">Battery API may be restricted on iPhone.</div>
+      </article>
+
+      <article class="card span-2">
+        <div class="card-title"><span>Device</span><span class="pill">Local</span></div>
+        <div class="metric small" id="deviceMetric">Detecting…</div>
+        <div class="detail" id="deviceDetail"></div>
+      </article>
+
+      <article class="card span-2">
+        <div class="card-title"><span>Storage</span><span class="pill" id="storagePill">Browser</span></div>
+        <div class="metric small" id="storageMetric">Unavailable</div>
+        <div class="progress"><span id="storageBar"></span></div>
+        <div class="detail" id="storageDetail">Shows storage assigned to this browser origin, not total phone storage.</div>
+      </article>
+
+      <article class="card full">
+        <div class="card-title"><span>Service checks</span><span class="pill" id="serviceSummary">Not checked</span></div>
+        <div class="service-list" id="serviceList"></div>
+      </article>
+
+      <article class="card full">
+        <div class="card-title"><span>Latency history</span><span class="pill">Last 20</span></div>
+        <canvas id="latencyChart" width="800" height="260" aria-label="Latency history chart"></canvas>
+        <div class="detail">History stays in this browser only.</div>
+      </article>
+    </section>
+
+    <p class="footer">
+      Browser security prevents a web page from performing true ICMP ping, reading Wi-Fi signal strength, or inspecting the phone's full hardware status. Service checks confirm that a network request completed; they do not guarantee every feature of the service is healthy.
+    </p>
+  </main>
+
+  <div class="settings" id="settingsPanel" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <section class="sheet">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <h2 id="settingsTitle">Check settings</h2>
+        <button class="icon-button" id="closeSettingsBtn" aria-label="Close settings">✕</button>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Request timeout (milliseconds)
+          <input id="timeoutInput" type="number" min="1000" max="30000" step="500" inputmode="numeric" />
+        </label>
+        <label>
+          Auto-refresh interval (seconds, 0 = off)
+          <input id="intervalInput" type="number" min="0" max="3600" step="5" inputmode="numeric" />
+        </label>
+      </div>
+
+      <h3 style="margin:20px 0 10px;font-size:1rem;">Endpoints</h3>
+      <div id="serviceEditors" class="form-grid"></div>
+      <button class="secondary-button" id="addServiceBtn" style="width:100%;margin-top:10px;">＋ Add endpoint</button>
+
+      <div class="sheet-actions">
+        <button class="secondary-button" id="resetBtn">Reset</button>
+        <button class="primary-button" id="saveBtn">Save settings</button>
+      </div>
+      <p class="privacy-note">
+        Settings and history are stored in localStorage on this device. Endpoint requests are sent directly from your browser. For internal systems, use HTTPS and enable CORS on the health endpoint for richer status reporting.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    'use strict';
+
+    const STORAGE_KEY = 'phone-status-app-v1';
+    const HISTORY_KEY = 'phone-status-latency-v1';
+
+    const defaults = {
+      timeoutMs: 6000,
+      intervalSec: 0,
+      services: [
+        { name: 'Cloudflare', url: 'https://www.cloudflare.com/cdn-cgi/trace' },
+        { name: 'Google', url: 'https://www.google.com/generate_204' },
+        { name: 'OpenAI', url: 'https://status.openai.com/' }
+      ]
+    };
+
+    const state = {
+      settings: loadJson(STORAGE_KEY, defaults),
+      history: loadJson(HISTORY_KEY, []),
+      timer: null,
+      checking: false,
+      results: []
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const els = {
+      hero: $('hero'), overallDot: $('overallDot'), overallStatus: $('overallStatus'), lastCheck: $('lastCheck'),
+      runBtn: $('runBtn'), copyBtn: $('copyBtn'), settingsBtn: $('settingsBtn'),
+      internetPill: $('internetPill'), internetMetric: $('internetMetric'), internetDetail: $('internetDetail'),
+      latencyPill: $('latencyPill'), latencyMetric: $('latencyMetric'), latencyDetail: $('latencyDetail'),
+      networkPill: $('networkPill'), networkMetric: $('networkMetric'), networkDetail: $('networkDetail'),
+      batteryPill: $('batteryPill'), batteryMetric: $('batteryMetric'), batteryBar: $('batteryBar'), batteryDetail: $('batteryDetail'),
+      deviceMetric: $('deviceMetric'), deviceDetail: $('deviceDetail'),
+      storagePill: $('storagePill'), storageMetric: $('storageMetric'), storageBar: $('storageBar'), storageDetail: $('storageDetail'),
+      serviceList: $('serviceList'), serviceSummary: $('serviceSummary'), latencyChart: $('latencyChart'),
+      settingsPanel: $('settingsPanel'), closeSettingsBtn: $('closeSettingsBtn'), timeoutInput: $('timeoutInput'),
+      intervalInput: $('intervalInput'), serviceEditors: $('serviceEditors'), addServiceBtn: $('addServiceBtn'),
+      resetBtn: $('resetBtn'), saveBtn: $('saveBtn')
+    };
+
+    function clone(value) { return JSON.parse(JSON.stringify(value)); }
+    function loadJson(key, fallback) {
+      try {
+        const saved = JSON.parse(localStorage.getItem(key));
+        return saved ?? clone(fallback);
+      } catch { return clone(fallback); }
+    }
+    function saveJson(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+    function formatBytes(bytes) {
+      if (!Number.isFinite(bytes)) return 'Unknown';
+      const units = ['B','KB','MB','GB','TB'];
+      let value = bytes, unit = 0;
+      while (value >= 1024 && unit < units.length - 1) { value /= 1024; unit++; }
+      return `${value.toFixed(value >= 10 || unit === 0 ? 0 : 1)} ${units[unit]}`;
+    }
+    function classForStatus(status) { return status === 'good' ? 'good' : status === 'bad' ? 'bad' : status === 'warn' ? 'warn' : ''; }
+    function setPill(el, text, status = '') { el.textContent = text; el.className = `pill ${classForStatus(status)}`.trim(); }
+    function nowLabel() { return new Intl.DateTimeFormat(undefined, { dateStyle: 'medium', timeStyle: 'medium' }).format(new Date()); }
+
+    function detectDevice() {
+      const ua = navigator.userAgent;
+      const platform = navigator.userAgentData?.platform || navigator.platform || 'Unknown platform';
+      const mobile = navigator.userAgentData?.mobile ?? /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+      const cores = navigator.hardwareConcurrency || 'Unknown';
+      const memory = navigator.deviceMemory ? `${navigator.deviceMemory} GB approx.` : 'Not exposed';
+      els.deviceMetric.textContent = `${mobile ? 'Mobile device' : 'Desktop / tablet'} · ${platform}`;
+      els.deviceDetail.textContent = `${cores} logical CPU cores · Memory: ${memory} · Screen: ${screen.width}×${screen.height} · Viewport: ${window.innerWidth}×${window.innerHeight}`;
+    }
+
+    function updateNetworkInfo() {
+      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      if (!connection) {
+        els.networkMetric.textContent = navigator.onLine ? 'Connected' : 'Offline';
+        els.networkDetail.textContent = 'Detailed connection information is not exposed by this browser.';
+        setPill(els.networkPill, 'Limited', navigator.onLine ? 'warn' : 'bad');
+        return;
+      }
+      const type = connection.type || connection.effectiveType || 'Unknown';
+      const downlink = Number.isFinite(connection.downlink) ? `${connection.downlink} Mbps est.` : 'Speed unknown';
+      const rtt = Number.isFinite(connection.rtt) ? `${connection.rtt} ms RTT est.` : 'RTT unknown';
+      els.networkMetric.textContent = type.toUpperCase();
+      els.networkDetail.textContent = `${downlink} · ${rtt}${connection.saveData ? ' · Data Saver on' : ''}`;
+      setPill(els.networkPill, connection.saveData ? 'Data Saver' : 'Available', connection.saveData ? 'warn' : 'good');
+    }
+
+    async function updateBattery() {
+      if (!navigator.getBattery) {
+        els.batteryMetric.textContent = 'Unavailable';
+        els.batteryDetail.textContent = 'This browser does not provide battery status to web pages.';
+        setPill(els.batteryPill, 'Restricted', 'warn');
+        return;
+      }
+      try {
+        const battery = await navigator.getBattery();
+        const render = () => {
+          const pct = Math.round(battery.level * 100);
+          els.batteryMetric.textContent = `${pct}%`;
+          els.batteryBar.style.width = `${pct}%`;
+          els.batteryDetail.textContent = battery.charging ? 'Charging' : 'On battery';
+          setPill(els.batteryPill, battery.charging ? 'Charging' : pct < 20 ? 'Low' : 'Normal', battery.charging || pct >= 20 ? 'good' : 'warn');
+        };
+        render();
+        battery.addEventListener('levelchange', render, { passive: true });
+        battery.addEventListener('chargingchange', render, { passive: true });
+      } catch {
+        els.batteryMetric.textContent = 'Unavailable';
+        setPill(els.batteryPill, 'Error', 'warn');
+      }
+    }
+
+    async function updateStorage() {
+      if (!navigator.storage?.estimate) {
+        setPill(els.storagePill, 'Restricted', 'warn');
+        return;
+      }
+      try {
+        const { usage = 0, quota = 0 } = await navigator.storage.estimate();
+        const pct = quota ? Math.min(100, Math.round((usage / quota) * 100)) : 0;
+        els.storageMetric.textContent = `${formatBytes(usage)} used of ${formatBytes(quota)}`;
+        els.storageBar.style.width = `${pct}%`;
+        els.storageDetail.textContent = `${pct}% of browser storage quota used. This is not total phone storage.`;
+        setPill(els.storagePill, pct > 85 ? 'High' : 'Available', pct > 85 ? 'warn' : 'good');
+      } catch {
+        setPill(els.storagePill, 'Error', 'warn');
+      }
+    }
+
+    function renderServices(results = null) {
+      els.serviceList.innerHTML = '';
+      state.settings.services.forEach((service, index) => {
+        const result = results?.[index];
+        const item = document.createElement('div');
+        item.className = 'service-item';
+        const statusClass = result ? classForStatus(result.ok ? 'good' : result.timeout ? 'warn' : 'bad') : '';
+        const text = result ? (result.ok ? `${Math.round(result.ms)} ms` : result.timeout ? 'Timed out' : 'Failed') : 'Waiting';
+        item.innerHTML = `
+          <span class="service-light ${statusClass}"></span>
+          <div style="min-width:0">
+            <div class="service-name"></div>
+            <div class="service-url"></div>
+          </div>
+          <div class="service-result">${text}</div>
+        `;
+        item.querySelector('.service-name').textContent = service.name || `Endpoint ${index + 1}`;
+        item.querySelector('.service-url').textContent = service.url;
+        els.serviceList.appendChild(item);
+      });
+    }
+
+    async function timedFetch(url, timeoutMs) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), timeoutMs);
+      const start = performance.now();
+      try {
+        const separator = url.includes('?') ? '&' : '?';
+        await fetch(`${url}${separator}_status_check=${Date.now()}`, {
+          method: 'GET', mode: 'no-cors', cache: 'no-store', signal: controller.signal,
+          credentials: 'omit', redirect: 'follow'
+        });
+        return { ok: true, ms: performance.now() - start };
+      } catch (error) {
+        return { ok: false, timeout: error?.name === 'AbortError', ms: performance.now() - start, error: error?.message || 'Request failed' };
+      } finally {
+        clearTimeout(timeout);
+      }
+    }
+
+    function latencyStatus(ms) {
+      if (!Number.isFinite(ms)) return ['Unknown', 'warn'];
+      if (ms < 150) return ['Excellent', 'good'];
+      if (ms < 350) return ['Good', 'good'];
+      if (ms < 800) return ['Slow', 'warn'];
+      return ['Very slow', 'bad'];
+    }
+
+    async function runChecks() {
+      if (state.checking) return;
+      state.checking = true;
+      els.runBtn.disabled = true;
+      els.runBtn.textContent = 'Checking…';
+      els.overallStatus.textContent = 'Running checks';
+      els.overallDot.className = 'overall-dot warn';
+      els.hero.style.setProperty('--status-glow', 'rgba(255,176,32,.16)');
+      setPill(els.serviceSummary, 'Checking', 'warn');
+
+      updateNetworkInfo();
+      const browserOnline = navigator.onLine;
+      const results = await Promise.all(state.settings.services.map(service => timedFetch(service.url, state.settings.timeoutMs)));
+      state.results = results;
+      renderServices(results);
+
+      const successes = results.filter(r => r.ok);
+      const avg = successes.length ? successes.reduce((sum, r) => sum + r.ms, 0) / successes.length : NaN;
+      const internetOk = browserOnline && successes.length > 0;
+      const partial = internetOk && successes.length < results.length;
+
+      els.internetMetric.textContent = internetOk ? 'Online' : 'Offline';
+      els.internetDetail.textContent = internetOk ? `${successes.length} of ${results.length} configured endpoints responded.` : 'No configured endpoint completed a request.';
+      setPill(els.internetPill, internetOk ? 'Connected' : 'No access', internetOk ? (partial ? 'warn' : 'good') : 'bad');
+
+      els.latencyMetric.textContent = Number.isFinite(avg) ? `${Math.round(avg)} ms` : '— ms';
+      const [latencyLabel, latencyClass] = latencyStatus(avg);
+      setPill(els.latencyPill, latencyLabel, latencyClass);
+      els.latencyDetail.textContent = Number.isFinite(avg) ? `Average across ${successes.length} successful endpoint${successes.length === 1 ? '' : 's'}.` : 'Latency could not be measured.';
+
+      setPill(els.serviceSummary, `${successes.length}/${results.length} reachable`, successes.length === results.length ? 'good' : successes.length ? 'warn' : 'bad');
+
+      let overallText = 'Connection healthy';
+      let overallClass = 'good';
+      if (!internetOk) { overallText = 'Connection problem'; overallClass = 'bad'; }
+      else if (partial || latencyClass === 'warn' || latencyClass === 'bad') { overallText = 'Connection degraded'; overallClass = 'warn'; }
+
+      els.overallStatus.textContent = overallText;
+      els.overallDot.className = `overall-dot ${overallClass}`;
+      els.hero.style.setProperty('--status-glow', overallClass === 'good' ? 'rgba(46,212,122,.14)' : overallClass === 'warn' ? 'rgba(255,176,32,.16)' : 'rgba(255,93,108,.16)');
+      els.lastCheck.textContent = `Last checked: ${nowLabel()}`;
+
+      if (Number.isFinite(avg)) {
+        state.history.push({ time: Date.now(), ms: Math.round(avg) });
+        state.history = state.history.slice(-20);
+        saveJson(HISTORY_KEY, state.history);
+      }
+      drawChart();
+      state.checking = false;
+      els.runBtn.disabled = false;
+      els.runBtn.textContent = 'Run full check';
+    }
+
+    function drawChart() {
+      const canvas = els.latencyChart;
+      const ctx = canvas.getContext('2d');
+      const ratio = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+      const cssWidth = canvas.clientWidth || 600;
+      const cssHeight = 130;
+      canvas.width = Math.round(cssWidth * ratio);
+      canvas.height = Math.round(cssHeight * ratio);
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      ctx.clearRect(0, 0, cssWidth, cssHeight);
+
+      const data = state.history;
+      ctx.strokeStyle = 'rgba(255,255,255,.08)';
+      ctx.lineWidth = 1;
+      [0.25, 0.5, 0.75].forEach(f => {
+        ctx.beginPath(); ctx.moveTo(0, cssHeight * f); ctx.lineTo(cssWidth, cssHeight * f); ctx.stroke();
+      });
+
+      if (data.length < 2) {
+        ctx.fillStyle = '#9aa8bd';
+        ctx.font = '13px system-ui';
+        ctx.textAlign = 'center';
+        ctx.fillText('Run at least two checks to build a chart', cssWidth / 2, cssHeight / 2 + 5);
+        return;
+      }
+      const max = Math.max(200, ...data.map(d => d.ms)) * 1.15;
+      const points = data.map((d, i) => ({
+        x: 8 + (i / (data.length - 1)) * (cssWidth - 16),
+        y: cssHeight - 12 - (d.ms / max) * (cssHeight - 28)
+      }));
+      const gradient = ctx.createLinearGradient(0, 0, cssWidth, 0);
+      gradient.addColorStop(0, '#67a7ff'); gradient.addColorStop(1, '#2ed47a');
+      ctx.strokeStyle = gradient; ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.beginPath(); points.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y)); ctx.stroke();
+      ctx.fillStyle = '#f4f7fb';
+      points.forEach(p => { ctx.beginPath(); ctx.arc(p.x, p.y, 2.7, 0, Math.PI * 2); ctx.fill(); });
+    }
+
+    function buildReport() {
+      const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+      const lines = [
+        'PHONE CONNECTION & SYSTEM STATUS',
+        `Generated: ${nowLabel()}`,
+        `Browser online: ${navigator.onLine ? 'Yes' : 'No'}`,
+        `Overall: ${els.overallStatus.textContent}`,
+        `Latency: ${els.latencyMetric.textContent}`,
+        `Network: ${connection?.effectiveType || connection?.type || 'Not exposed'}${connection?.downlink ? `, ${connection.downlink} Mbps estimated` : ''}`,
+        `Battery: ${els.batteryMetric.textContent} (${els.batteryDetail.textContent})`,
+        `Device: ${els.deviceMetric.textContent}`,
+        `Device details: ${els.deviceDetail.textContent}`,
+        `Storage: ${els.storageMetric.textContent}`,
+        '',
+        'ENDPOINTS'
+      ];
+      state.settings.services.forEach((service, i) => {
+        const r = state.results[i];
+        lines.push(`${service.name}: ${r ? (r.ok ? `Reachable, ${Math.round(r.ms)} ms` : r.timeout ? 'Timed out' : 'Failed') : 'Not checked'} — ${service.url}`);
+      });
+      lines.push('', 'Note: Browser checks are not ICMP ping and cannot inspect complete phone hardware or Wi-Fi signal strength.');
+      return lines.join('\n');
+    }
+
+    async function copyReport() {
+      const report = buildReport();
+      try {
+        await navigator.clipboard.writeText(report);
+        const old = els.copyBtn.textContent;
+        els.copyBtn.textContent = 'Copied';
+        setTimeout(() => els.copyBtn.textContent = old, 1400);
+      } catch {
+        window.prompt('Copy this report:', report);
+      }
+    }
+
+    function openSettings() {
+      els.timeoutInput.value = state.settings.timeoutMs;
+      els.intervalInput.value = state.settings.intervalSec;
+      renderServiceEditors(state.settings.services);
+      els.settingsPanel.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeSettings() {
+      els.settingsPanel.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function renderServiceEditors(services) {
+      els.serviceEditors.innerHTML = '';
+      services.forEach((service, index) => {
+        const row = document.createElement('div');
+        row.className = 'service-editor';
+        row.innerHTML = `
+          <label>Name<input class="edit-name" value=""></label>
+          <label>HTTPS URL<input class="edit-url" type="url" value=""></label>
+          <button class="danger-button remove-service" aria-label="Remove endpoint">−</button>
+        `;
+        row.querySelector('.edit-name').value = service.name;
+        row.querySelector('.edit-url').value = service.url;
+        row.querySelector('.remove-service').addEventListener('click', () => {
+          row.remove();
+        });
+        els.serviceEditors.appendChild(row);
+      });
+    }
+    function collectServices() {
+      return [...els.serviceEditors.querySelectorAll('.service-editor')].map((row, index) => ({
+        name: row.querySelector('.edit-name').value.trim() || `Endpoint ${index + 1}`,
+        url: row.querySelector('.edit-url').value.trim()
+      })).filter(s => /^https:\/\//i.test(s.url));
+    }
+    function scheduleAutoRefresh() {
+      clearInterval(state.timer);
+      state.timer = null;
+      if (state.settings.intervalSec > 0) {
+        state.timer = setInterval(runChecks, Math.max(5, state.settings.intervalSec) * 1000);
+      }
+    }
+
+    els.runBtn.addEventListener('click', runChecks);
+    els.copyBtn.addEventListener('click', copyReport);
+    els.settingsBtn.addEventListener('click', openSettings);
+    els.closeSettingsBtn.addEventListener('click', closeSettings);
+    els.settingsPanel.addEventListener('click', (e) => { if (e.target === els.settingsPanel) closeSettings(); });
+    els.addServiceBtn.addEventListener('click', () => {
+      const current = collectServices();
+      current.push({ name: 'New service', url: 'https://' });
+      renderServiceEditors(current);
+    });
+    els.resetBtn.addEventListener('click', () => {
+      state.settings = clone(defaults);
+      els.timeoutInput.value = state.settings.timeoutMs;
+      els.intervalInput.value = state.settings.intervalSec;
+      renderServiceEditors(state.settings.services);
+    });
+    els.saveBtn.addEventListener('click', () => {
+      const services = collectServices();
+      state.settings = {
+        timeoutMs: Math.min(30000, Math.max(1000, Number(els.timeoutInput.value) || defaults.timeoutMs)),
+        intervalSec: Math.min(3600, Math.max(0, Number(els.intervalInput.value) || 0)),
+        services: services.length ? services : clone(defaults.services)
+      };
+      saveJson(STORAGE_KEY, state.settings);
+      renderServices();
+      scheduleAutoRefresh();
+      closeSettings();
+    });
+
+    window.addEventListener('online', () => { updateNetworkInfo(); runChecks(); });
+    window.addEventListener('offline', () => {
+      updateNetworkInfo();
+      els.overallStatus.textContent = 'Device is offline';
+      els.overallDot.className = 'overall-dot bad';
+      els.internetMetric.textContent = 'Offline';
+      setPill(els.internetPill, 'No access', 'bad');
+    });
+    window.addEventListener('resize', () => { detectDevice(); drawChart(); });
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    connection?.addEventListener?.('change', updateNetworkInfo);
+
+    detectDevice();
+    updateNetworkInfo();
+    updateBattery();
+    updateStorage();
+    renderServices();
+    drawChart();
+    scheduleAutoRefresh();
+  </script>
+</body>
+</html>
