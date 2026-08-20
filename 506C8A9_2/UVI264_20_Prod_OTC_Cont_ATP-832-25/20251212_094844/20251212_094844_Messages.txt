@@ -1,0 +1,159 @@
+
+Output Message File Version:1.00.00
+Type;	Product::Source;	Message;	Time Stamp
+Info;	MUI::LoadSettingsFile();	Finished Loading System Settings for file C:\temp\UVI264_Cont.msf;	12/12/2025 09:40:23
+Info;	MUI::MainWindow;	Current selected Test Environment and Test Coverage has no Tests to display.;	12/12/2025 09:40:23
+Info;	MUI::BuildTree();	Acquiring System Data for Tree;	12/12/2025 09:40:23
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : SupportBoard;	12/12/2025 09:40:23
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : VI26x8p5V2x90V;	12/12/2025 09:40:23
+Info;	VPManager::SheetManager;	Create and import Pin & Channel maps for job : Job__FactCont;	12/12/2025 09:40:24
+Info;	VPManager::SheetManager;	Create and import Pin Levels and Time Set sheets for job : Job__FactCont;	12/12/2025 09:40:24
+Info;	VPManager::SheetManager;	Create and import Test Instance and Flow sheets for job : JobSerial__FactCont;	12/12/2025 09:40:24
+Info;	VPManager::JobDefinition;	Create or update Job List Sheet for job JobSerial__FactCont;	12/12/2025 09:40:25
+Info;	VPManager::SheetManager;	Create and import Pin & Channel maps for job : M_DC_8P5V_90V_DM2CHANMAP_FactCont;	12/12/2025 09:40:26
+Info;	VPManager::SheetManager;	Create and import Pin Levels and Time Set sheets for job : M_DC_8P5V_90V_DM2CHANMAP_FactCont;	12/12/2025 09:40:26
+Info;	VPManager::SheetManager;	Create and import Test Instance and Flow sheets for job : M_DC_8P5V_90V_DM2CHANMAP_FactCont;	12/12/2025 09:40:26
+Info;	VPManager::JobDefinition;	Create or update Job List Sheet for job M_DC_8P5V_90V_DM2CHANMAP_FactCont;	12/12/2025 09:40:26
+Info;	VPManager::VPManager;	Set IG-XL job: JobSerial__FactCont for Factory Test\Continuity Test Coverage;	12/12/2025 09:40:26
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactCont Job sheets for VP: SupportBoard;	12/12/2025 09:40:26
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactCont Job sheets for VP: VI26x8p5V2x90V;	12/12/2025 09:40:26
+Info;	VPManager::VPManager;	Finished setting IG-XL job for Factory Test\Continuity Test Coverage;	12/12/2025 09:40:26
+Info;	MUI::BuildTree();	Elapsed Time for Tree Creation : 4.415 Seconds;	12/12/2025 09:40:27
+Info;	MUI::ApplySystemSettings();	Finished applying System Settings;	12/12/2025 09:40:27
+Info;	VPManager::TestExecutionManager;	Start of Run session for Factory Test:Continuity;	12/12/2025 09:40:28
+Info;	VPManager::TestExecutionManager;	IG-XL job validation started.;	12/12/2025 09:40:28
+Info;	VPManager::TestExecutionManager;	IG-XL job validation succeeded.;	12/12/2025 09:40:35
+Info;	VPManager::TestExecutionManager;	Start Run Session Loop 1 of 1;	12/12/2025 09:40:35
+Info;	VPManager::TestExecutionManager;	Trigger start of  IG-XL job: JobSerial__FactCont for category: Continuity;	12/12/2025 09:40:35
+Info;	VPPortal::CDataServiceListener;	Start to log Test Category: Continuity;	12/12/2025 09:40:35
+Info;	VPManager::TestExecutionManager;	Calling tl_ProgramRun.;	12/12/2025 09:40:35
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramStarted interpose received for Test Category : Continuity;	12/12/2025 09:40:43
+Info;	VPPortal::CDataServiceListener;	2027F601;	12/12/2025 09:40:43
+Info;	VPPortal::CDataServiceListener;	;	12/12/2025 09:40:43
+Info;	VPPortal::CDataServiceListener;	;	12/12/2025 09:40:43
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:CableID Check;	12/12/2025 09:40:43
+Info;	VI26x8p5V2x90V::CableID Check;	Beginning of VI26x8p5V2x90V:CableID Check test...;	12/12/2025 09:40:43
+Info;	VI26x8p5V2x90V::CableID Check;	End of CableID Check test.;	12/12/2025 09:40:43
+Info;	VI26x8p5V2x90V::LV|Force Pin;	Beginning of VI26x8p5V2x90V:LV|Force Pin test...;	12/12/2025 09:40:43
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:CableID Check;	12/12/2025 09:40:43
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|Force Pin;	12/12/2025 09:40:43
+Info;	VI26x8p5V2x90V::LV|Force Pin;	End of LV|Force Pin test.;	12/12/2025 09:40:47
+Info;	VI26x8p5V2x90V::LV|Sense Pin;	Beginning of VI26x8p5V2x90V:LV|Sense Pin test...;	12/12/2025 09:40:47
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|Force Pin;	12/12/2025 09:40:47
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|Sense Pin;	12/12/2025 09:40:47
+Info;	VI26x8p5V2x90V::LV|Sense Pin;	End of LV|Sense Pin test.;	12/12/2025 09:40:49
+Info;	VI26x8p5V2x90V::LV|DGS Monitor;	Beginning of VI26x8p5V2x90V:LV|DGS Monitor test...;	12/12/2025 09:40:49
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|Sense Pin;	12/12/2025 09:40:50
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|DGS Monitor;	12/12/2025 09:40:50
+Info;	VI26x8p5V2x90V::LV|DGS Monitor;	End of LV|DGS Monitor test.;	12/12/2025 09:41:11
+Info;	VI26x8p5V2x90V::Board|LV DGS Rejection;	Beginning of VI26x8p5V2x90V:Board|LV DGS Rejection test...;	12/12/2025 09:41:11
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|DGS Monitor;	12/12/2025 09:41:11
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|LV DGS Rejection;	12/12/2025 09:41:11
+Info;	VI26x8p5V2x90V::Board|LV DGS Rejection;	End of Board|LV DGS Rejection test.;	12/12/2025 09:41:30
+Info;	VI26x8p5V2x90V::LV|Snubber;	Beginning of VI26x8p5V2x90V:LV|Snubber test...;	12/12/2025 09:41:30
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|LV DGS Rejection;	12/12/2025 09:41:30
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|Snubber;	12/12/2025 09:41:30
+Info;	VI26x8p5V2x90V::LV|Snubber;	End of LV|Snubber test.;	12/12/2025 09:41:35
+Info;	VI26x8p5V2x90V::Precision Reference|PrecRef;	Beginning of VI26x8p5V2x90V:Precision Reference|PrecRef test...;	12/12/2025 09:41:35
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|Snubber;	12/12/2025 09:41:36
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Precision Reference|PrecRef;	12/12/2025 09:41:36
+Info;	VI26x8p5V2x90V::Precision Reference|PrecRef;	End of Precision Reference|PrecRef test.;	12/12/2025 09:41:36
+Info;	VI26x8p5V2x90V::Precision Reference|PrecRef DGS;	Beginning of VI26x8p5V2x90V:Precision Reference|PrecRef DGS test...;	12/12/2025 09:41:36
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Precision Reference|PrecRef;	12/12/2025 09:41:36
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Precision Reference|PrecRef DGS;	12/12/2025 09:41:36
+Info;	VI26x8p5V2x90V::Precision Reference|PrecRef DGS;	End of Precision Reference|PrecRef DGS test.;	12/12/2025 09:41:37
+Info;	VI26x8p5V2x90V::HV|HV_Connect;	Beginning of VI26x8p5V2x90V:HV|HV_Connect test...;	12/12/2025 09:41:37
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Precision Reference|PrecRef DGS;	12/12/2025 09:41:37
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|HV_Connect;	12/12/2025 09:41:37
+Info;	VI26x8p5V2x90V::HV|HV_Connect;	End of HV|HV_Connect test.;	12/12/2025 09:41:39
+Info;	VI26x8p5V2x90V::HV|Force Pin;	Beginning of VI26x8p5V2x90V:HV|Force Pin test...;	12/12/2025 09:41:39
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|HV_Connect;	12/12/2025 09:41:39
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|Force Pin;	12/12/2025 09:41:39
+Info;	VI26x8p5V2x90V::HV|Force Pin;	End of HV|Force Pin test.;	12/12/2025 09:41:41
+Info;	VI26x8p5V2x90V::HV|Sense Pin;	Beginning of VI26x8p5V2x90V:HV|Sense Pin test...;	12/12/2025 09:41:41
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|Force Pin;	12/12/2025 09:41:41
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|Sense Pin;	12/12/2025 09:41:41
+Info;	VI26x8p5V2x90V::HV|Sense Pin;	End of HV|Sense Pin test.;	12/12/2025 09:41:42
+Info;	VI26x8p5V2x90V::HV|HV DGS;	Beginning of VI26x8p5V2x90V:HV|HV DGS test...;	12/12/2025 09:41:42
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|Sense Pin;	12/12/2025 09:41:42
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|HV DGS;	12/12/2025 09:41:42
+Info;	VI26x8p5V2x90V::HV|HV DGS;	End of HV|HV DGS test.;	12/12/2025 09:41:51
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|HV DGS;	12/12/2025 09:41:51
+Info;	VI26x8p5V2x90V::HV|PMOS Continuity;	Beginning of VI26x8p5V2x90V:HV|PMOS Continuity test...;	12/12/2025 09:41:51
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|PMOS Continuity;	12/12/2025 09:41:51
+Info;	VI26x8p5V2x90V::HV|PMOS Continuity;	End of HV|PMOS Continuity test.;	12/12/2025 09:41:52
+Info;	VI26x8p5V2x90V::HV|Guard Pin;	Beginning of VI26x8p5V2x90V:HV|Guard Pin test...;	12/12/2025 09:41:52
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|PMOS Continuity;	12/12/2025 09:41:52
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|Guard Pin;	12/12/2025 09:41:52
+Info;	VI26x8p5V2x90V::HV|Guard Pin;	End of HV|Guard Pin test.;	12/12/2025 09:41:53
+Info;	VI26x8p5V2x90V::TMU|Sense Pin;	Beginning of VI26x8p5V2x90V:TMU|Sense Pin test...;	12/12/2025 09:41:53
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|Guard Pin;	12/12/2025 09:41:53
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:TMU|Sense Pin;	12/12/2025 09:41:53
+Info;	VI26x8p5V2x90V::TMU|Sense Pin;	End of TMU|Sense Pin test.;	12/12/2025 09:46:59
+Info;	VI26x8p5V2x90V::TMU|Sense Pin HiPerf;	Beginning of VI26x8p5V2x90V:TMU|Sense Pin HiPerf test...;	12/12/2025 09:46:59
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:TMU|Sense Pin;	12/12/2025 09:47:00
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:TMU|Sense Pin HiPerf;	12/12/2025 09:47:00
+Info;	VI26x8p5V2x90V::TMU|Sense Pin HiPerf;	End of TMU|Sense Pin HiPerf test.;	12/12/2025 09:47:08
+Info;	VI26x8p5V2x90V::TMU|Sense Pin HV;	Beginning of VI26x8p5V2x90V:TMU|Sense Pin HV test...;	12/12/2025 09:47:08
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:TMU|Sense Pin HiPerf;	12/12/2025 09:47:08
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:TMU|Sense Pin HV;	12/12/2025 09:47:08
+Info;	VI26x8p5V2x90V::TMU|Sense Pin HV;	End of TMU|Sense Pin HV test.;	12/12/2025 09:47:31
+Info;	VI26x8p5V2x90V::TMU|TMUDGS;	Beginning of VI26x8p5V2x90V:TMU|TMUDGS test...;	12/12/2025 09:47:31
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:TMU|Sense Pin HV;	12/12/2025 09:47:31
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:TMU|TMUDGS;	12/12/2025 09:47:31
+Info;	VI26x8p5V2x90V::TMU|TMUDGS;	End of TMU|TMUDGS test.;	12/12/2025 09:47:43
+Info;	VI26x8p5V2x90V::TMU|TMUHVDGS;	Beginning of VI26x8p5V2x90V:TMU|TMUHVDGS test...;	12/12/2025 09:47:43
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:TMU|TMUDGS;	12/12/2025 09:47:43
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:TMU|TMUHVDGS;	12/12/2025 09:47:43
+Info;	VI26x8p5V2x90V::TMU|TMUHVDGS;	End of TMU|TMUHVDGS test.;	12/12/2025 09:47:57
+Info;	VI26x8p5V2x90V::DVM|DVM HV Stripper;	Beginning of VI26x8p5V2x90V:DVM|DVM HV Stripper test...;	12/12/2025 09:47:57
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:TMU|TMUHVDGS;	12/12/2025 09:47:57
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:DVM|DVM HV Stripper;	12/12/2025 09:47:57
+Info;	VI26x8p5V2x90V::DVM|DVM HV Stripper;	End of DVM|DVM HV Stripper test.;	12/12/2025 09:47:58
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:DVM|DVM HV Stripper;	12/12/2025 09:47:58
+Info;	VI26x8p5V2x90V::DVM|DVM Hi LV;	Beginning of VI26x8p5V2x90V:DVM|DVM Hi LV test...;	12/12/2025 09:47:58
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:DVM|DVM Hi LV;	12/12/2025 09:47:58
+Info;	VI26x8p5V2x90V::DVM|DVM Hi LV;	End of DVM|DVM Hi LV test.;	12/12/2025 09:48:00
+Info;	VI26x8p5V2x90V::DVM|DVM Lo LV;	Beginning of VI26x8p5V2x90V:DVM|DVM Lo LV test...;	12/12/2025 09:48:00
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:DVM|DVM Hi LV;	12/12/2025 09:48:00
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:DVM|DVM Lo LV;	12/12/2025 09:48:00
+Info;	VI26x8p5V2x90V::DVM|DVM Lo LV;	End of DVM|DVM Lo LV test.;	12/12/2025 09:48:02
+Info;	VI26x8p5V2x90V::DVM|DVM Direct;	Beginning of VI26x8p5V2x90V:DVM|DVM Direct test...;	12/12/2025 09:48:02
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:DVM|DVM Lo LV;	12/12/2025 09:48:02
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:DVM|DVM Direct;	12/12/2025 09:48:02
+Info;	VI26x8p5V2x90V::DVM|DVM Direct;	End of DVM|DVM Direct test.;	12/12/2025 09:48:03
+Info;	VI26x8p5V2x90V::DVM|DVMDGS;	Beginning of VI26x8p5V2x90V:DVM|DVMDGS test...;	12/12/2025 09:48:03
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:DVM|DVM Direct;	12/12/2025 09:48:03
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:DVM|DVMDGS;	12/12/2025 09:48:03
+Info;	VI26x8p5V2x90V::DVM|DVMDGS;	End of DVM|DVMDGS test.;	12/12/2025 09:48:17
+Info;	VI26x8p5V2x90V::LV|VSpike;	Beginning of VI26x8p5V2x90V:LV|VSpike test...;	12/12/2025 09:48:17
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:DVM|DVMDGS;	12/12/2025 09:48:17
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|VSpike;	12/12/2025 09:48:17
+Info;	VI26x8p5V2x90V::LV|VSpike;	End of LV|VSpike test.;	12/12/2025 09:48:18
+Info;	VI26x8p5V2x90V::HV|VSpike;	Beginning of VI26x8p5V2x90V:HV|VSpike test...;	12/12/2025 09:48:18
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|VSpike;	12/12/2025 09:48:18
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|VSpike;	12/12/2025 09:48:18
+Info;	VI26x8p5V2x90V::HV|VSpike;	End of HV|VSpike test.;	12/12/2025 09:48:18
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|VSpike;	12/12/2025 09:48:18
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramEnded interpose received. Wait for Job complete.;	12/12/2025 09:48:18
+Info;	VPManager::TestExecutionManager;	Back from tl_ProgramRun.;	12/12/2025 09:48:18
+Info;	VPManager::TestExecutionManager;	End of IG-XL Job: JobSerial__FactCont with Test Category : Continuity;	12/12/2025 09:48:19
+Info;	VPManager::JobDefinition;	Resynch TestTypes to M_DC_8P5V_90V_DM2CHANMAP_FactCont Job sheets for VP: VI26x8p5V2x90V;	12/12/2025 09:48:19
+Info;	VPManager::TestExecutionManager;	IG-XL job validation started.;	12/12/2025 09:48:19
+Info;	VPManager::TestExecutionManager;	IG-XL job validation succeeded.;	12/12/2025 09:48:22
+Info;	VPManager::TestExecutionManager;	Trigger start of  IG-XL job: M_DC_8P5V_90V_DM2CHANMAP_FactCont for category: Continuity;	12/12/2025 09:48:22
+Info;	VPPortal::CDataServiceListener;	Start to log Test Category: Continuity;	12/12/2025 09:48:22
+Info;	VPManager::TestExecutionManager;	Calling tl_ProgramRun.;	12/12/2025 09:48:22
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramStarted interpose received for Test Category : Continuity;	12/12/2025 09:48:22
+Info;	VI26x8p5V2x90V::HV|MergePin;	Beginning of VI26x8p5V2x90V:HV|MergePin test...;	12/12/2025 09:48:22
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|MergePin;	12/12/2025 09:48:22
+Info;	VI26x8p5V2x90V::HV|MergePin;	End of HV|MergePin test.;	12/12/2025 09:48:23
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|MergePin;	12/12/2025 09:48:23
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramEnded interpose received. Wait for Job complete.;	12/12/2025 09:48:23
+Info;	VPManager::TestExecutionManager;	Back from tl_ProgramRun.;	12/12/2025 09:48:23
+Info;	VPManager::TestExecutionManager;	End of IG-XL Job: M_DC_8P5V_90V_DM2CHANMAP_FactCont with Test Category : Continuity;	12/12/2025 09:48:23
+Info;	VPManager::TestExecutionManager;	End Of Run session;	12/12/2025 09:48:23
+Info;	MUI::Elapsed Run Time From 'Start' to 'EndOfRunEvent';	475.393 Seconds;	12/12/2025 09:48:24
+Info;	VPPortal::CDataServiceListener;	End of Run Session logging;	12/12/2025 09:48:24
+Info;	MUI::MainWindow;	Maintenance exit request made.;	12/12/2025 09:48:24
+Info;	MUI::MainWindow;	Exiting: waiting for Excel process to end with 30 second timeout ...;	12/12/2025 09:48:24

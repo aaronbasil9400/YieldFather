@@ -1,0 +1,1572 @@
+*******************************************************************************
+Teradyne SMC UltraFlex2 Tester Status Log
+Beginning Run
+File Name: Tester Status1225.txt
+
+How to read SMC measurements:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[timestamp]  node type(slot number) rail name(rail number)
+Lo: lower limit Val: measured value Hi: upper limit units
+
+SMC Node abreviations:
+~~~~~~~~~~~~~~~~~~~~~~
+CCN - Channel Card Node
+SCN - Support Cabinet Node
+SN  - System Node
+TCN - Tester Computer 'Node'
+*******************************************************************************
+
+12/01/25,06:25:08  SMC SERVICE Disconnected from System Node: OK
+12/01/25,06:25:08  CSmcWindowsServer PID: 7060. Disconnect received from client IG_XL
+12/01/25,06:25:11  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #41(11/30/2025 20:35:32)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,06:50:26  SMC STATUS, SN , SMC Test Power turned OFF
+12/01/25,07:40:32  12/01/25,07:40:32  SmcWindowsWinService V2018.10.15. PID: 7060. Connection Received from client IG_XL
+12/01/25,07:41:32  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/01/25,07:41:56  SMC STATUS, slot(023), Override ON
+12/01/25,07:42:09  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/01/25,07:42:23  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/01/25,07:42:30  SMC STATUS, slot(023), Override OFF
+12/01/25,07:42:41  SMC SERVICE Disconnected from System Node: OK
+12/01/25,07:42:41  CSmcWindowsServer PID: 7060. Disconnect received from client IG_XL
+12/01/25,07:42:51  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #42(12/01/2025 07:43:02)
+Slot: 023, SMC Ver: 0000-0000, (null) [IG-XL\10.98.76_uflx\SMC\] -- FAILED TO LOAD TABLE
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,07:43:02  SMC STATUS, SN , SMC Test Power turned ON
+12/01/25,07:43:24  SMC SERVICE Disconnected from System Node: OK
+12/01/25,07:43:24  CSmcWindowsServer PID: 7060. Disconnect received from client TRDS
+12/01/25,07:43:24  Exiting because all clients have disconnected.
+12/01/25,07:43:24  SMC SERVICE CLOSED
+
+12/01/25,07:43:30  SMC Windows SERVICE STARTED
+12/01/25,07:43:30  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/01/25,07:43:30  12/01/25,07:43:30  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client TRDS
+12/01/25,07:43:31  SMC SERVICE Using SN node address: 10.0.0.2
+12/01/25,07:43:31  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: OK, Test Power Cycle #42(12/01/2025 07:43:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,07:43:33  SMCOffPending needs SN Version 1826 or later.
+12/01/25,07:46:10  tlSmcTrdsWriteStart notification skipped, needs SN Version 1826 or later.
+12/01/25,07:48:14  tlSmcTrdsWriteEnd notification skipped, needs SN Version 1826 or later.
+12/01/25,07:52:58  12/01/25,07:52:58  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/01/25,07:56:11  SMC SERVICE Disconnected from System Node: OK
+12/01/25,07:56:11  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/01/25,07:56:15  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #42(12/01/2025 07:43:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,07:57:56  12/01/25,07:57:56  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/01/25,08:00:56  SMC SERVICE Disconnected from System Node: OK
+12/01/25,08:00:56  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/01/25,08:01:00  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #42(12/01/2025 07:43:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,08:02:08  12/01/25,08:02:08  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/01/25,13:17:42  SMC SERVICE Disconnected from System Node: OK
+12/01/25,13:17:42  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/01/25,13:17:46  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #42(12/01/2025 07:43:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,13:18:11  SMC STATUS, SN , SMC Test Power turned OFF
+12/01/25,13:20:59  SMC STATUS, SN , SMC Test Power turned ON
+12/01/25,13:24:07  12/01/25,13:26:15  12/01/25,13:26:50  12/01/25,13:26:50  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/01/25,19:06:01  SMC SERVICE Disconnected from System Node: OK
+12/01/25,19:06:01  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/01/25,19:06:05  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #43(12/01/2025 13:20:59)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,19:06:42  SMC STATUS, SN , SMC Test Power turned OFF
+12/01/25,19:07:39  SMC STATUS, SN , SMC Test Power turned ON
+12/01/25,19:14:20  12/01/25,19:14:20  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/01/25,20:24:59  SMC SERVICE Disconnected from System Node: OK
+12/01/25,20:24:59  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/01/25,20:25:03  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #44(12/01/2025 19:07:39)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/01/25,20:25:32  SMC STATUS, SN , SMC Test Power turned OFF
+12/01/25,22:22:02  SMC STATUS, SN , SMC Test Power turned ON
+12/01/25,22:25:08  12/01/25,22:27:13  12/01/25,22:28:02  12/01/25,22:28:02  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,00:07:15  SMC SERVICE Disconnected from System Node: OK
+12/02/25,00:07:15  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,00:07:19  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #45(12/01/2025 22:22:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,00:16:01  12/02/25,00:16:01  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,00:20:18  12/02/25,00:20:18  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,00:20:18  CSmcWindowsServer duplicate connection received from client IG_XL before release.
+12/02/25,06:46:24  SMC SERVICE Disconnected from System Node: OK
+12/02/25,06:46:24  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,06:46:27  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #45(12/01/2025 22:22:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,06:50:00  SMC STATUS, SN , SMC Test Power turned OFF
+12/02/25,13:52:00  SMC STATUS, SN , SMC Test Power turned ON
+12/02/25,13:55:10  12/02/25,13:57:17  12/02/25,14:25:22  12/02/25,14:25:22  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,14:39:37  SMC SERVICE Disconnected from System Node: OK
+12/02/25,14:39:37  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,14:39:40  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #46(12/02/2025 13:52:00)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,14:43:09  12/02/25,14:43:09  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,15:04:23  SMC SERVICE Disconnected from System Node: OK
+12/02/25,15:04:23  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,15:04:27  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #46(12/02/2025 13:52:00)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,15:05:19  12/02/25,15:05:19  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,15:07:45  SMC SERVICE Disconnected from System Node: OK
+12/02/25,15:07:45  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,15:07:49  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #46(12/02/2025 13:52:00)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,15:26:34  12/02/25,15:26:34  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,15:48:19  SMC SERVICE Disconnected from System Node: OK
+12/02/25,15:48:19  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,15:48:23  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #46(12/02/2025 13:52:00)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,15:50:37  12/02/25,15:50:37  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/02/25,22:18:02  SMC SERVICE Disconnected from System Node: OK
+12/02/25,22:18:02  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/02/25,22:18:05  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #46(12/02/2025 13:52:00)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/02/25,23:55:59  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,00:04:06  12/03/25,00:04:06  SmcWindowsWinService V2018.10.15. PID: 11208. Connection Received from client IG_XL
+12/03/25,00:05:37  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,00:06:15  SMC STATUS, slot(023), Override ON
+12/03/25,00:06:29  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,00:06:54  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,00:07:19  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,00:07:25  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Generic Node Firmware]
+12/03/25,00:07:49  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,00:08:01  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,00:08:12  SMC STATUS, slot(023), Override OFF
+12/03/25,00:08:26  SMC SERVICE Disconnected from System Node: OK
+12/03/25,00:08:26  CSmcWindowsServer PID: 11208. Disconnect received from client IG_XL
+12/03/25,00:08:36  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #47(12/03/2025 00:08:40)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,00:08:40  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,00:23:06  12/03/25,00:30:55  
+12/03/25,00:32:31  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP5P0(081)	Lo: 4.001	Val: 0.000	Hi: 6.003	V
+
+
+12/03/25,00:32:31  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP22P0(082)	Lo: 17.660	Val: 0.000	Hi: 26.500	V
+
+12/03/25,00:32:33  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,01:12:24  SMC STATUS, SN , SMC Test Power turned ON
+
+12/03/25,01:12:37  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP5P0(081)	Lo: 4.001	Val: 0.000	Hi: 6.003	V
+
+
+12/03/25,01:12:37  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP22P0(082)	Lo: 17.660	Val: 0.000	Hi: 26.500	V
+
+12/03/25,01:16:44  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:16:44  CSmcWindowsServer PID: 11208. Disconnect received from client TRDS
+12/03/25,01:16:44  Exiting because all clients have disconnected.
+12/03/25,01:16:44  SMC SERVICE CLOSED
+
+12/03/25,01:16:49  SMC Windows SERVICE STARTED
+12/03/25,01:16:49  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/03/25,01:16:49  12/03/25,01:16:49  SmcWindowsWinService V2018.10.15. PID: 5016. Connection Received from client TRDS
+12/03/25,01:16:50  SMC SERVICE Using SN node address: 10.0.0.2
+12/03/25,01:16:50  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:12:39  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,01:17:10  12/03/25,01:17:10  SmcWindowsWinService V2018.10.15. PID: 5016. Connection Received from client TRDS
+12/03/25,01:17:10  CSmcWindowsServer duplicate connection received from client TRDS before release.
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:17:10  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:17:10  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:17:31  12/03/25,01:17:31  SmcWindowsWinService V2018.10.15. PID: 5016. Connection Received from client TRDS
+12/03/25,01:17:31  CSmcWindowsServer duplicate connection received from client TRDS before release.
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:17:31  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:17:31  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+
+12/03/25,01:19:44  SMC Windows SERVICE STARTED
+12/03/25,01:19:44  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/03/25,01:19:44  12/03/25,01:19:44  SmcWindowsWinService V2018.10.15. PID: 10340. Connection Received from client TRDS
+12/03/25,01:19:45  SMC SERVICE Using SN node address: 10.0.0.2
+12/03/25,01:19:45  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:21:49  12/03/25,01:21:49  SmcWindowsWinService V2018.10.15. PID: 10340. Connection Received from client TRDS
+12/03/25,01:21:49  CSmcWindowsServer duplicate connection received from client TRDS before release.
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:21:49  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:21:49  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:21:55  12/03/25,01:21:55  SmcWindowsWinService V2018.10.15. PID: 10340. Connection Received from client TRDS
+12/03/25,01:21:55  CSmcWindowsServer duplicate connection received from client TRDS before release.
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:21:55  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:21:55  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:22:08  12/03/25,01:22:08  SmcWindowsWinService V2018.10.15. PID: 10340. Connection Received from client TRDS
+12/03/25,01:22:08  CSmcWindowsServer duplicate connection received from client TRDS before release.
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:22:08  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:22:08  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: Not OK, Test Power Cycle #48(12/03/2025 01:12:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:22:44  12/03/25,01:22:44  SmcWindowsWinService V2018.10.15. PID: 10340. Connection Received from client TRDS
+12/03/25,01:22:44  CSmcWindowsServer duplicate connection received from client TRDS before release.
+12/03/25,01:22:44  SMC INTERNAL ERROR, Could not connect to System Node at 10.0.0.2
+                   Last Winsock error code detected by Smc Service: 10035
+12/03/25,01:22:51  CSmcWindowsServer PID: 10340. Disconnect received from client TRDS
+12/03/25,01:22:51  Exiting because all clients have disconnected.
+12/03/25,01:22:51  SMC SERVICE CLOSED
+
+12/03/25,01:22:55  SMC Windows SERVICE STARTED
+12/03/25,01:22:55  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/03/25,01:22:55  12/03/25,01:22:55  SmcWindowsWinService V2018.10.15. PID: 1608. Connection Received from client TRDS
+12/03/25,01:22:56  SMC SERVICE Using SN node address: 10.0.0.2
+12/03/25,01:22:56  SMC INTERNAL ERROR, Could not connect to System Node at 10.0.0.2
+                   Last Winsock error code detected by Smc Service: 10035
+12/03/25,01:23:06  CSmcWindowsServer PID: 1608. Disconnect received from client TRDS
+12/03/25,01:23:06  Exiting because all clients have disconnected.
+12/03/25,01:23:06  SMC SERVICE CLOSED
+
+12/03/25,01:23:16  SMC Windows SERVICE STARTED
+12/03/25,01:23:16  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/03/25,01:23:16  12/03/25,01:23:16  SmcWindowsWinService V2018.10.15. PID: 6368. Connection Received from client TRDS
+12/03/25,01:23:16  SMC SERVICE Using SN node address: 10.0.0.2
+12/03/25,01:23:17  SMC INTERNAL ERROR, Could not connect to System Node at 10.0.0.2
+                   Last Winsock error code detected by Smc Service: 10035
+
+12/03/25,01:25:24  SMC Windows SERVICE STARTED
+12/03/25,01:25:24  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/03/25,01:25:24  12/03/25,01:25:24  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client TRDS
+12/03/25,01:25:25  SMC SERVICE Using SN node address: 10.0.0.2
+12/03/25,01:25:25  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: OFF, Tester: OK, Test Power Cycle #0(no timestamp)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:26:19  12/03/25,01:26:19  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,01:28:30  SMC STATUS, slot(023), Override ON
+12/03/25,01:28:44  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,01:28:57  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,01:29:05  SMC STATUS, slot(023), Override OFF
+12/03/25,01:29:36  SMC SERVICE Disconnected from System Node: OK
+12/03/25,01:29:36  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,01:29:46  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: Not OK, Test Power Cycle #1(12/03/2025 01:29:37)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,01:29:37  SMC STATUS, SN , SMC Test Power turned ON
+
+12/03/25,01:29:48  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP5P0(081)	Lo: 4.001	Val: 0.000	Hi: 6.003	V
+
+
+12/03/25,01:29:48  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP22P0(082)	Lo: 17.660	Val: 0.000	Hi: 26.500	V
+
+12/03/25,01:29:50  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,01:33:50  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,01:34:01  SMCOffPending needs SN Version 1826 or later.
+
+12/03/25,01:34:02  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP5P0(081)	Lo: 4.001	Val: 0.000	Hi: 6.003	V
+
+
+12/03/25,01:34:02  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD4_VP22P0(082)	Lo: 17.660	Val: 0.000	Hi: 26.500	V
+
+12/03/25,01:34:05  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,03:10:01  12/03/25,03:10:01  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,03:15:08  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,03:15:37  SMC STATUS, slot(023), Override ON
+12/03/25,03:16:15  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,03:16:47  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Generic Node Firmware]
+12/03/25,03:17:16  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,03:17:23  CSmcWindowsSvc::Update ignoring corrupt SmcStatus 
+12/03/25,03:20:06  SMC STATUS, slot(023), Override OFF
+12/03/25,03:21:51  SMC SERVICE Disconnected from System Node: OK
+12/03/25,03:21:51  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,03:22:01  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: Not OK, Test Power Cycle #3(12/03/2025 03:21:51)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,03:21:51  SMC STATUS, SN , SMC Test Power turned ON
+
+12/03/25,03:22:02  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD3_VB17N0(060)	Lo: -20.380	Val: -1.062	Hi: -13.590	V
+
+12/03/25,03:22:04  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,03:24:39  SMC STATUS, SN , SMC Test Power turned ON
+
+12/03/25,03:24:49  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD3_VB17N0(060)	Lo: -20.380	Val: -1.062	Hi: -13.590	V
+
+12/03/25,03:24:51  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,06:05:43  12/03/25,06:05:43  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,06:08:54  SMC STATUS, slot(023), Override ON
+12/03/25,06:09:07  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,06:09:20  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,06:09:28  SMC STATUS, slot(023), Override OFF
+12/03/25,06:12:22  SMC SERVICE Disconnected from System Node: OK
+12/03/25,06:12:22  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,06:12:32  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: OK, Test Power Cycle #5(12/03/2025 06:12:42)
+Slot: 023, SMC Ver: 0000-0000, (null) [IG-XL\10.98.76_uflx\SMC\] -- FAILED TO LOAD TABLE
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,06:12:42  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,06:19:52  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,08:25:21  12/03/25,08:25:21  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,08:26:43  SMC STATUS, slot(023), Override ON
+12/03/25,08:26:59  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,08:27:10  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,08:27:18  SMC STATUS, slot(023), Override OFF
+12/03/25,08:27:30  SMC SERVICE Disconnected from System Node: OK
+12/03/25,08:27:30  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,08:27:40  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: OK, Test Power Cycle #6(12/03/2025 08:27:42)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,08:27:42  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,08:30:53  tlSmcTrdsWriteStart notification skipped, needs SN Version 1826 or later.
+12/03/25,08:34:23  tlSmcTrdsWriteEnd notification skipped, needs SN Version 1826 or later.
+12/03/25,08:40:08  12/03/25,08:40:08  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,08:43:35  SMC SERVICE Disconnected from System Node: OK
+12/03/25,08:43:35  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,08:43:39  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #6(12/03/2025 08:27:42)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,08:44:31  12/03/25,08:44:31  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,08:47:30  SMC SERVICE Disconnected from System Node: OK
+12/03/25,08:47:30  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,08:47:34  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #6(12/03/2025 08:27:42)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,08:54:23  12/03/25,08:54:23  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,09:53:05  SMC SERVICE Disconnected from System Node: OK
+12/03/25,09:53:05  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,09:53:09  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #6(12/03/2025 08:27:42)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,09:54:11  12/03/25,09:54:11  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,09:57:11  SMC SERVICE Disconnected from System Node: OK
+12/03/25,09:57:11  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,09:57:14  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #6(12/03/2025 08:27:42)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,09:59:13  12/03/25,09:59:13  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,10:10:00  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,10:12:40  12/03/25,10:12:40  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,10:12:40  CSmcWindowsServer duplicate connection received from client IG_XL before release.
+12/03/25,10:13:32  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,10:17:05  SMC STATUS, slot(023), Override ON
+12/03/25,10:17:21  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,10:17:47  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,10:18:12  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,10:18:18  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Generic Node Firmware]
+12/03/25,10:18:57  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,10:19:07  SMC STATUS, slot(023), Override OFF
+12/03/25,10:20:45  SMC SERVICE Disconnected from System Node: OK
+12/03/25,10:20:45  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,10:20:55  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,10:21:01  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,10:24:09  12/03/25,10:27:44  12/03/25,10:34:13  12/03/25,10:34:13  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,10:36:44  SMC SERVICE Disconnected from System Node: OK
+12/03/25,10:36:44  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,10:36:47  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,10:37:42  12/03/25,10:37:42  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,10:40:42  SMC SERVICE Disconnected from System Node: OK
+12/03/25,10:40:42  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,10:40:46  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,10:42:27  12/03/25,10:42:27  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,10:52:23  SMC SERVICE Disconnected from System Node: OK
+12/03/25,10:52:23  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,10:52:26  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,10:55:21  12/03/25,10:55:21  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,11:09:14  SMC SERVICE Disconnected from System Node: OK
+12/03/25,11:09:14  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,11:09:18  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,11:21:42  12/03/25,11:21:42  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,11:42:02  SMC SERVICE Disconnected from System Node: OK
+12/03/25,11:42:02  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,11:42:06  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,11:46:04  12/03/25,11:46:04  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,11:48:29  SMC SERVICE Disconnected from System Node: OK
+12/03/25,11:48:29  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,11:48:33  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,11:49:31  12/03/25,11:49:31  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,12:11:16  SMC SERVICE Disconnected from System Node: OK
+12/03/25,12:11:16  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,12:11:20  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,12:13:15  12/03/25,12:13:15  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,12:24:34  SMC SERVICE Disconnected from System Node: OK
+12/03/25,12:24:34  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,12:24:37  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,12:43:15  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,12:46:11  12/03/25,12:46:11  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,12:47:03  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,12:47:38  SMC STATUS, slot(023), Override ON
+12/03/25,12:47:51  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,12:48:05  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,12:48:12  SMC STATUS, slot(023), Override OFF
+12/03/25,12:48:33  SMC SERVICE Disconnected from System Node: OK
+12/03/25,12:48:33  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,12:48:33  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: OFF, Tester: OK, Test Power Cycle #7(12/03/2025 10:21:01)
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,12:49:01  SMC STATUS, SN , SMC Test Power turned ON
+
+12/03/25,12:49:11  *** SMC SYSTEM-WIDE FAULT (F1) ***, slot(023), TEST POWER SHUTDOWN
+                   ELEC-MECH, RAIDEN, FOR S(slot 023), MOD3_VB17N0(060)	Lo: -20.380	Val: -1.131	Hi: -13.590	V
+
+12/03/25,12:49:13  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,13:09:52  12/03/25,13:09:52  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/03/25,13:11:16  SMC STATUS, slot(023), Override ON
+12/03/25,13:11:29  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,13:11:43  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,13:11:50  SMC STATUS, slot(023), Override OFF
+12/03/25,13:12:00  SMC SERVICE Disconnected from System Node: OK
+12/03/25,13:12:00  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/03/25,13:12:10  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 0000-0000, (null) [IG-XL\10.98.76_uflx\SMC\] -- FAILED TO LOAD TABLE
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,13:12:19  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,13:12:41  SMC SERVICE Disconnected from System Node: OK
+12/03/25,13:12:41  CSmcWindowsServer PID: 10348. Disconnect received from client TRDS
+12/03/25,13:12:41  Exiting because all clients have disconnected.
+12/03/25,13:12:41  SMC SERVICE CLOSED
+
+12/03/25,13:12:47  SMC Windows SERVICE STARTED
+12/03/25,13:12:47  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/03/25,13:12:47  12/03/25,13:12:47  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client TRDS
+12/03/25,13:12:48  SMC SERVICE Using SN node address: 10.0.0.2
+12/03/25,13:12:48  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,13:12:50  SMCOffPending needs SN Version 1826 or later.
+12/03/25,13:20:37  12/03/25,13:20:37  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,13:23:25  SMC SERVICE Disconnected from System Node: OK
+12/03/25,13:23:25  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,13:23:29  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,13:24:23  12/03/25,13:24:23  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,13:27:22  SMC SERVICE Disconnected from System Node: OK
+12/03/25,13:27:22  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,13:27:26  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,13:28:20  12/03/25,13:28:20  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,13:38:16  SMC SERVICE Disconnected from System Node: OK
+12/03/25,13:38:16  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,13:38:19  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,13:43:43  12/03/25,13:43:43  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,13:57:33  SMC SERVICE Disconnected from System Node: OK
+12/03/25,13:57:33  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,13:57:37  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,14:09:19  12/03/25,14:09:19  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,14:12:14  SMC SERVICE Disconnected from System Node: OK
+12/03/25,14:12:14  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,14:12:18  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,14:19:34  12/03/25,14:19:34  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,14:22:34  SMC SERVICE Disconnected from System Node: OK
+12/03/25,14:22:34  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,14:22:38  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,14:24:47  12/03/25,14:24:47  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,14:34:41  SMC SERVICE Disconnected from System Node: OK
+12/03/25,14:34:41  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,14:34:45  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,14:36:08  12/03/25,14:36:08  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,14:50:04  SMC SERVICE Disconnected from System Node: OK
+12/03/25,14:50:04  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,14:50:07  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,15:05:17  12/03/25,15:05:17  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,15:25:48  SMC SERVICE Disconnected from System Node: OK
+12/03/25,15:25:48  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,15:25:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,15:27:36  12/03/25,15:27:36  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,15:30:04  SMC SERVICE Disconnected from System Node: OK
+12/03/25,15:30:04  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,15:30:08  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,15:30:57  12/03/25,15:30:57  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,15:52:42  SMC SERVICE Disconnected from System Node: OK
+12/03/25,15:52:42  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,15:52:46  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,16:25:34  12/03/25,16:25:34  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,16:36:48  SMC SERVICE Disconnected from System Node: OK
+12/03/25,16:36:48  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,16:36:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #9(12/03/2025 13:12:19)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,16:39:36  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,16:41:37  12/03/25,16:41:37  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,16:42:29  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,16:43:29  SMC STATUS, slot(023), Override ON
+12/03/25,16:43:42  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,16:44:08  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,16:44:33  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,16:44:40  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Generic Node Firmware]
+12/03/25,16:45:03  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/03/25,16:45:15  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/03/25,16:45:25  SMC STATUS, slot(023), Override OFF
+12/03/25,16:46:29  SMC SERVICE Disconnected from System Node: OK
+12/03/25,16:46:29  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,16:46:39  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,16:46:47  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,16:52:43  tlSmcTrdsWriteStart notification skipped, needs SN Version 1826 or later.
+12/03/25,17:00:31  tlSmcTrdsWriteEnd notification skipped, needs SN Version 1826 or later.
+12/03/25,17:08:51  12/03/25,17:08:51  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,17:11:47  SMC SERVICE Disconnected from System Node: OK
+12/03/25,17:11:47  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,17:11:50  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,17:16:03  12/03/25,17:16:03  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,17:19:03  SMC SERVICE Disconnected from System Node: OK
+12/03/25,17:19:03  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,17:19:07  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,17:20:19  12/03/25,17:20:19  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,17:30:31  SMC SERVICE Disconnected from System Node: OK
+12/03/25,17:30:31  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,17:30:34  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,17:33:32  12/03/25,17:33:32  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,17:47:54  SMC SERVICE Disconnected from System Node: OK
+12/03/25,17:47:54  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,17:47:58  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,17:49:12  12/03/25,17:49:12  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,18:09:20  SMC SERVICE Disconnected from System Node: OK
+12/03/25,18:09:20  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,18:09:24  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,18:16:51  12/03/25,18:16:51  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,18:19:16  SMC SERVICE Disconnected from System Node: OK
+12/03/25,18:19:16  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,18:19:20  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,18:20:09  12/03/25,18:20:09  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,18:41:52  SMC SERVICE Disconnected from System Node: OK
+12/03/25,18:41:52  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,18:41:56  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,18:44:36  12/03/25,18:44:36  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,18:55:54  SMC SERVICE Disconnected from System Node: OK
+12/03/25,18:55:54  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,18:55:57  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,20:02:26  12/03/25,20:02:26  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,20:07:45  SMC SERVICE Disconnected from System Node: OK
+12/03/25,20:07:45  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,20:07:48  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,20:09:28  12/03/25,20:09:28  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,20:14:41  SMC SERVICE Disconnected from System Node: OK
+12/03/25,20:14:41  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,20:14:45  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,20:18:27  12/03/25,20:18:27  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,20:23:41  SMC SERVICE Disconnected from System Node: OK
+12/03/25,20:23:41  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,20:23:45  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #10(12/03/2025 16:46:47)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,20:24:35  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,20:28:45  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,20:30:37  SMC STATUS, SN , SMC Test Power turned OFF
+12/03/25,20:32:12  SMC STATUS, SN , SMC Test Power turned ON
+12/03/25,20:35:20  12/03/25,20:37:24  12/03/25,20:47:52  12/03/25,20:47:52  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/03/25,21:44:33  SMC SERVICE Disconnected from System Node: OK
+12/03/25,21:44:33  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/03/25,21:44:37  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #12(12/03/2025 20:32:12)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/03/25,21:47:46  12/03/25,21:47:46  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,00:22:33  12/04/25,00:22:33  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,00:22:33  CSmcWindowsServer duplicate connection received from client IG_XL before release.
+12/04/25,02:30:46  SMC SERVICE Disconnected from System Node: OK
+12/04/25,02:30:46  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,02:30:50  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #12(12/03/2025 20:32:12)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,02:32:29  12/04/25,02:32:29  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,09:00:12  SMC SERVICE Disconnected from System Node: OK
+12/04/25,09:00:12  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,09:00:15  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #12(12/03/2025 20:32:12)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,09:17:48  SMC STATUS, SN , SMC Test Power turned OFF
+12/04/25,09:44:47  SMC STATUS, SN , SMC Test Power turned ON
+12/04/25,09:47:55  12/04/25,09:50:03  12/04/25,10:04:26  12/04/25,10:04:26  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,10:18:32  SMC SERVICE Disconnected from System Node: OK
+12/04/25,10:18:32  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,10:18:35  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #13(12/04/2025 09:44:47)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,10:20:53  12/04/25,10:20:53  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,10:41:24  SMC SERVICE Disconnected from System Node: OK
+12/04/25,10:41:24  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,10:41:28  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #13(12/04/2025 09:44:47)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,10:43:08  12/04/25,10:43:08  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,10:45:34  SMC SERVICE Disconnected from System Node: OK
+12/04/25,10:45:34  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,10:45:38  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #13(12/04/2025 09:44:47)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,10:46:28  12/04/25,10:46:28  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,11:08:16  SMC SERVICE Disconnected from System Node: OK
+12/04/25,11:08:16  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,11:08:19  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #13(12/04/2025 09:44:47)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,12:01:03  12/04/25,12:01:03  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,18:27:50  SMC SERVICE Disconnected from System Node: OK
+12/04/25,18:27:50  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,18:27:53  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #13(12/04/2025 09:44:47)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,19:31:28  SMC STATUS, SN , SMC Test Power turned OFF
+12/04/25,19:42:20  12/04/25,19:42:20  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,19:43:54  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/04/25,19:54:18  SMC STATUS, slot(023), Override ON
+12/04/25,19:54:32  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/04/25,19:54:45  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/04/25,19:54:54  SMC STATUS, slot(023), Override OFF
+12/04/25,19:56:23  SMC SERVICE Disconnected from System Node: OK
+12/04/25,19:56:23  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,19:56:33  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,19:56:23  SMC STATUS, SN , SMC Test Power turned ON
+12/04/25,19:59:32  12/04/25,20:03:02  12/04/25,20:12:45  12/04/25,20:12:45  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,20:16:16  SMC SERVICE Disconnected from System Node: OK
+12/04/25,20:16:16  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,20:16:20  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,20:35:53  12/04/25,20:35:53  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,20:38:57  SMC SERVICE Disconnected from System Node: OK
+12/04/25,20:38:57  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,20:39:00  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,20:41:39  12/04/25,20:41:39  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,20:51:38  SMC SERVICE Disconnected from System Node: OK
+12/04/25,20:51:38  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,20:51:41  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,20:54:18  12/04/25,20:54:18  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,21:08:00  SMC SERVICE Disconnected from System Node: OK
+12/04/25,21:08:00  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,21:08:04  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,21:09:25  12/04/25,21:09:25  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,21:23:07  SMC SERVICE Disconnected from System Node: OK
+12/04/25,21:23:07  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,21:23:11  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,21:39:48  12/04/25,21:39:48  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,22:18:24  SMC SERVICE Disconnected from System Node: OK
+12/04/25,22:18:24  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,22:18:28  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #14(12/04/2025 19:56:23)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,22:19:25  12/04/25,22:19:25  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,22:32:18  SMC STATUS, SN , SMC Test Power turned OFF
+12/04/25,22:33:52  SMC STATUS, SN , SMC Test Power turned ON
+12/04/25,22:37:01  12/04/25,22:39:04  12/04/25,22:39:54  12/04/25,22:39:54  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/04/25,22:39:54  CSmcWindowsServer duplicate connection received from client IG_XL before release.
+12/04/25,23:52:48  SMC SERVICE Disconnected from System Node: OK
+12/04/25,23:52:48  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/04/25,23:52:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #15(12/04/2025 22:33:52)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/04/25,23:55:43  12/04/25,23:55:43  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,06:23:05  SMC SERVICE Disconnected from System Node: OK
+12/05/25,06:23:05  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,06:23:08  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #15(12/04/2025 22:33:52)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/05/25,07:06:28  SMC STATUS, SN , SMC Test Power turned OFF
+12/05/25,09:47:24  SMC STATUS, SN , SMC Test Power turned ON
+12/05/25,09:50:32  12/05/25,09:54:03  12/05/25,09:54:32  12/05/25,09:54:32  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,10:46:51  SMC SERVICE Disconnected from System Node: OK
+12/05/25,10:46:51  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,10:46:55  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #16(12/05/2025 09:47:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/05/25,10:49:40  12/05/25,10:49:40  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,12:18:55  SMC SERVICE Disconnected from System Node: OK
+12/05/25,12:18:55  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,12:18:58  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #16(12/05/2025 09:47:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/05/25,13:09:04  SMC STATUS, SN , SMC Test Power turned OFF
+12/05/25,14:48:10  12/05/25,14:48:10  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,14:49:10  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/05/25,15:08:26  SMC STATUS, slot(023), Override ON
+12/05/25,15:08:40  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/05/25,15:09:05  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/05/25,15:09:30  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/05/25,15:09:39  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Generic Node Firmware]
+12/05/25,15:10:03  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/05/25,15:10:16  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/05/25,15:10:27  SMC STATUS, slot(023), Override OFF
+12/05/25,15:13:06  SMC SERVICE Disconnected from System Node: OK
+12/05/25,15:13:06  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,15:13:16  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #17(12/05/2025 15:13:20)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/05/25,15:13:20  SMC STATUS, SN , SMC Test Power turned ON
+12/05/25,15:16:28  12/05/25,15:20:03  12/05/25,15:20:23  12/05/25,15:20:23  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,15:21:09  SMC SERVICE Disconnected from System Node: OK
+12/05/25,15:21:09  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,15:21:09  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #17(12/05/2025 15:13:20)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/05/25,15:26:44  SMC STATUS, SN , SMC Test Power turned OFF
+12/05/25,16:27:23  SMC STATUS, SN , SMC Test Power turned ON
+12/05/25,16:30:32  12/05/25,16:34:07  12/05/25,16:47:00  12/05/25,16:47:00  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,17:38:20  SMC SERVICE Disconnected from System Node: OK
+12/05/25,17:38:20  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,17:38:23  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #18(12/05/2025 16:27:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/05/25,17:42:06  12/05/25,17:42:06  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/05/25,22:16:09  SMC SERVICE Disconnected from System Node: OK
+12/05/25,22:16:09  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/05/25,22:16:12  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #18(12/05/2025 16:27:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,00:18:52  12/06/25,00:18:52  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/06/25,06:56:53  SMC SERVICE Disconnected from System Node: OK
+12/06/25,06:56:53  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/06/25,06:56:56  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #18(12/05/2025 16:27:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,07:10:44  12/06/25,07:10:44  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/06/25,08:04:20  SMC SERVICE Disconnected from System Node: OK
+12/06/25,08:04:20  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/06/25,08:04:24  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #18(12/05/2025 16:27:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,08:04:43  12/06/25,08:04:43  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/06/25,09:02:33  SMC SERVICE Disconnected from System Node: OK
+12/06/25,09:02:33  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/06/25,09:02:37  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #18(12/05/2025 16:27:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,09:04:47  SMC STATUS, SN , SMC Test Power turned OFF
+12/06/25,09:17:55  SMC STATUS, SN , SMC Test Power turned ON
+12/06/25,09:21:05  12/06/25,09:24:40  12/06/25,09:40:40  12/06/25,09:40:40  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/06/25,10:40:14  SMC SERVICE Disconnected from System Node: OK
+12/06/25,10:40:14  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/06/25,10:40:18  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #19(12/06/2025 09:17:55)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,10:45:14  12/06/25,10:45:14  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/06/25,17:12:12  SMC SERVICE Disconnected from System Node: OK
+12/06/25,17:12:12  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/06/25,17:12:15  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #19(12/06/2025 09:17:55)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,17:13:51  SMC STATUS, SN , SMC Test Power turned OFF
+12/06/25,17:16:11  SMC STATUS, SN , SMC Test Power turned ON
+12/06/25,17:19:20  12/06/25,17:21:23  12/06/25,17:27:12  12/06/25,17:27:12  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/06/25,18:21:25  SMC SERVICE Disconnected from System Node: OK
+12/06/25,18:21:25  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/06/25,18:21:29  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #20(12/06/2025 17:16:11)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/06/25,18:23:01  12/06/25,18:23:01  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/07/25,00:50:00  SMC SERVICE Disconnected from System Node: OK
+12/07/25,00:50:00  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/07/25,00:50:03  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #20(12/06/2025 17:16:11)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/07/25,00:54:51  SMC STATUS, SN , SMC Test Power turned OFF
+12/07/25,04:03:17  SMC STATUS, SN , SMC Test Power turned ON
+12/07/25,04:06:26  12/07/25,04:08:30  12/07/25,04:13:55  12/07/25,04:13:55  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/07/25,05:23:24  SMC SERVICE Disconnected from System Node: OK
+12/07/25,05:23:24  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/07/25,05:23:28  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #21(12/07/2025 04:03:17)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/07/25,06:16:57  12/07/25,06:16:57  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/07/25,12:43:53  SMC SERVICE Disconnected from System Node: OK
+12/07/25,12:43:53  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/07/25,12:43:56  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #21(12/07/2025 04:03:17)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/07/25,12:49:34  SMC STATUS, SN , SMC Test Power turned OFF
+12/07/25,12:51:55  SMC STATUS, SN , SMC Test Power turned ON
+12/07/25,12:55:04  12/07/25,12:58:34  12/07/25,13:00:15  12/07/25,13:00:15  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/07/25,14:38:49  SMC SERVICE Disconnected from System Node: OK
+12/07/25,14:38:49  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/07/25,14:38:53  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #22(12/07/2025 12:51:55)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/07/25,14:41:52  12/07/25,14:41:52  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/07/25,21:08:44  SMC SERVICE Disconnected from System Node: OK
+12/07/25,21:08:44  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/07/25,21:08:47  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #22(12/07/2025 12:51:55)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/07/25,21:17:50  SMC STATUS, SN , SMC Test Power turned OFF
+12/07/25,21:20:33  SMC STATUS, SN , SMC Test Power turned ON
+12/07/25,21:28:25  SMC STATUS, SN , SMC Test Power turned OFF
+12/07/25,21:29:14  SMC STATUS, SN , SMC Test Power turned ON
+12/07/25,21:32:22  12/07/25,21:34:26  12/07/25,21:35:08  12/07/25,21:35:08  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/07/25,23:26:57  SMC SERVICE Disconnected from System Node: OK
+12/07/25,23:26:57  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/07/25,23:27:01  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #24(12/07/2025 21:29:14)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/07/25,23:29:48  12/07/25,23:29:48  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/08/25,05:56:58  SMC SERVICE Disconnected from System Node: OK
+12/08/25,05:56:58  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/08/25,05:57:01  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #24(12/07/2025 21:29:14)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/08/25,07:14:29  SMC STATUS, SN , SMC Test Power turned OFF
+12/08/25,07:17:30  SMC STATUS, SN , SMC Test Power turned ON
+12/08/25,07:20:39  12/08/25,07:24:14  12/08/25,07:34:56  12/08/25,07:34:56  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/08/25,08:45:19  SMC SERVICE Disconnected from System Node: OK
+12/08/25,08:45:19  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/08/25,08:45:23  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #25(12/08/2025 07:17:30)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/08/25,08:50:44  12/08/25,08:50:44  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/08/25,15:17:45  SMC SERVICE Disconnected from System Node: OK
+12/08/25,15:17:45  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/08/25,15:17:48  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #25(12/08/2025 07:17:30)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/08/25,15:33:07  SMC STATUS, SN , SMC Test Power turned OFF
+12/08/25,15:41:42  SMC STATUS, SN , SMC Test Power turned ON
+12/08/25,15:44:51  12/08/25,15:46:55  12/08/25,15:53:07  12/08/25,15:53:07  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/08/25,17:15:09  SMC SERVICE Disconnected from System Node: OK
+12/08/25,17:15:09  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/08/25,17:15:13  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #26(12/08/2025 15:41:42)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/08/25,17:20:00  12/08/25,17:20:00  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/08/25,23:47:06  SMC SERVICE Disconnected from System Node: OK
+12/08/25,23:47:06  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/08/25,23:47:09  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #26(12/08/2025 15:41:42)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/08/25,23:59:20  SMC STATUS, SN , SMC Test Power turned OFF
+12/09/25,00:05:14  SMC STATUS, SN , SMC Test Power turned ON
+12/09/25,00:08:23  12/09/25,00:10:27  12/09/25,00:16:53  12/09/25,00:16:53  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/09/25,01:27:31  SMC SERVICE Disconnected from System Node: OK
+12/09/25,01:27:31  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/09/25,01:27:35  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #27(12/09/2025 00:05:14)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,01:27:58  SMC STATUS, SN , SMC Test Power turned OFF
+12/09/25,01:30:10  SMC STATUS, SN , SMC Test Power turned ON
+12/09/25,01:33:19  12/09/25,01:35:22  12/09/25,01:36:32  12/09/25,01:36:32  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/09/25,02:46:48  SMC SERVICE Disconnected from System Node: OK
+12/09/25,02:46:48  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/09/25,02:46:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #28(12/09/2025 01:30:10)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,06:46:19  12/09/25,06:46:19  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/09/25,13:13:57  SMC SERVICE Disconnected from System Node: OK
+12/09/25,13:13:57  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/09/25,13:14:00  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #28(12/09/2025 01:30:10)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,13:16:08  SMC STATUS, SN , SMC Test Power turned OFF
+12/09/25,13:18:23  SMC STATUS, SN , SMC Test Power turned ON
+12/09/25,13:24:24  12/09/25,13:24:24  SmcWindowsWinService V2018.10.15. PID: 344. Connection Received from client IG_XL
+12/09/25,13:51:55  SMC SERVICE Disconnected from System Node: OK
+12/09/25,13:51:55  CSmcWindowsServer PID: 344. Disconnect received from client IG_XL
+12/09/25,13:51:59  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #29(12/09/2025 13:18:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+
+12/09/25,14:03:24  SMC Windows SERVICE STARTED
+12/09/25,14:03:24  CSmcWindowsServer::get_SmcWindowsSvc acquired mutex.
+12/09/25,14:03:24  12/09/25,14:03:24  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client TRDS
+12/09/25,14:03:25  SMC SERVICE Using SN node address: 10.0.0.2
+12/09/25,14:03:25  SMC SERVICE Connected to System Node (System Serial Number: (null))
+Test Power: ON, Tester: OK, Test Power Cycle #29(12/09/2025 13:18:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,14:03:27  SMCOffPending needs SN Version 1826 or later.
+12/09/25,14:04:29  12/09/25,14:04:29  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/09/25,15:18:28  SMC SERVICE Disconnected from System Node: OK
+12/09/25,15:18:28  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/09/25,15:18:32  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #29(12/09/2025 13:18:23)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,15:31:31  SMC STATUS, SN , SMC Test Power turned OFF
+12/09/25,15:33:40  SMC STATUS, SN , SMC Test Power turned ON
+12/09/25,15:36:49  tlSmcTrdsWriteStart notification skipped, needs SN Version 1826 or later.
+12/09/25,15:40:23  tlSmcTrdsWriteEnd notification skipped, needs SN Version 1826 or later.
+12/09/25,15:41:04  12/09/25,15:41:04  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/09/25,17:05:45  SMC SERVICE Disconnected from System Node: OK
+12/09/25,17:05:45  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/09/25,17:05:49  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #30(12/09/2025 15:33:40)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,17:09:40  12/09/25,17:09:40  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/09/25,23:36:27  SMC SERVICE Disconnected from System Node: OK
+12/09/25,23:36:27  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/09/25,23:36:30  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #30(12/09/2025 15:33:40)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/09/25,23:38:04  SMC STATUS, SN , SMC Test Power turned OFF
+12/09/25,23:39:43  SMC STATUS, SN , SMC Test Power turned ON
+12/09/25,23:42:51  12/09/25,23:44:55  12/09/25,23:46:31  12/09/25,23:46:31  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/10/25,00:44:02  SMC SERVICE Disconnected from System Node: OK
+12/10/25,00:44:02  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/10/25,00:44:06  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #31(12/09/2025 23:39:43)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/10/25,00:44:43  12/10/25,00:44:43  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/10/25,07:11:47  SMC SERVICE Disconnected from System Node: OK
+12/10/25,07:11:47  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/10/25,07:11:50  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #31(12/09/2025 23:39:43)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/10/25,07:22:02  12/10/25,07:22:02  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/10/25,10:47:26  SMC STATUS, SN , SMC Test Power turned OFF
+12/10/25,10:49:41  SMC STATUS, SN , SMC Test Power turned ON
+12/10/25,10:55:26  12/10/25,10:55:26  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/10/25,10:55:26  CSmcWindowsServer duplicate connection received from client IG_XL before release.
+12/10/25,17:49:08  SMC STATUS, SN , SMC Test Power turned OFF
+12/10/25,19:56:14  SMC SERVICE Disconnected from System Node: OK
+12/10/25,19:56:14  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/10/25,19:56:18  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: OFF, Tester: OK, Test Power Cycle #32(12/10/2025 10:49:41)
+Slot: 023, SMC Ver: 3648-2444, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2444.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,18:49:18  12/11/25,18:49:18  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,18:50:54  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/11/25,18:52:06  SMC STATUS, slot(023), Override ON
+12/11/25,18:52:18  CSmcWindowsSvc::Update() returned 0x1, tl_Error_Complete() returned 0x0.
+12/11/25,18:52:33  SMC CONFIGURATION, SN, File sent to slot(023) OK [Smc Limit Table]
+12/11/25,18:52:40  SMC STATUS, slot(023), Override OFF
+12/11/25,18:53:01  SMC SERVICE Disconnected from System Node: OK
+12/11/25,18:53:01  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,18:53:11  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,18:53:02  SMC STATUS, SN , SMC Test Power turned ON
+12/11/25,18:53:06  SMC STATUS, slot(023), Override ON
+12/11/25,18:56:09  12/11/25,18:59:39  12/11/25,19:40:08  12/11/25,19:40:08  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,19:43:39  SMC SERVICE Disconnected from System Node: OK
+12/11/25,19:43:39  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,19:43:43  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,19:44:53  12/11/25,19:44:53  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,19:47:53  SMC SERVICE Disconnected from System Node: OK
+12/11/25,19:47:53  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,19:47:57  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,19:49:40  12/11/25,19:49:40  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,19:59:34  SMC SERVICE Disconnected from System Node: OK
+12/11/25,19:59:34  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,19:59:37  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,20:01:07  12/11/25,20:01:07  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,20:14:48  SMC SERVICE Disconnected from System Node: OK
+12/11/25,20:14:48  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,20:14:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,20:23:51  12/11/25,20:23:51  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,20:44:13  SMC SERVICE Disconnected from System Node: OK
+12/11/25,20:44:13  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,20:44:17  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,20:47:46  12/11/25,20:47:46  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,20:50:12  SMC SERVICE Disconnected from System Node: OK
+12/11/25,20:50:12  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,20:50:16  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,20:51:16  12/11/25,20:51:16  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,21:13:01  SMC SERVICE Disconnected from System Node: OK
+12/11/25,21:13:01  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,21:13:04  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,21:14:02  12/11/25,21:14:02  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,21:25:18  SMC SERVICE Disconnected from System Node: OK
+12/11/25,21:25:18  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,21:25:22  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,21:26:47  12/11/25,21:26:47  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/11/25,21:31:59  SMC SERVICE Disconnected from System Node: OK
+12/11/25,21:31:59  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/11/25,21:32:03  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/11/25,21:37:30  12/11/25,21:37:30  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,00:22:30  SMC SERVICE Disconnected from System Node: OK
+12/12/25,00:22:30  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,00:22:34  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,00:23:00  SMC STATUS, SN , SMC Test Power turned OFF
+12/12/25,01:25:52  12/12/25,01:25:52  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,01:37:12  SMC SERVICE Disconnected from System Node: OK
+12/12/25,01:37:12  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,01:37:22  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: OFF, Tester: OK, Test Power Cycle #33(12/11/2025 18:53:02)
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,01:59:50  SMC STATUS, SN , SMC Test Power turned ON
+12/12/25,02:02:57  12/12/25,02:05:01  12/12/25,02:25:52  12/12/25,02:25:52  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,02:28:59  SMC SERVICE Disconnected from System Node: OK
+12/12/25,02:28:59  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,02:29:02  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #34(12/12/2025 01:59:50)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,02:29:58  12/12/25,02:29:58  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,02:32:57  SMC SERVICE Disconnected from System Node: OK
+12/12/25,02:32:57  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,02:33:01  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #34(12/12/2025 01:59:50)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,02:36:51  12/12/25,02:36:51  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,02:46:49  SMC SERVICE Disconnected from System Node: OK
+12/12/25,02:46:49  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,02:46:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #34(12/12/2025 01:59:50)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,02:51:19  SMC STATUS, SN , SMC Test Power turned OFF
+12/12/25,07:08:07  SMC STATUS, SN , SMC Test Power turned ON
+12/12/25,07:11:14  12/12/25,07:13:17  12/12/25,07:17:01  12/12/25,07:17:01  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,07:18:46  SMC SERVICE Disconnected from System Node: OK
+12/12/25,07:18:46  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,07:18:50  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #35(12/12/2025 07:08:07)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,07:19:19  12/12/25,07:19:19  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,08:35:19  SMC SERVICE Disconnected from System Node: OK
+12/12/25,08:35:19  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,08:35:23  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #35(12/12/2025 07:08:07)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,08:42:25  12/12/25,08:42:25  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,09:00:59  12/12/25,09:00:59  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,09:00:59  CSmcWindowsServer duplicate connection received from client IG_XL before release.
+12/12/25,15:27:49  SMC SERVICE Disconnected from System Node: OK
+12/12/25,15:27:49  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,15:27:52  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #35(12/12/2025 07:08:07)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,15:40:14  SMC STATUS, SN , SMC Test Power turned OFF
+12/12/25,15:42:24  SMC STATUS, SN , SMC Test Power turned ON
+12/12/25,15:45:30  12/12/25,15:47:34  12/12/25,15:49:27  12/12/25,15:49:27  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,17:20:02  SMC SERVICE Disconnected from System Node: OK
+12/12/25,17:20:02  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,17:20:06  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #36(12/12/2025 15:42:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]
+12/12/25,17:27:30  12/12/25,17:27:30  SmcWindowsWinService V2018.10.15. PID: 10348. Connection Received from client IG_XL
+12/12/25,23:55:16  SMC SERVICE Disconnected from System Node: OK
+12/12/25,23:55:16  CSmcWindowsServer PID: 10348. Disconnect received from client IG_XL
+12/12/25,23:55:19  SMC SERVICE Connected to System Node (System Serial Number: 2026F602)
+Test Power: ON, Tester: OK, Test Power Cycle #36(12/12/2025 15:42:24)
+Slot: 023, SMC Ver: 3646-2018, ELEC-MECH, RAIDEN, FOR S [IG-XL\10.98.76_uflx\SMC\640-423-20_2018.dat]
+Slot: 048, SMC Ver: 3646-1708, SupportBoard 25-Slot [IG-XL\10.98.76_uflx\SMC\639-209-02_1708.dat]
+Slot: 122, SMC Ver: 1607-1545, SMC System Node
+Slot: 126, SMC Ver: 1841-1619, Dragon TB6 Support Cabin [IG-XL\10.98.76_uflx\SMC\630-945-00_1619.dat]

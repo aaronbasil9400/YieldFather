@@ -1,0 +1,128 @@
+
+Output Message File Version:1.00.00
+Type;	Product::Source;	Message;	Time Stamp
+Info;	MUI::LoadSettingsFile();	Finished Loading System Settings for file C:\Test\tmp\UVI264_BasicChk.msf;	12/12/2025 07:37:27
+Info;	MUI::MainWindow;	Current selected Test Environment and Test Coverage has no Tests to display.;	12/12/2025 07:37:27
+Info;	MUI::BuildTree();	Acquiring System Data for Tree;	12/12/2025 07:37:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : SupportBoard;	12/12/2025 07:37:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : Computer;	12/12/2025 07:37:28
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : DSP;	12/12/2025 07:37:28
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : SMC;	12/12/2025 07:37:28
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : VI26x8p5V2x90V;	12/12/2025 07:37:30
+Info;	VPManager::SheetManager;	Create and import Pin & Channel maps for job : Job__FactBC;	12/12/2025 07:37:31
+Info;	VPManager::SheetManager;	Create and import Pin Levels and Time Set sheets for job : Job__FactBC;	12/12/2025 07:37:31
+Info;	VPManager::SheetManager;	Create and import Test Instance and Flow sheets for job : JobSerial__FactBC;	12/12/2025 07:37:31
+Info;	VPManager::JobDefinition;	Create or update Job List Sheet for job JobSerial__FactBC;	12/12/2025 07:37:33
+Info;	VPManager::VPManager;	Set IG-XL job: JobSerial__FactBC for Factory Test\Basic Test Coverage;	12/12/2025 07:37:33
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactBC Job sheets for VP: SupportBoard;	12/12/2025 07:37:33
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactBC Job sheets for VP: Computer;	12/12/2025 07:37:33
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactBC Job sheets for VP: DSP;	12/12/2025 07:37:33
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactBC Job sheets for VP: SMC;	12/12/2025 07:37:33
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactBC Job sheets for VP: VI26x8p5V2x90V;	12/12/2025 07:37:33
+Info;	VPManager::VPManager;	Finished setting IG-XL job for Factory Test\Basic Test Coverage;	12/12/2025 07:37:33
+Info;	MUI::BuildTree();	Elapsed Time for Tree Creation : 6.579 Seconds;	12/12/2025 07:37:34
+Info;	MUI::ApplySystemSettings();	Finished applying System Settings;	12/12/2025 07:37:34
+Warning;	MUI::MainWindow;	Error or Warning occurred in MUI startup. Scroll window up to get details;	12/12/2025 07:37:34
+Info;	VPManager::TestExecutionManager;	Start of Run session for Factory Test:Basic;	12/12/2025 07:37:35
+Info;	VPManager::TestExecutionManager;	IG-XL job validation started.;	12/12/2025 07:37:35
+Info;	VPManager::TestExecutionManager;	IG-XL job validation succeeded.;	12/12/2025 07:37:41
+Info;	VPManager::TestExecutionManager;	Start Run Session Loop 1 of 1;	12/12/2025 07:37:41
+Info;	VPManager::TestExecutionManager;	Trigger start of  IG-XL job: JobSerial__FactBC for category: Options;	12/12/2025 07:37:41
+Info;	VPPortal::CDataServiceListener;	Start to log Test Category: Options;	12/12/2025 07:37:41
+Info;	VPManager::TestExecutionManager;	Calling tl_ProgramRun.;	12/12/2025 07:37:41
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramStarted interpose received for Test Category : Options;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	2027F601;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|CalStatus;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|CalStatus;	Beginning of VI26x8p5V2x90V:Board|CalStatus test...;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|CalStatus;	End of Board|CalStatus test.;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|PCIeLink;	Beginning of VI26x8p5V2x90V:Board|PCIeLink test...;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|CalStatus;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|PCIeLink;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|PCIeLink;	End of Board|PCIeLink test.;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|PCIeLink;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|IDPROM;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|IDPROM;	Beginning of VI26x8p5V2x90V:Board|IDPROM test...;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|IDPROM;	End of Board|IDPROM test.;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|Thor Revision;	Beginning of VI26x8p5V2x90V:Board|Thor Revision test...;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|IDPROM;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|Thor Revision;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|Thor Revision;	End of Board|Thor Revision test.;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|Thor Revision;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|ISL;	Beginning of VI26x8p5V2x90V:Board|ISL test...;	12/12/2025 07:37:49
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|ISL;	12/12/2025 07:37:49
+Info;	VI26x8p5V2x90V::Board|ISL;	End of Board|ISL test.;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|CalPROM;	Beginning of VI26x8p5V2x90V:Board|CalPROM test...;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|ISL;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|CalPROM;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|CalPROM;	End of Board|CalPROM test.;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|ShortBISTTest;	Beginning of VI26x8p5V2x90V:Board|ShortBISTTest test...;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|CalPROM;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|ShortBISTTest;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|ShortBISTTest;	End of Board|ShortBISTTest test.;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|ShortBISTTest;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|FPGA Revision;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|FPGA Revision;	Beginning of VI26x8p5V2x90V:Board|FPGA Revision test...;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|FPGA Revision;	End of Board|FPGA Revision test.;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|TempADC;	Beginning of VI26x8p5V2x90V:Board|TempADC test...;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|FPGA Revision;	12/12/2025 07:37:50
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|TempADC;	12/12/2025 07:37:50
+Info;	VI26x8p5V2x90V::Board|TempADC;	End of Board|TempADC test.;	12/12/2025 07:38:15
+Info;	VI26x8p5V2x90V::Board|ZeusTemp;	Beginning of VI26x8p5V2x90V:Board|ZeusTemp test...;	12/12/2025 07:38:15
+Info;	VI26x8p5V2x90V::Board|ZeusTemp;	End of Board|ZeusTemp test.;	12/12/2025 07:38:15
+Info;	VI26x8p5V2x90V::Board|FixedReferences;	Beginning of VI26x8p5V2x90V:Board|FixedReferences test...;	12/12/2025 07:38:15
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|TempADC;	12/12/2025 07:38:15
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|ZeusTemp;	12/12/2025 07:38:15
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|ZeusTemp;	12/12/2025 07:38:15
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|FixedReferences;	12/12/2025 07:38:15
+Info;	VI26x8p5V2x90V::Board|FixedReferences;	End of Board|FixedReferences test.;	12/12/2025 07:38:16
+Info;	VI26x8p5V2x90V::Board|Fixed Ref Heater;	Beginning of VI26x8p5V2x90V:Board|Fixed Ref Heater test...;	12/12/2025 07:38:16
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|FixedReferences;	12/12/2025 07:38:16
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|Fixed Ref Heater;	12/12/2025 07:38:16
+Info;	VI26x8p5V2x90V::Board|Fixed Ref Heater;	End of Board|Fixed Ref Heater test.;	12/12/2025 07:38:16
+Info;	VI26x8p5V2x90V::LV|VSelfTest;	Beginning of VI26x8p5V2x90V:LV|VSelfTest test...;	12/12/2025 07:38:16
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|Fixed Ref Heater;	12/12/2025 07:38:16
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|VSelfTest;	12/12/2025 07:38:16
+Info;	VI26x8p5V2x90V::LV|VSelfTest;	End of LV|VSelfTest test.;	12/12/2025 07:38:16
+Info;	VI26x8p5V2x90V::Board|DCSS|LVRes;	Beginning of VI26x8p5V2x90V:Board|DCSS|LVRes test...;	12/12/2025 07:38:16
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|VSelfTest;	12/12/2025 07:38:16
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|DCSS|LVRes;	12/12/2025 07:38:16
+Info;	VI26x8p5V2x90V::Board|DCSS|LVRes;	End of Board|DCSS|LVRes test.;	12/12/2025 07:38:17
+Info;	VI26x8p5V2x90V::Board|DCSS|Resistors;	Beginning of VI26x8p5V2x90V:Board|DCSS|Resistors test...;	12/12/2025 07:38:17
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|DCSS|LVRes;	12/12/2025 07:38:18
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|DCSS|Resistors;	12/12/2025 07:38:18
+Info;	VI26x8p5V2x90V::Board|DCSS|Resistors;	End of Board|DCSS|Resistors test.;	12/12/2025 07:38:18
+Info;	VI26x8p5V2x90V::Board|DISA Conn;	Beginning of VI26x8p5V2x90V:Board|DISA Conn test...;	12/12/2025 07:38:18
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|DCSS|Resistors;	12/12/2025 07:38:18
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|DISA Conn;	12/12/2025 07:38:18
+Info;	VI26x8p5V2x90V::Board|DISA Conn;	End of Board|DISA Conn test.;	12/12/2025 07:38:21
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|DISA Conn;	12/12/2025 07:38:21
+Info;	VI26x8p5V2x90V::DVM|DVMSELV;	Beginning of VI26x8p5V2x90V:DVM|DVMSELV test...;	12/12/2025 07:38:21
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:DVM|DVMSELV;	12/12/2025 07:38:21
+Info;	VI26x8p5V2x90V::DVM|DVMSELV;	End of DVM|DVMSELV test.;	12/12/2025 07:38:21
+Info;	VI26x8p5V2x90V::Precision References|Programmable;	Beginning of VI26x8p5V2x90V:Precision References|Programmable test...;	12/12/2025 07:38:21
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:DVM|DVMSELV;	12/12/2025 07:38:21
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Precision References|Programmable;	12/12/2025 07:38:21
+Info;	VI26x8p5V2x90V::Precision References|Programmable;	End of Precision References|Programmable test.;	12/12/2025 07:38:23
+Info;	VI26x8p5V2x90V::LV|PathResistance;	Beginning of VI26x8p5V2x90V:LV|PathResistance test...;	12/12/2025 07:38:23
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Precision References|Programmable;	12/12/2025 07:38:23
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:LV|PathResistance;	12/12/2025 07:38:23
+Info;	VI26x8p5V2x90V::LV|PathResistance;	End of LV|PathResistance test.;	12/12/2025 07:38:25
+Info;	VI26x8p5V2x90V::HV|HVVSelfTest;	Beginning of VI26x8p5V2x90V:HV|HVVSelfTest test...;	12/12/2025 07:38:25
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:LV|PathResistance;	12/12/2025 07:38:25
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:HV|HVVSelfTest;	12/12/2025 07:38:25
+Info;	VI26x8p5V2x90V::HV|HVVSelfTest;	End of HV|HVVSelfTest test.;	12/12/2025 07:38:31
+Info;	VI26x8p5V2x90V::TMU|Stamper Accuracy;	Beginning of VI26x8p5V2x90V:TMU|Stamper Accuracy test...;	12/12/2025 07:38:31
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:HV|HVVSelfTest;	12/12/2025 07:38:31
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:TMU|Stamper Accuracy;	12/12/2025 07:38:31
+Info;	VI26x8p5V2x90V::TMU|Stamper Accuracy;	End of TMU|Stamper Accuracy test.;	12/12/2025 07:38:32
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:TMU|Stamper Accuracy;	12/12/2025 07:38:32
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramEnded interpose received. Wait for Job complete.;	12/12/2025 07:38:32
+Info;	VPManager::TestExecutionManager;	Back from tl_ProgramRun.;	12/12/2025 07:38:32
+Info;	VPManager::TestExecutionManager;	End of IG-XL Job: JobSerial__FactBC with Test Category : Options;	12/12/2025 07:38:32
+Info;	VPManager::TestExecutionManager;	End Of Run session;	12/12/2025 07:38:32
+Info;	MUI::Elapsed Run Time From 'Start' to 'EndOfRunEvent';	57.982 Seconds;	12/12/2025 07:38:33
+Info;	MUI::MainWindow;	Maintenance exit request made.;	12/12/2025 07:38:33
+Info;	VPPortal::CDataServiceListener;	End of Run Session logging;	12/12/2025 07:38:33
+Info;	MUI::MainWindow;	Exiting: waiting for Excel process to end with 30 second timeout ...;	12/12/2025 07:38:33

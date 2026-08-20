@@ -1,0 +1,40 @@
+TDF Version: 4.0
+Tester: TB6-DA07
+IG-XL VERSION: 10.98.76_uflx(x64)
+IG-XL BUILD: 03.06.21.18.00
+CURRENT TIME: Fri Dec 12 7:35:54 2025 
+SYSTEM TYPE: UltraFLEXplus
+PROGRAM NAME: Full(Factory Test)
+SYSTEM SERIAL NUMBER: 2027F601
+MASTER SUPPORT BOARD TEMP: No Temperature Data.
+CDU TEMP: No Temperature Data.
+
+
+Board Configuration:
+Slot	Option Name      	Serial #	Rev Date	PartNum	Calibration State(in Memory)	Version numbers for Boards and Modules
+						CONFIG	piasa	DSC	BSP	UBOOT	KERNEL	RFS	zeus	mercury-1	mercury-2	chronos	EII	WD	NetDx	
+19.0	DC-8p5V90V       	506C8A9	2527-A	640-423-20	Calibrated	20170316_0834	0.1.4.0	20190429.1537	
+19.1	VI26x8p5V2x90V   	504E517	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+19.2	VI26x8p5V2x90V   	504BCE7	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+19.3	VI26x8p5V2x90V   	504BF45	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+19.4	VI26x8p5V2x90V   	504E507	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+						BSP	UBOOT	DTB	KERNEL	RFS	yoshi	westport-0	westport-1	smaug-0	EII	WD	NetDx	norbert-0	norbert-2	norbert-3	
+48.0	Support          	C3E5074	2320-A	639-209-02	Calibrated	20191218_1351	20171026_0912	20160531.1427	20181212_0744	20191218_1351	0.3.4.0	0.0.2.1	0.0.2.1	1.0.4.1	1.0.20210306_1408	4.4.0	20181211.1015	
+48.1	DCCal            	C3D8576	1720-A	639-210-01		
+48.8	Distribution     	C3E50D7	1814-A	630-925-01														TRDS EXCEP: Slot=48; SubSlot=0; ImageName=norbert-0; exception message=Unrecognized image 'norbert-0'.	TRDS EXCEP: Slot=48; SubSlot=0; ImageName=norbert-2; exception message=Unrecognized image 'norbert-2'.	0.2.4.0	
+DIB	InterfaceBoard ---Not Programmed---
+
+
+P/F	Slot	Subslot	Instrument	TestGrp2	TestGrp1	TestType	TestNb	Channel	TypeofTest	ExpVal	LowLim	Value	HighLim	Units	%Delta	LpCnt	TestLabel	TestParameters
+PASS|19|1 | VI26x8p5V2x90V||Board|ConfigFlashMemory|100|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-1|
+PASS|19|1 | VI26x8p5V2x90V||Board|ConfigFlashMemory|101|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-2|
+PASS|19|1 | VI26x8p5V2x90V||Board|ConfigFlashMemory|102|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|CHRONOS|
+PASS|19|2 | VI26x8p5V2x90V||Board|ConfigFlashMemory|100|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-1|
+PASS|19|2 | VI26x8p5V2x90V||Board|ConfigFlashMemory|101|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-2|
+PASS|19|2 | VI26x8p5V2x90V||Board|ConfigFlashMemory|102|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|CHRONOS|
+PASS|19|3 | VI26x8p5V2x90V||Board|ConfigFlashMemory|100|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-1|
+PASS|19|3 | VI26x8p5V2x90V||Board|ConfigFlashMemory|101|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-2|
+PASS|19|3 | VI26x8p5V2x90V||Board|ConfigFlashMemory|102|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|CHRONOS|
+PASS|19|4 | VI26x8p5V2x90V||Board|ConfigFlashMemory|100|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-1|
+PASS|19|4 | VI26x8p5V2x90V||Board|ConfigFlashMemory|101|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|MERCURY-2|
+PASS|19|4 | VI26x8p5V2x90V||Board|ConfigFlashMemory|102|LV1|Bol|1.2.3.4|1.2.3.4|1.2.3.4||||1|CHRONOS|

@@ -1,0 +1,136 @@
+# This file was generated on 12/12/25 at 08:46:41.
+
+#TesterConfig.txt loaded from: c:\Program Files (x86)\Teradyne\IG-XL\10.98.76_uflx\tester\PhysicalConfig.txt
+
+# In order to load this configuration information in a pre-3.64.50
+# version of IG-XL, it must be converted to the version 0 format.
+# To convert this file from version 1 to version 0:
+#	1. Make a backup of this file.
+#	2. Copy the information between the tags <TEST_HEAD TH 1> and </TEST_HEAD TH 1>,
+#	   paste it into a new file, and save that file as SimulatedConfig.txt in the current test program's directory.
+#	3. Copy the information between the tags <BACKPLANE-DIB_CABLES TH 1> and </BACKPLANE-DIB_CABLES TH 1>,
+#	   paste it into a new file, and save that file as DibSlotConfig.txt in the current test program's directory.
+
+<Version>
+1
+</Version>
+
+<Configuration>
+UltraFLEXplus
+</Configuration>
+
+<TESTER_INFO TI 1>
+TESTER SERIAL NUMBER: 2027F601
+TESTER PRODUCTION NUMBER: TB6-DA07
+TESTER PART NUMBER: 635-807-60
+PTL PART NUMBER: 000-000-00
+PTL SERIAL NUMBER: 
+IG-XL VERSION: 10.98.76_uflx
+IG-XL BUILD: 03.06.21.06.00
+CONFIG DATE: 12/12/25
+CONFIG TIME: 08:46:41
+</TESTER_INFO TI 1>
+
+<TEST_HEAD TH 1>
+#slot[.subslot]	Type		idprom (type serial rev company)
+
+19.0		DC-8p5V90V		640-423-20 506C8A9 2527-A 5445
+    		Communications		639-977-13 5053E91 2504-A 5445
+    		PowerBoard		671-980-01 50490FB 2042-A 5445
+    		Midplane		625-390-00 506D1C2 1901-A 5445
+19.1		VI26x8p5V2x90V		638-249-30 504E517 2520-A 5445
+19.2		VI26x8p5V2x90V		638-249-30 504BCE7 2520-A 5445
+19.3		VI26x8p5V2x90V		638-249-30 504BF45 2520-A 5445
+19.4		VI26x8p5V2x90V		638-249-30 504E507 2520-A 5445
+48.0		Support		639-209-02 C3E5074 2320-A 5445
+    		SupportPA		638-561-02 C3D1602 2011-A 5445
+    		TimingCal		638-557-01 C3E54B8 1742-A 5445
+48.1		DCCal		639-210-01 C3D8576 1720-A 5445
+48.8		Distribution		630-925-01 C3E50D7 1814-A 5445
+</TEST_HEAD TH 1>
+
+<SWITCH SW 0>
+NAME:                   ICX7450-24
+TERADYNE PART NUMBER:   634-557-00
+VENDOR PART NUMBER:     N/A
+SERIAL NUMBER:          N/A
+COMPANY:                Brocade Communications Systems
+SOFTWARE VERSION:       N/A
+</SWITCH SW 0>
+
+<LICENSE_ENABLERS>
+#Off-line enabling levels
+#FEATURE                      ENABLED LEVEL    LICENSE COUNT    LEGAL ENABLING POINTS
+ACCapture                     124              20000            124,75,40,3
+ACCapture                     75               20000            124,75,40,3
+ACCapture                     40               20000            124,75,40,3
+ACCapture                     3                20000            124,75,40,3
+ACSource                      124              20000            124,80,40,3
+ACSource                      80               20000            124,80,40,3
+ACSource                      40               20000            124,80,40,3
+ACSource                      3                20000            124,80,40,3
+BitmapTool.StandAlone         1                N/A              1,0
+CTO_CaptureSampleRate         1                20000            1,0
+CTO_Channels                  1                20000            1,0
+CTO_INLCal                    1                20000            1,0
+CTO_SourceModeAWG             1                20000            1,0
+CTO_SourceModeSine            1                20000            1,0
+DC-8p5V                       1                20000            1
+DC-8p5VMux                    1                20000            1
+DC-90V                        1                20000            1
+DC-DVM                        1                20000            1
+DC-TMU                        1                20000            1
+DSPPCConcurrentAlgCount       128              N/A              256,254,252,250,248,246,244,242,240,238,236,234,232,230,228,226,224,222,220,218,216,214,212,210,208,206,204,202,200,198,196,194,192,190,188,186,184,182,180,178,176,174,172,170,168,166,164,162,160,158,156,154,152,150,148,146,144,142,140,138,136,134,132,130,128,126,124,122,120,118,116,114,112,110,108,106,104,102,100,98,96,94,92,90,88,86,84,82,80,78,76,74,72,70,68,66,64,62,60,58,56,54,52,50,48,46,44,42,40,38,36,34,32,30,28,26,24,22,20,18,16,14,12,10,8,6,4,2
+DVM-Accuracy                  1                20000            1
+DVM-CalGain                   1                20000            1
+DVM-CalOffset                 1                20000            1
+DVM-RefCurrent                1                20000            1
+DVM-RefVoltage                1                20000            1
+DVM-Speed                     1                20000            1
+HSDP_AutoStrobe               1                20000            1
+HSDP_DDR                      1                20000            1
+HSDP_DSSC                     1                20000            1,0
+HSDP_DSSC_Personalization     1                20000            1,0
+HSDP_Enable                   1                20000            1
+HSDP_MemoryDepth              1                20000            1
+HSDP_nWire                    1                20000            1
+HSDP_SCAN                     1                20000            1,0
+HSDP_ScanSiteCopy             1                20000            1
+HSDP_Speed                    2200             20000            2200,1600,1500,1400,1300,1200,1100,1000,800,700,600,500,400,300,200,100,50,1
+IgNet                         N/A              N/A              N/A              
+IG-XL_Bitmap                  N/A              N/A              N/A              
+IG-XL_EEPROM_ACCESS           N/A              N/A              N/A              
+IG-XL_PBM                     N/A              N/A              N/A              
+IG-XL_RA                      N/A              N/A              N/A              
+IG-XL_RAPlus                  N/A              N/A              N/A              
+IG-XL_SECSGEM                 N/A              N/A              N/A              
+IG-XL_TesterServiceDaemon     N/A              N/A              N/A              
+IGXLConcurrentExecution       N/A              N/A              N/A              
+MainSlots                     36               N/A              36,24,16,12,8,6,4
+TDA_Enable                    1                20000            0,1
+UltraClockHPCores             1                20000            1,0
+UltraClockHPFrequency         200              20000            200,0
+UltraClockHPPorts             1                20000            1,0
+UltraClockHPSquareWave        1                20000            1,0
+UW48-1PortVNA                 1                20000            1,0
+UW48-EDR                      1                20000            1,0
+UW48-LUT                      1                20000            1,0
+UW48-Modulation               1                20000            1,0
+UW48-NoiseSource              1                20000            1,0
+UW48-Ports                    1                20000            1,0
+UW48-RcvBW                    999              20000            999,200,160,80,40,0
+UW48-RcvFrequency             6000             20000            6000,3000,1000,0
+UW48-RcvFrequency             3000             20000            6000,3000,1000,0
+UW48-RcvFrequency             1000             20000            6000,3000,1000,0
+UW48-Receiver                 1                20000            1,0
+UW48-SrcFrequency             6000             20000            6000,3000,1000,0
+UW48-SrcFrequency             3000             20000            6000,3000,1000,0
+UW48-SrcFrequency             1000             20000            6000,3000,1000,0
+UW48-SrcModulation            999              20000            999,200,160,80,40,0
+UW48-SrcSynthesizer           1                20000            1,0
+VPS_Enable                    1                20000            1
+VS-5A                         1                20000            1,0
+VS-800mA                      1                20000            1,0
+WaferMap.StandAlone           1                N/A              1,0
+</LICENSE_ENABLERS>
+

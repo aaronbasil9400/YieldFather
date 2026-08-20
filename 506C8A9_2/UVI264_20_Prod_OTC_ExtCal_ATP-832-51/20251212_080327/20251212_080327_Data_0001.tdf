@@ -1,0 +1,270 @@
+TDF Version: 4.0
+Tester: TB6-DA07
+IG-XL VERSION: 10.98.76_uflx(x64)
+IG-XL BUILD: 03.06.21.18.00
+CURRENT TIME: Fri Dec 12 7:51:45 2025 
+SYSTEM TYPE: UltraFLEXplus
+PROGRAM NAME: DC-8p5V90V.External
+SYSTEM SERIAL NUMBER: 2027F601
+MASTER SUPPORT BOARD TEMP: No Temperature Data.
+CDU TEMP: No Temperature Data.
+
+
+Board Configuration:
+Slot	Option Name      	Serial #	Rev Date	PartNum	Calibration State(in Memory)	Version numbers for Boards and Modules
+						CONFIG	piasa	DSC	BSP	UBOOT	KERNEL	RFS	zeus	mercury-1	mercury-2	chronos	EII	WD	NetDx	
+19.0	DC-8p5V90V       	506C8A9	2527-A	640-423-20	Not Calibrated	20170316_0834	0.1.4.0	20190429.1537	
+19.1	VI26x8p5V2x90V   	504E517	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+19.2	VI26x8p5V2x90V   	504BCE7	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+19.3	VI26x8p5V2x90V   	504BF45	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+19.4	VI26x8p5V2x90V   	504E507	2520-A	638-249-30					20200723_1640	20190108_1207	20181212_0747	20200723_1640	1.9.6.8	1.9.1.2	1.9.1.2	1.9.2.1	0.0.20210306_1409	4.4.0	20181211.1015	
+						BSP	UBOOT	DTB	KERNEL	RFS	yoshi	westport-0	westport-1	smaug-0	EII	WD	NetDx	norbert-0	norbert-2	norbert-3	
+48.0	Support          	C3E5074	2320-A	639-209-02	Calibrated	20191218_1351	20171026_0912	20160531.1427	20181212_0744	20191218_1351	0.3.4.0	0.0.2.1	0.0.2.1	1.0.4.1	1.0.20210306_1408	4.4.0	20181211.1015	
+48.1	DCCal            	C3D8576	1720-A	639-210-01		
+48.8	Distribution     	C3E50D7	1814-A	630-925-01														TRDS EXCEP: Slot=48; SubSlot=0; ImageName=norbert-0; exception message=Unrecognized image 'norbert-0'.	TRDS EXCEP: Slot=48; SubSlot=0; ImageName=norbert-2; exception message=Unrecognized image 'norbert-2'.	0.2.4.0	
+DIB	InterfaceBoard ---Not Programmed---
+
+
+P/F	Slot	Subslot	Instrument	TestGrp2	TestGrp1	TestType	TestNb	Channel	TypeofTest	ExpVal	LowLim	Value	HighLim	Units	%Delta	LpCnt	TestLabel	TestParameters
+PASS|19|1 | DC-8p5V90V|||DVM_Status|160030050000|0|Par|||HP3458A||||1|HP3458A ; DVM ID, DVM ID|
+PASS|19|1 | DC-8p5V90V|||DVM_Status|160030100000|0|Par|||34.4303416||C||1|34.4 C; Factory temp, DVM factory cal temperature|
+PASS|19|1 | DC-8p5V90V|||DVM_Status|160030150000|0|Par|||40.8157947||C||1|40.8 C; Auto temp, DVM auto cal temperaturents|
+PASS|19|1 | DC-8p5V90V|||DVM_Status|160030200000|0|Par|||41.1||C||1|41.1 C; Current temp, DVM current temperature|
+PASS|19|1 | DC-8p5V90V|||DVM_Status|160030250000|0|Par|||6.6696584||C||1| 6.7 C; Factory temp delta, Factory cal temp delta|
+PASS|19|1 | DC-8p5V90V|||DVM_Status|160030300000|0|Par|||0.284205300000004||C||1| 0.3 C; Auto temp delta, Auto cal temp delta|
+PASS|19|1 | DC-8p5V90V|||Resistor|160050050000|0|Par|50000|49986.5|49998.98613|50013.5|O||1|49998.98613 Ohm; 50k, Measure resistor with external meter|
+PASS|19|1 | DC-8p5V90V|||Resistor|160050050001|0|Par|5000|4998.65|4999.961988|5001.35|O||1|4999.961988 Ohm; 5k, Measure resistor with external meter|
+PASS|19|1 | DC-8p5V90V|||Resistor|160050050002|0|Par|500|499.82|499.9868789|500.18|O||1|499.9868789 Ohm; 500, Measure resistor with external meter|
+PASS|19|1 | DC-8p5V90V|||Resistor|160050050003|0|Par|50|49.955|49.98254346|50.045|O||1|49.98254346 Ohm; 50, Measure resistor with external meter|
+PASS|19|1 | DC-8p5V90V|||Resistor|160050050004|0|Par|5|4.91|4.989637604|5.09|O||1|4.989637604 Ohm; 5, Measure resistor with external meter|
+PASS|19|1 | DC-8p5V90V|||Resistor|160050050005|0|Par|0.5|0.491|0.4997443605|0.509|O||1|0.4997443605 Ohm; 0.5, Measure resistor with external meter|
+PASS|19|2 | DC-8p5V90V|||Resistor|160050050000|0|Par|50000|49986.5|49999.28286|50013.5|O||1|49999.28286 Ohm; 50k, Measure resistor with external meter|
+PASS|19|2 | DC-8p5V90V|||Resistor|160050050001|0|Par|5000|4998.65|4999.894637|5001.35|O||1|4999.894637 Ohm; 5k, Measure resistor with external meter|
+PASS|19|2 | DC-8p5V90V|||Resistor|160050050002|0|Par|500|499.82|499.9849301|500.18|O||1|499.9849301 Ohm; 500, Measure resistor with external meter|
+PASS|19|2 | DC-8p5V90V|||Resistor|160050050003|0|Par|50|49.955|49.97983645|50.045|O||1|49.97983645 Ohm; 50, Measure resistor with external meter|
+PASS|19|2 | DC-8p5V90V|||Resistor|160050050004|0|Par|5|4.91|4.988781409|5.09|O||1|4.988781409 Ohm; 5, Measure resistor with external meter|
+PASS|19|2 | DC-8p5V90V|||Resistor|160050050005|0|Par|0.5|0.491|0.5001210734|0.509|O||1|0.5001210734 Ohm; 0.5, Measure resistor with external meter|
+PASS|19|3 | DC-8p5V90V|||Resistor|160050050000|0|Par|50000|49986.5|50000.36199|50013.5|O||1|50000.36199 Ohm; 50k, Measure resistor with external meter|
+PASS|19|3 | DC-8p5V90V|||Resistor|160050050001|0|Par|5000|4998.65|4999.963544|5001.35|O||1|4999.963544 Ohm; 5k, Measure resistor with external meter|
+PASS|19|3 | DC-8p5V90V|||Resistor|160050050002|0|Par|500|499.82|499.973119|500.18|O||1|499.973119 Ohm; 500, Measure resistor with external meter|
+PASS|19|3 | DC-8p5V90V|||Resistor|160050050003|0|Par|50|49.955|49.97613756|50.045|O||1|49.97613756 Ohm; 50, Measure resistor with external meter|
+PASS|19|3 | DC-8p5V90V|||Resistor|160050050004|0|Par|5|4.91|4.981789307|5.09|O||1|4.981789307 Ohm; 5, Measure resistor with external meter|
+PASS|19|3 | DC-8p5V90V|||Resistor|160050050005|0|Par|0.5|0.491|0.5000765632|0.509|O||1|0.5000765632 Ohm; 0.5, Measure resistor with external meter|
+PASS|19|4 | DC-8p5V90V|||Resistor|160050050000|0|Par|50000|49986.5|49999.71074|50013.5|O||1|49999.71074 Ohm; 50k, Measure resistor with external meter|
+PASS|19|4 | DC-8p5V90V|||Resistor|160050050001|0|Par|5000|4998.65|4999.883292|5001.35|O||1|4999.883292 Ohm; 5k, Measure resistor with external meter|
+PASS|19|4 | DC-8p5V90V|||Resistor|160050050002|0|Par|500|499.82|499.9856815|500.18|O||1|499.9856815 Ohm; 500, Measure resistor with external meter|
+PASS|19|4 | DC-8p5V90V|||Resistor|160050050003|0|Par|50|49.955|49.9902298|50.045|O||1|49.9902298 Ohm; 50, Measure resistor with external meter|
+PASS|19|4 | DC-8p5V90V|||Resistor|160050050004|0|Par|5|4.91|4.994336364|5.09|O||1|4.994336364 Ohm; 5, Measure resistor with external meter|
+PASS|19|4 | DC-8p5V90V|||Resistor|160050050005|0|Par|0.5|0.491|0.50002746|0.509|O||1|0.50002746 Ohm; 0.5, Measure resistor with external meter|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100050000|0|Par|0|-23.1|3.644108624|23.1|uV||1|     3.644 uV; _7p0 V common mode path, Common mode measurement|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100050001|0|Par|0|-23.1|3.157243909|23.1|uV||1|     3.157 uV; _3p5 V common mode path, Common mode measurement|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100050002|0|Par|0|-23.1|5.001428436|23.1|uV||1|     5.001 uV; _PR_unbuffered V common mode path, Common mode measurement|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100050003|0|Par|0|-23.1|3.127736957|23.1|uV||1|     3.128 uV; _PR V common mode path, Common mode measurement|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150000|0|Par|7|6.5125|7.119383911|7.4875|V||1| 7.1193839 V; _7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200000|0|Par|-7|-7.4875|-7.119375133|-6.5125|V||1|-7.1193751 V; _7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250000|0|Par|7|6.5125|7.119379522|7.4875|V||1| 7.1193795 V; _7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300000|0|Par|0|-23.1|4.38899999988251|23.1|uV||1|     4.389 uV; _7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150001|0|Par|-7|-7.4875|-7.119893644|-6.5125|V||1|-7.1198936 V; _N7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200001|0|Par|7|6.5125|7.119902334|7.4875|V||1| 7.1199023 V; _N7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250001|0|Par|-7|-7.4875|-7.119897989|-6.5125|V||1|-7.1198980 V; _N7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300001|0|Par|0|-23.1|4.34499999979465|23.1|uV||1|     4.345 uV; _N7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150002|0|Par|3.5|3.25625|3.559738864|3.74375|V||1| 3.5597389 V; _3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200002|0|Par|-3.5|-3.74375|-3.55973106|-3.25625|V||1|-3.5597311 V; _3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250002|0|Par|3.5|3.25625|3.559734962|3.74375|V||1| 3.5597350 V; _3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300002|0|Par|0|-23.1|3.90200000000007|23.1|uV||1|     3.902 uV; _3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150003|0|Par|-3.5|-3.74375|-3.55999767|-3.25625|V||1|-3.5599977 V; _N3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200003|0|Par|3.5|3.25625|3.560004707|3.74375|V||1| 3.5600047 V; _N3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250003|0|Par|-3.5|-3.74375|-3.5600011885|-3.25625|V||1|-3.5600012 V; _N3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300003|0|Par|0|-23.1|3.51850000024356|23.1|uV||1|     3.519 uV; _N3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150004|0|Par|1.4|1.3025|1.423905702|1.4975|V||1| 1.4239057 V; _1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200004|0|Par|-1.4|-1.4975|-1.423898871|-1.3025|V||1|-1.4238989 V; _1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250004|0|Par|1.4|1.3025|1.4239022865|1.4975|V||1| 1.4239023 V; _1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300004|0|Par|0|-23.1|3.41549999993696|23.1|uV||1|     3.415 uV; _1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150005|0|Par|-1.4|-1.4975|-1.424014214|-1.3025|V||1|-1.4240142 V; _N1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200005|0|Par|1.4|1.3025|1.424020661|1.4975|V||1| 1.4240207 V; _N1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250005|0|Par|-1.4|-1.4975|-1.4240174375|-1.3025|V||1|-1.4240174 V; _N1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300005|0|Par|0|-23.1|3.22349999981597|23.1|uV||1|     3.223 uV; _N1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150006|0|Par|0.7|0.65125|0.7119914166|0.74875|V||1| 0.7119914 V; _0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200006|0|Par|-0.7|-0.74875|-0.7119842759|-0.65125|V||1|-0.7119843 V; _0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250006|0|Par|0.7|0.65125|0.71198784625|0.74875|V||1| 0.7119878 V; _0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300006|0|Par|0|-23.1|3.57034999998174|23.1|uV||1|     3.570 uV; _0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150007|0|Par|-0.7|-0.74875|-0.7120500321|-0.65125|V||1|-0.7120500 V; _N0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200007|0|Par|0.7|0.65125|0.7120564499|0.74875|V||1| 0.7120564 V; _N0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250007|0|Par|-0.7|-0.74875|-0.712053241|-0.65125|V||1|-0.7120532 V; _N0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300007|0|Par|0|-23.1|3.20890000005125|23.1|uV||1|     3.209 uV; _N0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150008|0|Par|0.35|0.325625|0.3559995073|0.374375|V||1| 0.3559995 V; _0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200008|0|Par|-0.35|-0.374375|-0.3559926027|-0.325625|V||1|-0.3559926 V; _0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250008|0|Par|0.35|0.325625|0.355996055|0.374375|V||1| 0.3559961 V; _0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300008|0|Par|0|-23.1|3.45230000003971|23.1|uV||1|     3.452 uV; _0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150009|0|Par|-0.35|-0.374375|-0.3560330567|-0.325625|V||1|-0.3560331 V; _N0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200009|0|Par|0.35|0.325625|0.356039386|0.374375|V||1| 0.3560394 V; _N0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250009|0|Par|-0.35|-0.374375|-0.35603622135|-0.325625|V||1|-0.3560362 V; _N0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300009|0|Par|0|-23.1|3.16464999999821|23.1|uV||1|     3.165 uV; _N0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150010|0|Par|0.195|0.181419642857143|0.192422184|0.208580357142857|V||1| 0.1924222 V; _0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200010|0|Par|-0.195|-0.208580357142857|-0.1924153531|-0.181419642857143|V||1|-0.1924154 V; _0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250010|0|Par|0.195|0.181419642857143|0.19241876855|0.208580357142857|V||1| 0.1924188 V; _0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300010|0|Par|0|-23.1|3.41544999998833|23.1|uV||1|     3.415 uV; _0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100150011|0|Par|-0.195|-0.208580357142857|-0.1924442552|-0.181419642857143|V||1|-0.1924443 V; _N0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100200011|0|Par|0.195|0.181419642857143|0.192450791|0.208580357142857|V||1| 0.1924508 V; _N0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100250011|0|Par|-0.195|-0.208580357142857|-0.1924475231|-0.181419642857143|V||1|-0.1924475 V; _N0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100300011|0|Par|0|-23.1|3.2679000000202|23.1|uV||1|     3.268 uV; _N0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|1 | DC-8p5V90V|||FixedReference|160100350000|0|Par|0|-23.1|-1.873691479|23.1|uV||1|    -1.874 uV; PR/PR Unbuffered Difference, Difference between buffered PR and unbuffered PR measurements|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100050000|0|Par|0|-23.1|1.962212336|23.1|uV||1|     1.962 uV; _7p0 V common mode path, Common mode measurement|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100050001|0|Par|0|-23.1|2.06548667|23.1|uV||1|     2.065 uV; _3p5 V common mode path, Common mode measurement|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100050002|0|Par|0|-23.1|3.880164244|23.1|uV||1|     3.880 uV; _PR_unbuffered V common mode path, Common mode measurement|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100050003|0|Par|0|-23.1|2.213021432|23.1|uV||1|     2.213 uV; _PR V common mode path, Common mode measurement|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150000|0|Par|7|6.5125|7.151105951|7.4875|V||1| 7.1511060 V; _7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200000|0|Par|-7|-7.4875|-7.151099267|-6.5125|V||1|-7.1510993 V; _7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250000|0|Par|7|6.5125|7.151102609|7.4875|V||1| 7.1511026 V; _7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300000|0|Par|0|-23.1|3.34199999940665|23.1|uV||1|     3.342 uV; _7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150001|0|Par|-7|-7.4875|-7.150951187|-6.5125|V||1|-7.1509512 V; _N7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200001|0|Par|7|6.5125|7.150957855|7.4875|V||1| 7.1509579 V; _N7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250001|0|Par|-7|-7.4875|-7.150954521|-6.5125|V||1|-7.1509545 V; _N7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300001|0|Par|0|-23.1|3.33399999963291|23.1|uV||1|     3.334 uV; _N7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150002|0|Par|3.5|3.25625|3.575651551|3.74375|V||1| 3.5756516 V; _3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200002|0|Par|-3.5|-3.74375|-3.57564559|-3.25625|V||1|-3.5756456 V; _3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250002|0|Par|3.5|3.25625|3.5756485705|3.74375|V||1| 3.5756486 V; _3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300002|0|Par|0|-23.1|2.98049999969408|23.1|uV||1|     2.980 uV; _3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150003|0|Par|-3.5|-3.74375|-3.575577827|-3.25625|V||1|-3.5755778 V; _N3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200003|0|Par|3.5|3.25625|3.575583729|3.74375|V||1| 3.5755837 V; _N3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250003|0|Par|-3.5|-3.74375|-3.575580778|-3.25625|V||1|-3.5755808 V; _N3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300003|0|Par|0|-23.1|2.95099999991777|23.1|uV||1|     2.951 uV; _N3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150004|0|Par|1.4|1.3025|1.430226549|1.4975|V||1| 1.4302265 V; _1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200004|0|Par|-1.4|-1.4975|-1.430220839|-1.3025|V||1|-1.4302208 V; _1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250004|0|Par|1.4|1.3025|1.430223694|1.4975|V||1| 1.4302237 V; _1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300004|0|Par|0|-23.1|2.8549999999683|23.1|uV||1|     2.855 uV; _1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150005|0|Par|-1.4|-1.4975|-1.430203327|-1.3025|V||1|-1.4302033 V; _N1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200005|0|Par|1.4|1.3025|1.430208741|1.4975|V||1| 1.4302087 V; _N1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250005|0|Par|-1.4|-1.4975|-1.430206034|-1.3025|V||1|-1.4302060 V; _N1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300005|0|Par|0|-23.1|2.70699999993518|23.1|uV||1|     2.707 uV; _N1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150006|0|Par|0.7|0.65125|0.7151475245|0.74875|V||1| 0.7151475 V; _0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200006|0|Par|-0.7|-0.74875|-0.7151419477|-0.65125|V||1|-0.7151419 V; _0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250006|0|Par|0.7|0.65125|0.7151447361|0.74875|V||1| 0.7151447 V; _0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300006|0|Par|0|-23.1|2.78840000000891|23.1|uV||1|     2.788 uV; _0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150007|0|Par|-0.7|-0.74875|-0.7151417559|-0.65125|V||1|-0.7151418 V; _N0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200007|0|Par|0.7|0.65125|0.7151472294|0.74875|V||1| 0.7151472 V; _N0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250007|0|Par|-0.7|-0.74875|-0.71514449265|-0.65125|V||1|-0.7151445 V; _N0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300007|0|Par|0|-23.1|2.73674999995421|23.1|uV||1|     2.737 uV; _N0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150008|0|Par|0.35|0.325625|0.3575829684|0.374375|V||1| 0.3575830 V; _0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200008|0|Par|-0.35|-0.374375|-0.3575767277|-0.325625|V||1|-0.3575767 V; _0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250008|0|Par|0.35|0.325625|0.35757984805|0.374375|V||1| 0.3575798 V; _0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300008|0|Par|0|-23.1|3.12034999999655|23.1|uV||1|     3.120 uV; _0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150009|0|Par|-0.35|-0.374375|-0.3575846503|-0.325625|V||1|-0.3575847 V; _N0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200009|0|Par|0.35|0.325625|0.3575906107|0.374375|V||1| 0.3575906 V; _N0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250009|0|Par|-0.35|-0.374375|-0.3575876305|-0.325625|V||1|-0.3575876 V; _N0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300009|0|Par|0|-23.1|2.98020000000232|23.1|uV||1|     2.980 uV; _N0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150010|0|Par|0.195|0.181419642857143|0.1932799068|0.208580357142857|V||1| 0.1932799 V; _0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200010|0|Par|-0.195|-0.208580357142857|-0.1932734891|-0.181419642857143|V||1|-0.1932735 V; _0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250010|0|Par|0.195|0.181419642857143|0.19327669795|0.208580357142857|V||1| 0.1932767 V; _0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300010|0|Par|0|-23.1|3.2088499999916|23.1|uV||1|     3.209 uV; _0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100150011|0|Par|-0.195|-0.208580357142857|-0.1932850558|-0.181419642857143|V||1|-0.1932851 V; _N0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100200011|0|Par|0.195|0.181419642857143|0.1932915473|0.208580357142857|V||1| 0.1932915 V; _N0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100250011|0|Par|-0.195|-0.208580357142857|-0.19328830155|-0.181419642857143|V||1|-0.1932883 V; _N0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100300011|0|Par|0|-23.1|3.24574999999161|23.1|uV||1|     3.246 uV; _N0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|2 | DC-8p5V90V|||FixedReference|160100350000|0|Par|0|-23.1|-1.667142812|23.1|uV||1|    -1.667 uV; PR/PR Unbuffered Difference, Difference between buffered PR and unbuffered PR measurements|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100050000|0|Par|0|-23.1|0.8114411917|23.1|uV||1|     0.811 uV; _7p0 V common mode path, Common mode measurement|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100050001|0|Par|0|-23.1|0.9147155252|23.1|uV||1|     0.915 uV; _3p5 V common mode path, Common mode measurement|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100050002|0|Par|0|-23.1|2.655625718|23.1|uV||1|     2.656 uV; _PR_unbuffered V common mode path, Common mode measurement|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100050003|0|Par|0|-23.1|0.7376738106|23.1|uV||1|     0.738 uV; _PR V common mode path, Common mode measurement|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150000|0|Par|7|6.5125|7.134891069|7.4875|V||1| 7.1348911 V; _7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200000|0|Par|-7|-7.4875|-7.134886702|-6.5125|V||1|-7.1348867 V; _7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250000|0|Par|7|6.5125|7.1348888855|7.4875|V||1| 7.1348889 V; _7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300000|0|Par|0|-23.1|2.1834999994752|23.1|uV||1|     2.183 uV; _7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150001|0|Par|-7|-7.4875|-7.134738252|-6.5125|V||1|-7.1347383 V; _N7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200001|0|Par|7|6.5125|7.134742118|7.4875|V||1| 7.1347421 V; _N7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250001|0|Par|-7|-7.4875|-7.134740185|-6.5125|V||1|-7.1347402 V; _N7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300001|0|Par|0|-23.1|1.93300000006502|23.1|uV||1|     1.933 uV; _N7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150002|0|Par|3.5|3.25625|3.567568239|3.74375|V||1| 3.5675682 V; _3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200002|0|Par|-3.5|-3.74375|-3.567565539|-3.25625|V||1|-3.5675655 V; _3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250002|0|Par|3.5|3.25625|3.567566889|3.74375|V||1| 3.5675669 V; _3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300002|0|Par|0|-23.1|1.34999999978902|23.1|uV||1|     1.350 uV; _3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150003|0|Par|-3.5|-3.74375|-3.567498603|-3.25625|V||1|-3.5674986 V; _N3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200003|0|Par|3.5|3.25625|3.567501199|3.74375|V||1| 3.5675012 V; _N3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250003|0|Par|-3.5|-3.74375|-3.567499901|-3.25625|V||1|-3.5674999 V; _N3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300003|0|Par|0|-23.1|1.29799999992741|23.1|uV||1|     1.298 uV; _N3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150004|0|Par|1.4|1.3025|1.427022315|1.4975|V||1| 1.4270223 V; _1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200004|0|Par|-1.4|-1.4975|-1.427020441|-1.3025|V||1|-1.4270204 V; _1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250004|0|Par|1.4|1.3025|1.427021378|1.4975|V||1| 1.4270214 V; _1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300004|0|Par|0|-23.1|0.937000000034161|23.1|uV||1|     0.937 uV; _1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150005|0|Par|-1.4|-1.4975|-1.427003622|-1.3025|V||1|-1.4270036 V; _N1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200005|0|Par|1.4|1.3025|1.427005968|1.4975|V||1| 1.4270060 V; _N1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250005|0|Par|-1.4|-1.4975|-1.427004795|-1.3025|V||1|-1.4270048 V; _N1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300005|0|Par|0|-23.1|1.17300000002096|23.1|uV||1|     1.173 uV; _N1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150006|0|Par|0.7|0.65125|0.7135409742|0.74875|V||1| 0.7135410 V; _0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200006|0|Par|-0.7|-0.74875|-0.7135388644|-0.65125|V||1|-0.7135389 V; _0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250006|0|Par|0.7|0.65125|0.7135399193|0.74875|V||1| 0.7135399 V; _0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300006|0|Par|0|-23.1|1.05489999990827|23.1|uV||1|     1.055 uV; _0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150007|0|Par|-0.7|-0.74875|-0.7135395579|-0.65125|V||1|-0.7135396 V; _N0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200007|0|Par|0.7|0.65125|0.7135410332|0.74875|V||1| 0.7135410 V; _N0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250007|0|Par|-0.7|-0.74875|-0.71354029555|-0.65125|V||1|-0.7135403 V; _N0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300007|0|Par|0|-23.1|0.737649999971168|23.1|uV||1|     0.738 uV; _N0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150008|0|Par|0.35|0.325625|0.3567836251|0.374375|V||1| 0.3567836 V; _0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200008|0|Par|-0.35|-0.374375|-0.3567815891|-0.325625|V||1|-0.3567816 V; _0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250008|0|Par|0.35|0.325625|0.3567826071|0.374375|V||1| 0.3567826 V; _0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300008|0|Par|0|-23.1|1.01800000001928|23.1|uV||1|     1.018 uV; _0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150009|0|Par|-0.35|-0.374375|-0.356790869|-0.325625|V||1|-0.3567909 V; _N0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200009|0|Par|0.35|0.325625|0.3567924476|0.374375|V||1| 0.3567924 V; _N0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250009|0|Par|-0.35|-0.374375|-0.3567916583|-0.325625|V||1|-0.3567917 V; _N0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300009|0|Par|0|-23.1|0.789300000025861|23.1|uV||1|     0.789 uV; _N0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150010|0|Par|0.195|0.181419642857143|0.1928331863|0.208580357142857|V||1| 0.1928332 V; _0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200010|0|Par|-0.195|-0.208580357142857|-0.1928312684|-0.181419642857143|V||1|-0.1928313 V; _0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250010|0|Par|0.195|0.181419642857143|0.19283222735|0.208580357142857|V||1| 0.1928322 V; _0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300010|0|Par|0|-23.1|0.958949999990688|23.1|uV||1|     0.959 uV; _0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100150011|0|Par|-0.195|-0.208580357142857|-0.1928441777|-0.181419642857143|V||1|-0.1928442 V; _N0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100200011|0|Par|0.195|0.181419642857143|0.1928459628|0.208580357142857|V||1| 0.1928460 V; _N0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100250011|0|Par|-0.195|-0.208580357142857|-0.19284507025|-0.181419642857143|V||1|-0.1928451 V; _N0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100300011|0|Par|0|-23.1|0.892549999992331|23.1|uV||1|     0.893 uV; _N0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|3 | DC-8p5V90V|||FixedReference|160100350000|0|Par|0|-23.1|-1.9179519074|23.1|uV||1|    -1.918 uV; PR/PR Unbuffered Difference, Difference between buffered PR and unbuffered PR measurements|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100050000|0|Par|0|-23.1|0.9589759538|23.1|uV||1|     0.959 uV; _7p0 V common mode path, Common mode measurement|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100050001|0|Par|0|-23.1|1.003236382|23.1|uV||1|     1.003 uV; _3p5 V common mode path, Common mode measurement|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100050002|0|Par|0|-23.1|2.670379194|23.1|uV||1|     2.670 uV; _PR_unbuffered V common mode path, Common mode measurement|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100050003|0|Par|0|-23.1|1.136017668|23.1|uV||1|     1.136 uV; _PR V common mode path, Common mode measurement|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150000|0|Par|7|6.5125|7.104033849|7.4875|V||1| 7.1040338 V; _7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200000|0|Par|-7|-7.4875|-7.104029482|-6.5125|V||1|-7.1040295 V; _7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250000|0|Par|7|6.5125|7.1040316655|7.4875|V||1| 7.1040317 V; _7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300000|0|Par|0|-23.1|2.18350000036338|23.1|uV||1|     2.184 uV; _7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150001|0|Par|-7|-7.4875|-7.10407504|-6.5125|V||1|-7.1040750 V; _N7p0 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200001|0|Par|7|6.5125|7.104079776|7.4875|V||1| 7.1040798 V; _N7p0 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250001|0|Par|-7|-7.4875|-7.104077408|-6.5125|V||1|-7.1040774 V; _N7p0 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300001|0|Par|0|-23.1|2.36800000052995|23.1|uV||1|     2.368 uV; _N7p0 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150002|0|Par|3.5|3.25625|3.551946875|3.74375|V||1| 3.5519469 V; _3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200002|0|Par|-3.5|-3.74375|-3.551942449|-3.25625|V||1|-3.5519424 V; _3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250002|0|Par|3.5|3.25625|3.551944662|3.74375|V||1| 3.5519447 V; _3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300002|0|Par|0|-23.1|2.21300000013969|23.1|uV||1|     2.213 uV; _3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150003|0|Par|-3.5|-3.74375|-3.551968858|-3.25625|V||1|-3.5519689 V; _N3p5 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200003|0|Par|3.5|3.25625|3.551973077|3.74375|V||1| 3.5519731 V; _N3p5 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250003|0|Par|-3.5|-3.74375|-3.5519709675|-3.25625|V||1|-3.5519710 V; _N3p5 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300003|0|Par|0|-23.1|2.10950000001375|23.1|uV||1|     2.110 uV; _N3p5 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150004|0|Par|1.4|1.3025|1.420802913|1.4975|V||1| 1.4208029 V; _1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200004|0|Par|-1.4|-1.4975|-1.42079831|-1.3025|V||1|-1.4207983 V; _1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250004|0|Par|1.4|1.3025|1.4208006115|1.4975|V||1| 1.4208006 V; _1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300004|0|Par|0|-23.1|2.30150000013474|23.1|uV||1|     2.302 uV; _1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150005|0|Par|-1.4|-1.4975|-1.42081535|-1.3025|V||1|-1.4208154 V; _N1p4 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200005|0|Par|1.4|1.3025|1.420819658|1.4975|V||1| 1.4208197 V; _N1p4 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250005|0|Par|-1.4|-1.4975|-1.420817504|-1.3025|V||1|-1.4208175 V; _N1p4 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300005|0|Par|0|-23.1|2.15399999992094|23.1|uV||1|     2.154 uV; _N1p4 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150006|0|Par|0.7|0.65125|0.7104285661|0.74875|V||1| 0.7104286 V; _0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200006|0|Par|-0.7|-0.74875|-0.7104239483|-0.65125|V||1|-0.7104239 V; _0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250006|0|Par|0.7|0.65125|0.7104262572|0.74875|V||1| 0.7104263 V; _0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300006|0|Par|0|-23.1|2.30890000008088|23.1|uV||1|     2.309 uV; _0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150007|0|Par|-0.7|-0.74875|-0.7104383477|-0.65125|V||1|-0.7104383 V; _N0p7 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200007|0|Par|0.7|0.65125|0.7104425376|0.74875|V||1| 0.7104425 V; _N0p7 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250007|0|Par|-0.7|-0.74875|-0.71044044265|-0.65125|V||1|-0.7104404 V; _N0p7 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300007|0|Par|0|-23.1|2.0949499999201|23.1|uV||1|     2.095 uV; _N0p7 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150008|0|Par|0.35|0.325625|0.3552198304|0.374375|V||1| 0.3552198 V; _0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200008|0|Par|-0.35|-0.374375|-0.3552148437|-0.325625|V||1|-0.3552148 V; _0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250008|0|Par|0.35|0.325625|0.35521733705|0.374375|V||1| 0.3552173 V; _0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300008|0|Par|0|-23.1|2.49334999996575|23.1|uV||1|     2.493 uV; _0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150009|0|Par|-0.35|-0.374375|-0.3552274874|-0.325625|V||1|-0.3552275 V; _N0p35 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200009|0|Par|0.35|0.325625|0.3552322233|0.374375|V||1| 0.3552322 V; _N0p35 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250009|0|Par|-0.35|-0.374375|-0.35522985535|-0.325625|V||1|-0.3552299 V; _N0p35 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300009|0|Par|0|-23.1|2.3679499999707|23.1|uV||1|     2.368 uV; _N0p35 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150010|0|Par|0.195|0.181419642857143|0.1920080834|0.208580357142857|V||1| 0.1920081 V; _0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200010|0|Par|-0.195|-0.208580357142857|-0.1920031115|-0.181419642857143|V||1|-0.1920031 V; _0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250010|0|Par|0.195|0.181419642857143|0.19200559745|0.208580357142857|V||1| 0.1920056 V; _0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300010|0|Par|0|-23.1|2.48594999999185|23.1|uV||1|     2.486 uV; _0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100150011|0|Par|-0.195|-0.208580357142857|-0.1920149881|-0.181419642857143|V||1|-0.1920150 V; _N0p195 V; Forward, Measure with HP meter (Forward)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100200011|0|Par|0.195|0.181419642857143|0.1920196206|0.208580357142857|V||1| 0.1920196 V; _N0p195 V; Reverse, Measure with HP meter with +/- reversed (Reverse)|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100250011|0|Par|-0.195|-0.208580357142857|-0.19201730435|-0.181419642857143|V||1|-0.1920173 V; _N0p195 V; Average, Absolute value average of Forward and Reverse|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100300011|0|Par|0|-23.1|2.31624999999513|23.1|uV||1|     2.316 uV; _N0p195 V; Therm EMF, Calculated thermal EMF|
+PASS|19|4 | DC-8p5V90V|||FixedReference|160100350000|0|Par|0|-23.1|-1.534361526|23.1|uV||1|    -1.534 uV; PR/PR Unbuffered Difference, Difference between buffered PR and unbuffered PR measurements|

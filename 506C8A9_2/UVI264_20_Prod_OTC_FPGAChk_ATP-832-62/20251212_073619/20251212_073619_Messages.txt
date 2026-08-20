@@ -1,0 +1,48 @@
+
+Output Message File Version:1.00.00
+Type;	Product::Source;	Message;	Time Stamp
+Info;	MUI::LoadSettingsFile();	Finished Loading System Settings for file C:\Test\Procedures\UVI264_FPGAProg_ATP-832-62\documents\UVI264_CnfgFlshMem.msf;	12/12/2025 07:35:27
+Info;	MUI::BuildTree();	Acquiring System Data for Tree;	12/12/2025 07:35:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : SupportBoard;	12/12/2025 07:35:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : Computer;	12/12/2025 07:35:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : DSP;	12/12/2025 07:35:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : SMC;	12/12/2025 07:35:27
+Info;	VPManager::VPWarehouseManager;	Create and setup VP : VI26x8p5V2x90V;	12/12/2025 07:35:30
+Info;	VPManager::SheetManager;	Create and import Pin & Channel maps for job : Job__FactFC;	12/12/2025 07:35:32
+Info;	VPManager::SheetManager;	Create and import Pin Levels and Time Set sheets for job : Job__FactFC;	12/12/2025 07:35:32
+Info;	VPManager::SheetManager;	Create and import Test Instance and Flow sheets for job : JobSerial__FactFC;	12/12/2025 07:35:32
+Info;	VPManager::JobDefinition;	Create or update Job List Sheet for job JobSerial__FactFC;	12/12/2025 07:35:34
+Info;	VPManager::VPManager;	Set IG-XL job: JobSerial__FactFC for Factory Test\Full Test Coverage;	12/12/2025 07:35:34
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactFC Job sheets for VP: SupportBoard;	12/12/2025 07:35:34
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactFC Job sheets for VP: Computer;	12/12/2025 07:35:34
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactFC Job sheets for VP: DSP;	12/12/2025 07:35:34
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactFC Job sheets for VP: SMC;	12/12/2025 07:35:34
+Info;	VPManager::JobDefinition;	Resynch TestTypes to JobSerial__FactFC Job sheets for VP: VI26x8p5V2x90V;	12/12/2025 07:35:34
+Info;	VPManager::VPManager;	Finished setting IG-XL job for Factory Test\Full Test Coverage;	12/12/2025 07:35:34
+Info;	MUI::BuildTree();	Elapsed Time for Tree Creation : 8.263 Seconds;	12/12/2025 07:35:35
+Info;	MUI::ApplySystemSettings();	Finished applying System Settings;	12/12/2025 07:35:35
+Info;	VPManager::TestExecutionManager;	Start of Run session for Factory Test:Full;	12/12/2025 07:35:36
+Info;	VPManager::TestExecutionManager;	IG-XL job validation started.;	12/12/2025 07:35:36
+Info;	VPManager::TestExecutionManager;	IG-XL job validation succeeded.;	12/12/2025 07:35:43
+Info;	VPManager::TestExecutionManager;	Start Run Session Loop 1 of 1;	12/12/2025 07:35:43
+Info;	VPManager::TestExecutionManager;	Trigger start of  IG-XL job: JobSerial__FactFC for category: Options;	12/12/2025 07:35:43
+Info;	VPPortal::CDataServiceListener;	Start to log Test Category: Options;	12/12/2025 07:35:43
+Info;	VPManager::TestExecutionManager;	Calling tl_ProgramRun.;	12/12/2025 07:35:43
+Info;	Calibration::AUTOCAL;	AutoCalibration has started.  This may take several minutes.  Please wait...;	12/12/2025 07:35:43
+Info;	Calibration::AUTOCAL;	AutoCalibration has completed.;	12/12/2025 07:35:46
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramStarted interpose received for Test Category : Options;	12/12/2025 07:35:54
+Info;	VPPortal::CDataServiceListener;	2027F601;	12/12/2025 07:35:54
+Info;	VPPortal::CDataServiceListener;	;	12/12/2025 07:35:54
+Info;	VPPortal::CDataServiceListener;	;	12/12/2025 07:35:54
+Info;	VPPortal::CDataServiceListener;	Start logging... VI26x8p5V2x90V:Board|ConfigFlashMemory;	12/12/2025 07:35:54
+Info;	VI26x8p5V2x90V::Board|ConfigFlashMemory;	Beginning of VI26x8p5V2x90V:Board|ConfigFlashMemory test...;	12/12/2025 07:35:54
+Info;	VI26x8p5V2x90V::Board|ConfigFlashMemory;	End of Board|ConfigFlashMemory test.;	12/12/2025 07:35:58
+Info;	VPPortal::CDataServiceListener;	End of logging - VI26x8p5V2x90V:Board|ConfigFlashMemory;	12/12/2025 07:35:58
+Info;	VPManager::TestExecutionManager;	IG-XL OnProgramEnded interpose received. Wait for Job complete.;	12/12/2025 07:35:58
+Info;	VPManager::TestExecutionManager;	Back from tl_ProgramRun.;	12/12/2025 07:35:58
+Info;	VPManager::TestExecutionManager;	End of IG-XL Job: JobSerial__FactFC with Test Category : Options;	12/12/2025 07:35:59
+Info;	MUI::Elapsed Run Time From 'Start' to 'EndOfRunEvent';	22.396 Seconds;	12/12/2025 07:35:59
+Info;	MUI::MainWindow;	Maintenance exit request made.;	12/12/2025 07:35:59
+Info;	VPPortal::CDataServiceListener;	End of Run Session logging;	12/12/2025 07:35:59
+Info;	VPManager::TestExecutionManager;	End Of Run session;	12/12/2025 07:35:59
+Info;	MUI::MainWindow;	Exiting: waiting for Excel process to end with 30 second timeout ...;	12/12/2025 07:35:59

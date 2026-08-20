@@ -1,0 +1,78 @@
+DATE: 12/12/2025                      	TIME: 7:47:23
+TESTER: TB6-DA07                        SERIAL NUMBER: 2027F601
+DRIVE C TOTAL SPACE: 240,054 MB         DRIVE C UNUSED SPACE: 36,957 MB
+IG-XL VERSION: 10.98.76_uflx            IG-XL BUILD: 03.06.21.18.00
+TEST ENVIRONMENT: Factory Test          TEST COVERAGE: Full
+SYSTEM CURRENT TEMP (MSB): NA      	CURRENT CDU TEMPERATURE: NA
+Tester Mode: Online Mode             	LOOP: By Loop Count
+---------------------------------------------------------------------------------------
+********************************** Systems    *********************************
+---------------------------------------------------------------------------------------
+Slot	Name           		S/N    		Part/All  Total	Pass	Fail	Invalid
+---------------------------------------------------------------------------------------
+48	Support         	C3E5074		       	   0	   0	   0	   0
+  	Computer        	       		       	   0	   0	   0	   0
+  	DSP             	       		       	   0	   0	   0	   0
+  	SMC             	       		       	   0	   0	   0	   0
+---------------------------------------------------------------------------------------
+********************************** Options    *********************************
+---------------------------------------------------------------------------------------
+Slot	Name           		S/N    		Part/All  Total	Pass	Fail	Invalid
+---------------------------------------------------------------------------------------
+19	DC-8p5V90V      	506C8A9		Partial	   1	   0	   0	   1
+---------------------------------------------------------------------------------------
+********************************** MultiSlots *********************************
+---------------------------------------------------------------------------------------
+Slot	Name           		S/N    		Part/All  Total	Pass	Fail	Invalid
+---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+******************************* CONFIGURATION *********************************
+-------------------------------------------------------------------------------
+Slot    Option_Name         Assembly     Part_Number  S/N       Rev_Date
+-------------------------------------------------------------------------------
+19.0    DC-8p5V90V          High-Level   640-423-20   506C8A9   2527-A
+        Communications      Primary   639-977-13      5053E91   2504-A
+        PowerBoard          Primary   671-980-01      50490FB   2042-A
+        Midplane            Primary   625-390-00      506D1C2   1901-A
+19.1    VI26x8p5V2x90V      High-Level   638-249-30   504E517   2520-A
+19.2    VI26x8p5V2x90V      High-Level   638-249-30   504BCE7   2520-A
+19.3    VI26x8p5V2x90V      High-Level   638-249-30   504BF45   2520-A
+19.4    VI26x8p5V2x90V      High-Level   638-249-30   504E507   2520-A
+48.0    Support             High-Level   639-209-02   C3E5074   2320-A
+        SupportPA           Primary   638-561-02      C3D1602   2011-A
+        TimingCal           Primary   638-557-01      C3E54B8   1742-A
+48.1    DCCal               High-Level   639-210-01   C3D8576   1720-A
+48.8    Distribution        High-Level   630-925-01   C3E50D7   1814-A
+-------------------------------------------------------------------------------
+
+
+Summary Format for Failures
+===========================
+<slot>.<subslot>:<option>;
+<test name>;<failing channel>; <diagnostic message>; <failing loop count list>
+
+
+Checker Fails
+=============
+19.1:VI26x8p5V2x90V
+	Board|CalStatus;;Invalid test result for Slot 19;1
+19.2:VI26x8p5V2x90V
+	Board|CalStatus;;Invalid test result for Slot 19;1
+19.3:VI26x8p5V2x90V
+	Board|CalStatus;;Invalid test result for Slot 19;1
+19.4:VI26x8p5V2x90V
+	Board|CalStatus;;Invalid test result for Slot 19;1
+
+
+Checker Errors
+==============
+None
+
+
+Checker Warnings
+================
+Proceed with caution! Calibration Service detected file:
+c:\Program Files (x86)\Teradyne\IG-XL\10.98.76_uflx\Tester\IgnoreCal.txt
+AutoCal is disabled and will not run on this system.
+Restore normal operation by removing IGNORECAL.txt and restart.
+Error or Warning occurred in MUI startup. Scroll window up to get details

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<statusFile boardName="DC-8p5V90V" slotNumber="19" calId="Independent" calTime="12/12/2025 8:22:27 AM" igxlVersion="10.98.76_uflx" igxlBuild="03.06.21.18.00">
+  <modules>
+    <module subSlot="0" moduleNumber="0" moduleName="Communications" partNumber="639-977-13" serialNumber="5053E91" revLevel="A" revDate="2504" />
+    <module subSlot="1" moduleNumber="1" moduleName="VI26x8p5V2x90V" partNumber="638-249-30" serialNumber="504E517" revLevel="A" revDate="2520" />
+    <module subSlot="2" moduleNumber="2" moduleName="VI26x8p5V2x90V" partNumber="638-249-30" serialNumber="504BCE7" revLevel="A" revDate="2520" />
+    <module subSlot="3" moduleNumber="3" moduleName="VI26x8p5V2x90V" partNumber="638-249-30" serialNumber="504BF45" revLevel="A" revDate="2520" />
+    <module subSlot="4" moduleNumber="4" moduleName="VI26x8p5V2x90V" partNumber="638-249-30" serialNumber="504E507" revLevel="A" revDate="2520" />
+    <module subSlot="0" moduleNumber="5" moduleName="PowerBoard" partNumber="671-980-01" serialNumber="50490FB" revLevel="A" revDate="2042" />
+    <module subSlot="0" moduleNumber="6" moduleName="Midplane" partNumber="625-390-00" serialNumber="506D1C2" revLevel="A" revDate="1901" />
+    <module subSlot="0" moduleNumber="100" moduleName="DC-8p5V90V" partNumber="640-423-20" serialNumber="506C8A9" revLevel="A" revDate="2527" />
+  </modules>
+  <entries>
+    <entry name="SBHLAPartNumber" value="639-209-02" />
+    <entry name="SBHLASerialNumber" value="C3E5074" />
+    <entry name="SBPAPartNumber" value="638-561-02" />
+    <entry name="SBPASerialNumber" value="C3D1602" />
+  </entries>
+  <channels>
+    <channel moduleNumber="1" channelNumber="28" resourceType="1" status="P" calTime="12/12/2025 8:22:24 AM" />
+    <channel moduleNumber="1" channelNumber="29" resourceType="1" status="P" calTime="12/12/2025 8:22:27 AM" />
+    <channel moduleNumber="1" channelNumber="0" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="1" channelNumber="1" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="1" channelNumber="2" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="1" channelNumber="3" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="1" channelNumber="4" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="1" channelNumber="5" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="1" channelNumber="6" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="1" channelNumber="7" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="1" channelNumber="8" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="1" channelNumber="9" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="1" channelNumber="10" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="1" channelNumber="11" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="1" channelNumber="12" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="1" channelNumber="13" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="1" channelNumber="14" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="1" channelNumber="15" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="1" channelNumber="16" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="1" channelNumber="17" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="1" channelNumber="18" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="1" channelNumber="19" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="1" channelNumber="20" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="1" channelNumber="21" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="1" channelNumber="22" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="1" channelNumber="23" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="1" channelNumber="24" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="1" channelNumber="25" resourceType="16" status="P" calTime="12/12/2025 8:17:42 AM" />
+    <channel moduleNumber="1" channelNumber="26" resourceType="16" status="P" calTime="12/12/2025 8:19:35 AM" />
+    <channel moduleNumber="1" channelNumber="27" resourceType="16" status="P" calTime="12/12/2025 8:19:55 AM" />
+    <channel moduleNumber="2" channelNumber="28" resourceType="1" status="P" calTime="12/12/2025 8:22:24 AM" />
+    <channel moduleNumber="2" channelNumber="29" resourceType="1" status="P" calTime="12/12/2025 8:22:27 AM" />
+    <channel moduleNumber="2" channelNumber="0" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="2" channelNumber="1" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="2" channelNumber="2" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="2" channelNumber="3" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="2" channelNumber="4" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="2" channelNumber="5" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="2" channelNumber="6" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="2" channelNumber="7" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="2" channelNumber="8" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="2" channelNumber="9" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="2" channelNumber="10" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="2" channelNumber="11" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="2" channelNumber="12" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="2" channelNumber="13" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="2" channelNumber="14" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="2" channelNumber="15" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="2" channelNumber="16" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="2" channelNumber="17" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="2" channelNumber="18" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="2" channelNumber="19" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="2" channelNumber="20" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="2" channelNumber="21" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="2" channelNumber="22" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="2" channelNumber="23" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="2" channelNumber="24" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="2" channelNumber="25" resourceType="16" status="P" calTime="12/12/2025 8:17:42 AM" />
+    <channel moduleNumber="2" channelNumber="26" resourceType="16" status="P" calTime="12/12/2025 8:19:35 AM" />
+    <channel moduleNumber="2" channelNumber="27" resourceType="16" status="P" calTime="12/12/2025 8:19:55 AM" />
+    <channel moduleNumber="3" channelNumber="28" resourceType="1" status="P" calTime="12/12/2025 8:22:24 AM" />
+    <channel moduleNumber="3" channelNumber="29" resourceType="1" status="P" calTime="12/12/2025 8:22:27 AM" />
+    <channel moduleNumber="3" channelNumber="0" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="3" channelNumber="1" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="3" channelNumber="2" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="3" channelNumber="3" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="3" channelNumber="4" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="3" channelNumber="5" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="3" channelNumber="6" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="3" channelNumber="7" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="3" channelNumber="8" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="3" channelNumber="9" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="3" channelNumber="10" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="3" channelNumber="11" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="3" channelNumber="12" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="3" channelNumber="13" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="3" channelNumber="14" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="3" channelNumber="15" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="3" channelNumber="16" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="3" channelNumber="17" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="3" channelNumber="18" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="3" channelNumber="19" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="3" channelNumber="20" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="3" channelNumber="21" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="3" channelNumber="22" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="3" channelNumber="23" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="3" channelNumber="24" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="3" channelNumber="25" resourceType="16" status="P" calTime="12/12/2025 8:17:42 AM" />
+    <channel moduleNumber="3" channelNumber="26" resourceType="16" status="P" calTime="12/12/2025 8:19:35 AM" />
+    <channel moduleNumber="3" channelNumber="27" resourceType="16" status="P" calTime="12/12/2025 8:19:55 AM" />
+    <channel moduleNumber="4" channelNumber="28" resourceType="1" status="P" calTime="12/12/2025 8:22:24 AM" />
+    <channel moduleNumber="4" channelNumber="29" resourceType="1" status="P" calTime="12/12/2025 8:22:27 AM" />
+    <channel moduleNumber="4" channelNumber="0" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="4" channelNumber="1" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="4" channelNumber="2" resourceType="16" status="P" calTime="12/12/2025 8:17:36 AM" />
+    <channel moduleNumber="4" channelNumber="3" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="4" channelNumber="4" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="4" channelNumber="5" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="4" channelNumber="6" resourceType="16" status="P" calTime="12/12/2025 8:17:37 AM" />
+    <channel moduleNumber="4" channelNumber="7" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="4" channelNumber="8" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="4" channelNumber="9" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="4" channelNumber="10" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="4" channelNumber="11" resourceType="16" status="P" calTime="12/12/2025 8:17:38 AM" />
+    <channel moduleNumber="4" channelNumber="12" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="4" channelNumber="13" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="4" channelNumber="14" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="4" channelNumber="15" resourceType="16" status="P" calTime="12/12/2025 8:17:39 AM" />
+    <channel moduleNumber="4" channelNumber="16" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="4" channelNumber="17" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="4" channelNumber="18" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="4" channelNumber="19" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="4" channelNumber="20" resourceType="16" status="P" calTime="12/12/2025 8:17:40 AM" />
+    <channel moduleNumber="4" channelNumber="21" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="4" channelNumber="22" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="4" channelNumber="23" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="4" channelNumber="24" resourceType="16" status="P" calTime="12/12/2025 8:17:41 AM" />
+    <channel moduleNumber="4" channelNumber="25" resourceType="16" status="P" calTime="12/12/2025 8:17:42 AM" />
+    <channel moduleNumber="4" channelNumber="26" resourceType="16" status="P" calTime="12/12/2025 8:19:35 AM" />
+    <channel moduleNumber="4" channelNumber="27" resourceType="16" status="P" calTime="12/12/2025 8:19:55 AM" />
+  </channels>
+</statusFile>

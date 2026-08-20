@@ -1,0 +1,16 @@
+﻿Error (12/12/2025 5:23:42 PM): System.IO.IOException: The process cannot access the file 'C:\temp\UVI264_SCR_OTC_ATP-832-01_121225172024.xpf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   at SysStatusServ.SysStatus.OnCustomCommand(Int32 command)
+Error (12/12/2025 5:23:42 PM): System.IO.IOException: The process cannot access the file 'C:\temp\UVI264_SCR_OTC_ATP-832-01_121225172024.xpf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   at SysStatusServ.SysStatus.OnCustomCommand(Int32 command)
+Error (12/12/2025 5:24:24 PM): System.IO.IOException: The process cannot access the file 'C:\temp\UVI264_SCR_OTC_ATP-832-01_121225172024.xpf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   at SysStatusServ.SysStatus.OnCustomCommand(Int32 command)
+Error (12/12/2025 5:26:46 PM): System.IO.IOException: The process cannot access the file 'C:\temp\UVI264_SCR_OTC_ATP-832-01_121225172024.xpf' because it is being used by another process.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite)
+   at SysStatusServ.SysStatus.OnCustomCommand(Int32 command)

@@ -1,0 +1,63 @@
+DATE: 12/12/2025                      	TIME: 23:55:04
+TESTER: TB6-DA05_T3                     SERIAL NUMBER: 2026F602
+DRIVE C TOTAL SPACE: 480,101 MB         DRIVE C UNUSED SPACE: 288,269 MB
+IG-XL VERSION: 10.98.76_uflx            IG-XL BUILD: 03.06.21.18.00
+TEST ENVIRONMENT: Factory Test          TEST COVERAGE: Performance
+SYSTEM CURRENT TEMP (MSB): NA      	CURRENT CDU TEMPERATURE: NA
+Tester Mode: Online Mode             	LOOP: By Loop Count
+---------------------------------------------------------------------------------------
+********************************** Systems    *********************************
+---------------------------------------------------------------------------------------
+Slot	Name           		S/N    		Part/All  Total	Pass	Fail	Invalid
+---------------------------------------------------------------------------------------
+48	Support         	C3DEAED		       	   0	   0	   0	   0
+---------------------------------------------------------------------------------------
+********************************** Options    *********************************
+---------------------------------------------------------------------------------------
+Slot	Name           		S/N    		Part/All  Total	Pass	Fail	Invalid
+---------------------------------------------------------------------------------------
+23	DC-8p5V90V      	506C8A9		       	   1	   1	   0	   0
+---------------------------------------------------------------------------------------
+********************************** MultiSlots *********************************
+---------------------------------------------------------------------------------------
+Slot	Name           		S/N    		Part/All  Total	Pass	Fail	Invalid
+---------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+******************************* CONFIGURATION *********************************
+-------------------------------------------------------------------------------
+Slot    Option_Name         Assembly     Part_Number  S/N       Rev_Date
+-------------------------------------------------------------------------------
+23.0    DC-8p5V90V          High-Level   640-423-20   506C8A9   2527-A
+        Communications      Primary   639-977-13      5053E91   2504-A
+        PowerBoard          Primary   671-980-01      50490FB   2042-A
+        Midplane            Primary   625-390-00      506D1C2   1901-A
+23.1    VI26x8p5V2x90V      High-Level   638-249-30   504E517   2520-A
+23.2    VI26x8p5V2x90V      High-Level   638-249-30   504BCE7   2520-A
+23.3    VI26x8p5V2x90V      High-Level   638-249-30   504BF45   2520-A
+23.4    VI26x8p5V2x90V      High-Level   638-249-30   504E507   2520-A
+48.0    Support             High-Level   639-209-02   C3DEAED   2320-A
+        SupportPA           Primary   638-561-02      C3D03A2   2011-A
+        TimingCal           Primary   638-557-01      C3DE184   1742-A
+48.1    DCCal               High-Level   639-210-01   C3DC875   1720-A
+48.8    Distribution        High-Level   630-925-01   C3CBA81   1814-A
+-------------------------------------------------------------------------------
+
+
+Summary Format for Failures
+===========================
+<slot>.<subslot>:<option>;
+<test name>;<failing channel>; <diagnostic message>; <failing loop count list>
+
+
+Checker Fails
+=============
+
+
+Checker Errors
+==============
+None
+
+
+Checker Warnings
+================
+Error or Warning occurred in MUI startup. Scroll window up to get details
