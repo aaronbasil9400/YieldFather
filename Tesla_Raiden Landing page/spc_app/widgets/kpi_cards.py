@@ -3,19 +3,7 @@
 import numpy as np
 from PySide6.QtWidgets import QFrame, QGridLayout, QLabel, QVBoxLayout, QWidget
 
-CARD_QSS = """
-QFrame#kpiCard {
-    background: rgba(128, 128, 128, 0.08);
-    border: 1px solid rgba(128, 128, 128, 0.3);
-    border-radius: 10px;
-}
-QFrame#kpiCard QLabel { background: transparent; border: none; }
-QLabel#kpiLabel {
-    font-size: 11px; font-weight: 600; letter-spacing: 0.5px;
-    color: #64748B;
-}
-QLabel#kpiValue { font-size: 19px; font-weight: 800; color: #31333F; }
-"""
+from spc_app.theme import LIGHT, card_qss
 
 KPI_SPECS = [
     ("Cpk", "Cpk", "{:.4g}"),
@@ -48,7 +36,11 @@ class KpiCard(QFrame):
         self.value_label.setObjectName("kpiValue")
         layout.addWidget(self.title_label)
         layout.addWidget(self.value_label)
-        self.setStyleSheet(CARD_QSS)
+        self.set_palette(LIGHT)
+
+    def set_palette(self, palette: dict):
+        self._palette = palette
+        self.setStyleSheet(card_qss(palette))
 
     def set_value(self, value):
         if value is None or _is_nan(value):
@@ -78,6 +70,10 @@ class KpiRow(QWidget):
         for card, (_, key, _fmt) in zip(self._cards, KPI_SPECS):
             card.set_value(stats.get(key) if key != "N" else stats.get("N"))
         self._cards[-1].set_value(pass_pct)
+
+    def apply_palette(self, palette: dict):
+        for card in self._cards:
+            card.set_palette(palette)
 
     def clear(self):
         for card in self._cards:

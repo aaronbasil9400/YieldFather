@@ -164,22 +164,78 @@ class SourcePanel(QWidget):
         self.progress_label.setText(message)
 
 
-class _SlicerGroup(QGroupBox):
-    def __init__(self, title: str, on_change, parent=None):
-        super().__init__(title, parent)
+class _SearchableList(QWidget):
+    """Checkable list with a substring filter box for long value lists."""
+
+    def __init__(self, on_change, max_height: int, parent=None):
+        super().__init__(parent)
         layout = QVBoxLayout(self)
-        layout.setContentsMargins(8, 4, 8, 4)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(2)
+        search_row = QHBoxLayout()
+        search_row.setContentsMargins(0, 0, 0, 0)
+        search_row.setSpacing(4)
+        self.search = QLineEdit()
+        self.search.setPlaceholderText("Type to filter...")
+        self.search.setClearButtonEnabled(True)
+        self.clear_button = QToolButton()
+        self.clear_button.setText("Clear")
+        self.clear_button.setToolTip("Uncheck all values and clear the search box.")
+        self.clear_button.clicked.connect(self._clear_requested)
+        search_row.addWidget(self.search, 1)
+        search_row.addWidget(self.clear_button)
         self.list = QListWidget()
-        self.list.setMaximumHeight(110)
+        self.list.setMaximumHeight(max_height)
         self.list.setAlternatingRowColors(True)
+        layout.addLayout(search_row)
         layout.addWidget(self.list)
+        self.search.textChanged.connect(self._apply_filter)
         self.list.itemChanged.connect(on_change)
+        self._on_change = on_change
+
+    def _clear_requested(self):
+        had_selection = bool(_checked_texts(self.list))
+        self.clear_selection_and_search()
+        if had_selection:
+            self._on_change()
+
+    def _apply_filter(self, text):
+        needle = text.strip().lower()
+        for i in range(self.list.count()):
+            item = self.list.item(i)
+            item.setHidden(bool(needle) and needle not in item.text().lower())
 
     def set_values(self, values):
         _fill_checkable(self.list, values)
 
     def selected(self):
         return _checked_texts(self.list)
+
+    def clear_selection_and_search(self):
+        self.search.blockSignals(True)
+        self.search.clear()
+        self.search.blockSignals(False)
+        self.list.blockSignals(True)
+        for i in range(self.list.count()):
+            item = self.list.item(i)
+            item.setCheckState(Qt.Unchecked)
+            item.setHidden(False)
+        self.list.blockSignals(False)
+
+
+class _SlicerGroup(QGroupBox):
+    def __init__(self, title: str, on_change, parent=None):
+        super().__init__(title, parent)
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(8, 4, 8, 4)
+        self.picker = _SearchableList(on_change, max_height=110)
+        layout.addWidget(self.picker)
+
+    def set_values(self, values):
+        self.picker.set_values(values)
+
+    def selected(self):
+        return self.picker.selected()
 
 
 class FilterPanel(QWidget):
@@ -197,16 +253,12 @@ class FilterPanel(QWidget):
 
         test_box = QGroupBox("2. Test selection")
         test_layout = QVBoxLayout(test_box)
-        self.testnb_list = QListWidget()
-        self.testnb_list.setMaximumHeight(140)
-        self.testnb_list.setAlternatingRowColors(True)
-        self.pairs_list = QListWidget()
-        self.pairs_list.setMaximumHeight(140)
-        self.pairs_list.setAlternatingRowColors(True)
+        self.testnb_picker = _SearchableList(self._on_change, max_height=140)
+        self.pairs_picker = _SearchableList(self._on_change, max_height=140)
         test_layout.addWidget(QLabel("Select by TestNb (includes every TestLabel)"))
-        test_layout.addWidget(self.testnb_list)
+        test_layout.addWidget(self.testnb_picker)
         test_layout.addWidget(QLabel("Fine control: specific TestNb - TestLabel pairs"))
-        test_layout.addWidget(self.pairs_list)
+        test_layout.addWidget(self.pairs_picker)
         layout.addWidget(test_box)
 
         self.slicer_groups = {}
@@ -247,11 +299,21 @@ class FilterPanel(QWidget):
         self.row_cap.setSingleStep(1000)
         self.row_cap.valueChanged.connect(lambda _: self._on_change())
         controls_layout.addWidget(self.row_cap)
+        self.reset_button = QPushButton("Reset all filters && charts")
+        self.reset_button.setToolTip(
+            "Uncheck every selection, clear search boxes, and clear the charts.")
+        self.reset_button.clicked.connect(self.reset)
+        controls_layout.addWidget(self.reset_button)
         layout.addWidget(controls_box)
         layout.addStretch(1)
 
-        self.testnb_list.itemChanged.connect(self._on_change)
-        self.pairs_list.itemChanged.connect(self._on_change)
+    @property
+    def testnb_list(self):
+        return self.testnb_picker.list
+
+    @property
+    def pairs_list(self):
+        return self.pairs_picker.list
 
     def _toggle_secondary(self, checked: bool):
         self.secondary_toggle.setArrowType(Qt.DownArrow if checked else Qt.RightArrow)
@@ -274,6 +336,73 @@ class FilterPanel(QWidget):
                 self.slicer_groups[col].set_values(values)
                 self.slicer_groups[col].setVisible(bool(values))
         self.blockSignals(False)
+        for picker in (self.testnb_picker, self.pairs_picker):
+            picker.clear_selection_and_search()
+
+    def reset(self):
+        self.blockSignals(True)
+        try:
+            self.testnb_picker.clear_selection_and_search()
+            self.pairs_picker.clear_selection_and_search()
+            for group in self.slicer_groups.values():
+                group.picker.clear_selection_and_search()
+        finally:
+            self.blockSignals(False)
+        self.filtersChanged.emit()
+
+    @staticmethod
+    def _check_item(list_widget: QListWidget, text: str):
+        matches = list_widget.findItems(text, Qt.MatchExactly)
+        if not matches:
+            return
+        list_widget.blockSignals(True)
+        try:
+            for item in matches:
+                item.setCheckState(Qt.Checked)
+        finally:
+            list_widget.blockSignals(False)
+
+    def selection_state(self) -> dict:
+        """Snapshot of the current choices, suitable for JSON persistence."""
+        slicers = {}
+        for col, _label in PRIMARY_SLICERS + SECONDARY_SLICERS:
+            group = self.slicer_groups.get(col)
+            if group is not None:
+                values = group.selected()
+                if values:
+                    slicers[col] = values
+        return {
+            "testnbs": _checked_texts(self.testnb_picker.list),
+            "combos": _checked_texts(self.pairs_picker.list),
+            "slicers": slicers,
+        }
+
+    def apply_selection(self, state: dict):
+        """Restore a snapshot produced by selection_state; emits once."""
+        if not isinstance(state, dict):
+            return
+        testnbs = [str(v) for v in state.get("testnbs") or []]
+        combos = [str(v) for v in state.get("combos") or []]
+        raw_slicers = state.get("slicers") or {}
+        secondary_cols = {col for col, _label in SECONDARY_SLICERS}
+        if any(col in raw_slicers for col in secondary_cols):
+            self.secondary_toggle.setChecked(True)
+        self.blockSignals(True)
+        try:
+            for text in testnbs:
+                self._check_item(self.testnb_picker.list, text)
+            for text in combos:
+                self._check_item(self.pairs_picker.list, text)
+            for col, values in raw_slicers.items():
+                group = self.slicer_groups.get(col)
+                if group is None:
+                    continue
+                for text in values or []:
+                    self._check_item(group.picker.list, str(text))
+        finally:
+            self.blockSignals(False)
+        if testnbs or combos or raw_slicers:
+            self.filtersChanged.emit()
 
     def selection(self):
         filters = {}
@@ -285,11 +414,11 @@ class FilterPanel(QWidget):
                     filters[col] = values
 
         parts, params = [], []
-        selected_testnbs = _checked_texts(self.testnb_list)
+        selected_testnbs = _checked_texts(self.testnb_picker.list)
         if selected_testnbs:
             parts.append(f'"TestNb" IN ({",".join("?" for _ in selected_testnbs)})')
             params.extend(selected_testnbs)
-        selected_combos = _checked_texts(self.pairs_list)
+        selected_combos = _checked_texts(self.pairs_picker.list)
         if selected_combos:
             combo_parts = []
             for combo in selected_combos:

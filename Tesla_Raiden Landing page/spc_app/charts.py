@@ -38,14 +38,15 @@ def _vline(plot, x, color, style):
                                  pen=pg.mkPen(color, width=1.6, style=style)))
 
 
-def configure_plot(plot_widget: pg.PlotWidget):
-    plot_widget.setBackground("w")
+def configure_plot(plot_widget: pg.PlotWidget, bg: str = "w",
+                   fg: str = "#31333F", axis_color: str = "#94A3B8"):
+    plot_widget.setBackground(bg)
     pi = plot_widget.getPlotItem()
     pi.showGrid(x=True, y=True, alpha=0.15)
     for axis_name in ("bottom", "left"):
         axis = pi.getAxis(axis_name)
-        axis.setPen(pg.mkPen("#94A3B8", width=1))
-        axis.setTextPen(pg.mkColor("#31333F"))
+        axis.setPen(pg.mkPen(axis_color, width=1))
+        axis.setTextPen(pg.mkColor(fg))
 
 
 def clear_chart(plot_widget: pg.PlotWidget, title=""):
@@ -54,10 +55,11 @@ def clear_chart(plot_widget: pg.PlotWidget, title=""):
 
 
 def build_control_chart(plot_widget: pg.PlotWidget, df: pd.DataFrame, stats: dict,
-                        lsl, usl, title: str, hover_callback=None):
+                        lsl, usl, title: str, hover_callback=None,
+                        title_color: str = "#31333F"):
     """Populate *plot_widget* with the measured-value control chart."""
     plot_widget.clear()
-    plot_widget.setTitle(title, color="#31333F", size="11pt")
+    plot_widget.setTitle(title, color=title_color, size="11pt")
     values = df["Value_num"].to_numpy(dtype=float)
     n = len(values)
     if n == 0:
@@ -116,10 +118,11 @@ def build_control_chart(plot_widget: pg.PlotWidget, df: pd.DataFrame, stats: dic
     plot_widget.setLabel("left", "Measured Value")
 
 
-def build_histogram(plot_widget: pg.PlotWidget, values: np.ndarray, lsl, usl, mean):
+def build_histogram(plot_widget: pg.PlotWidget, values: np.ndarray, lsl, usl, mean,
+                    title_color: str = "#31333F"):
     """Populate *plot_widget* with the distribution of measured values."""
     plot_widget.clear()
-    plot_widget.setTitle("Distribution", color="#31333F", size="11pt")
+    plot_widget.setTitle("Distribution", color=title_color, size="11pt")
     values = np.asarray(values, dtype=float)
     values = values[~np.isnan(values)]
     if len(values) == 0:

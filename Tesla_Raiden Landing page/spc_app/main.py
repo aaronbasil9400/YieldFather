@@ -23,18 +23,24 @@ from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (
     QApplication,
+    QComboBox,
+    QFileDialog,
     QFrame,
+    QHBoxLayout,
     QLabel,
     QMainWindow,
     QMessageBox,
+    QPushButton,
     QScrollArea,
     QSplitter,
     QStackedWidget,
     QTabWidget,
+    QToolBar,
     QVBoxLayout,
     QWidget,
 )
 
+import spc_app.reporting as reporting
 from spc_core.consolidation import TABLE
 from spc_core.query import (
     build_where_clause,
@@ -45,6 +51,8 @@ from spc_core.query import (
 )
 from spc_core.stats import compute_stats
 from spc_app import paths
+from spc_app import settings
+from spc_app import theme
 from spc_app.charts import build_control_chart, build_histogram, clear_chart, configure_plot
 from spc_app.workers import ConsolidationWorker
 from spc_app.widgets import CpkByGroupTab, FilterPanel, KpiRow, RawDataTab, SourcePanel
@@ -81,6 +89,8 @@ class MainWindow(QMainWindow):
         self.conn = None
         self.columns = []
         self.worker = None
+        self._last_db_path = ""
+        self._last_eval = None
 
         self.source_panel = SourcePanel()
         self.filter_panel = FilterPanel()
@@ -105,20 +115,52 @@ class MainWindow(QMainWindow):
         configure_plot(self.control_chart)
         self.histogram_chart = pg.PlotWidget()
         configure_plot(self.histogram_chart)
+        self._palette = theme.LIGHT
+
+        def _reset_view(plot_widget):
+            vb = plot_widget.getPlotItem().getViewBox()
+            vb.enableAutoRange(axis=pg.ViewBox.XYAxes, enable=True)
+            vb.autoRange()
 
         self.cpk_tab = CpkByGroupTab()
         self.raw_tab = RawDataTab()
+
+        control_header = QWidget()
+        control_header_layout = QHBoxLayout(control_header)
+        control_header_layout.setContentsMargins(0, 0, 0, 0)
+        section_title = QLabel("SPC Control Chart")
+        self.control_title = section_title
+        self.control_reset_button = QPushButton("Reset view")
+        self.control_reset_button.setToolTip("Zoom the control chart back out to all data.")
+        self.control_reset_button.clicked.connect(lambda: _reset_view(self.control_chart))
+        control_header_layout.addWidget(section_title)
+        control_header_layout.addStretch(1)
+        control_header_layout.addWidget(self.control_reset_button)
+
+        hist_container = QWidget()
+        hist_layout = QVBoxLayout(hist_container)
+        hist_layout.setContentsMargins(0, 0, 0, 0)
+        hist_header_layout = QHBoxLayout()
+        hist_title = QLabel("Distribution / Histogram")
+        self.hist_title = hist_title
+        self.hist_reset_button = QPushButton("Reset view")
+        self.hist_reset_button.setToolTip("Zoom the histogram back out to all data.")
+        self.hist_reset_button.clicked.connect(lambda: _reset_view(self.histogram_chart))
+        hist_header_layout.addWidget(hist_title)
+        hist_header_layout.addStretch(1)
+        hist_header_layout.addWidget(self.hist_reset_button)
+        hist_layout.addLayout(hist_header_layout)
+        hist_layout.addWidget(self.histogram_chart, 1)
+
         self.tabs = QTabWidget()
-        self.tabs.addTab(self.histogram_chart, "Distribution / Histogram")
+        self.tabs.addTab(hist_container, "Distribution / Histogram")
         self.tabs.addTab(self.cpk_tab, "Cpk by group")
         self.tabs.addTab(self.raw_tab, "Raw filtered data")
 
         chart_container = QWidget()
         chart_layout = QVBoxLayout(chart_container)
         chart_layout.setContentsMargins(0, 0, 0, 0)
-        section_title = QLabel("SPC Control Chart")
-        section_title.setStyleSheet("font-weight: 700;")
-        chart_layout.addWidget(section_title)
+        chart_layout.addWidget(control_header)
         chart_layout.addWidget(self.control_chart, 1)
 
         results_split = QSplitter(Qt.Vertical)
@@ -129,7 +171,7 @@ class MainWindow(QMainWindow):
         self.warning_banner, self.warning_label = _make_banner()
 
         kpi_title = QLabel("Key Statistics")
-        kpi_title.setStyleSheet("font-weight: 700;")
+        self.kpi_title = kpi_title
 
         self.results_widget = QWidget()
         results_layout = QVBoxLayout(self.results_widget)
@@ -169,8 +211,29 @@ class MainWindow(QMainWindow):
         self.source_panel.db_selected.connect(self.load_db_file)
         self.filter_panel.filtersChanged.connect(self.refresh_results)
 
+        export_bar = QToolBar("Export")
+        export_bar.setMovable(False)
+        export_bar.addAction("Control chart (PNG)",
+                             lambda: self._export_chart_png(self.control_chart,
+                                                            "control_chart.png"))
+        export_bar.addAction("Histogram (PNG)",
+                             lambda: self._export_chart_png(self.histogram_chart,
+                                                            "histogram.png"))
+        export_bar.addAction("Full report",
+                             lambda: self._export_full_report())
+        export_bar.addSeparator()
+        self.theme_combo = QComboBox()
+        self.theme_combo.addItems(list(theme.THEME_MODES))
+        self.theme_combo.setToolTip(
+            "App appearance. 'System' follows the Windows personalization setting.")
+        self.theme_combo.currentTextChanged.connect(lambda _mode: self._apply_theme())
+        export_bar.addWidget(QLabel("Theme:"))
+        export_bar.addWidget(self.theme_combo)
+        self.addToolBar(export_bar)
+
         self._set_controls_enabled(False)
         self.resize(1400, 900)
+        self._restore_session()
 
     def _set_controls_enabled(self, enabled: bool):
         self.filter_panel.setEnabled(enabled)
@@ -288,19 +351,24 @@ class MainWindow(QMainWindow):
 
         title = (f"{df['TestStep'].iloc[0]} | TestNb {df['TestNb'].iloc[0]} | "
                  f"{df['TestLabel'].iloc[0]}")
+        self._last_eval = {"stats": stats, "pass_pct": pass_pct, "title": title,
+                           "lsl": lsl, "usl": usl}
         QApplication.setOverrideCursor(Qt.WaitCursor)
         try:
             self.kpi_row.update_stats(stats, pass_pct)
             build_control_chart(self.control_chart, df, stats, lsl, usl, title,
-                                hover_callback=self._show_hover)
+                                hover_callback=self._show_hover,
+                                title_color=self._palette["plot_fg"])
             build_histogram(self.histogram_chart, df["Value_num"].to_numpy(dtype=float),
-                            lsl, usl, stats["Mean"])
+                            lsl, usl, stats["Mean"],
+                            title_color=self._palette["plot_fg"])
             self.cpk_tab.update_groups(df, group_cols)
             self.raw_tab.set_dataframe(df)
         finally:
             QApplication.restoreOverrideCursor()
 
     def _clear_results(self):
+        self._last_eval = None
         self.kpi_row.clear()
         clear_chart(self.control_chart)
         clear_chart(self.histogram_chart)
@@ -316,6 +384,135 @@ class MainWindow(QMainWindow):
 
     def _show_hover(self, text):
         self.statusBar().showMessage(text.replace("\n", " | "), 4000)
+
+    def _apply_theme(self):
+        mode = self.theme_combo.currentText()
+        self._palette = theme.resolve_palette(mode)
+        app = QApplication.instance()
+        if app is not None:
+            app.setStyle("Fusion")
+            app.setPalette(theme.build_app_palette(self._palette))
+        self.kpi_row.apply_palette(self._palette)
+        self.warning_banner.setStyleSheet(theme.banner_qss(self._palette))
+        p = self._palette
+        for title in (self.control_title, self.hist_title, self.kpi_title):
+            title.setStyleSheet(f"font-weight: 700; color: {p['text']};")
+        self.info_page.setStyleSheet(f"color: {p['muted']}; font-size: 14px;")
+        configure_plot(self.control_chart, p["plot_bg"], p["plot_fg"], p["plot_axis"])
+        configure_plot(self.histogram_chart, p["plot_bg"], p["plot_fg"],
+                       p["plot_axis"])
+        self.refresh_results()
+
+    def closeEvent(self, event):
+        self._save_session()
+        if self.conn is not None:
+            self.conn.close()
+            self.conn = None
+        super().closeEvent(event)
+
+    def _save_session(self):
+        try:
+            settings.save_settings({
+                "mode_index": self.source_panel.mode_combo.currentIndex(),
+                "tdf_root": self.source_panel.tdf_root.text(),
+                "output_dir": self.source_panel.output_dir.text(),
+                "last_db": self._last_db_path,
+                "row_cap": self.filter_panel.row_cap.value(),
+                "theme_mode": self.theme_combo.currentText(),
+                "selection": self.filter_panel.selection_state(),
+            })
+        except Exception:
+            log.exception("Saving session settings failed")
+
+    def _restore_session(self):
+        cfg = settings.load_settings()
+        if not isinstance(cfg, dict) or not cfg:
+            self._apply_theme()
+            return
+        theme_mode = cfg.get("theme_mode")
+        if theme_mode in theme.THEME_MODES:
+            self.theme_combo.blockSignals(True)
+            self.theme_combo.setCurrentText(theme_mode)
+            self.theme_combo.blockSignals(False)
+        self._apply_theme()
+        mode_index = cfg.get("mode_index")
+        if mode_index in (0, 1):
+            self.source_panel.mode_combo.setCurrentIndex(int(mode_index))
+        for key, picker in (("tdf_root", self.source_panel.tdf_root),
+                            ("output_dir", self.source_panel.output_dir)):
+            value = cfg.get(key)
+            if value:
+                picker.edit.setText(str(value))
+        row_cap = cfg.get("row_cap")
+        if row_cap:
+            self.filter_panel.row_cap.setValue(int(row_cap))
+        db_path = cfg.get("last_db")
+        if not db_path or not Path(db_path).exists():
+            return
+        try:
+            self.load_db_file(db_path)
+            selection = cfg.get("selection")
+            if selection:
+                self.filter_panel.apply_selection(selection)
+        except Exception:
+            log.exception("Auto-reconnect to last DB failed")
+
+    def _export_chart_png(self, plot_widget, suggested_name: str):
+        path, _ = QFileDialog.getSaveFileName(self, "Export chart as PNG",
+                                              suggested_name,
+                                              "PNG images (*.png);;All files (*)")
+        if not path:
+            return
+        if not path.lower().endswith(".png"):
+            path += ".png"
+        QApplication.setOverrideCursor(Qt.WaitCursor)
+        try:
+            ok = plot_widget.grab().save(path, "PNG")
+        finally:
+            QApplication.restoreOverrideCursor()
+        if ok:
+            self.statusBar().showMessage(f"Chart exported: {path}", 5000)
+        else:
+            QMessageBox.critical(self, "Export chart",
+                                 f"Could not write PNG file:\n{path}")
+
+    def _export_full_report(self):
+        df = self.raw_tab.table.model().dataframe()
+        if df is None or df.empty or not self._last_eval:
+            QMessageBox.information(
+                self, "Export report",
+                "No evaluation results to export.\n"
+                "Select a TestNb or TestNb/TestLabel pair first.")
+            return
+        out_dir = QFileDialog.getExistingDirectory(
+            self, "Select report output folder")
+        if not out_dir:
+            return
+        evaluation = self._last_eval
+        QApplication.setOverrideCursor(Qt.WaitCursor)
+        try:
+            control_png = Path(out_dir) / "control_chart.png"
+            hist_png = Path(out_dir) / "histogram.png"
+            ok_control = self.control_chart.grab().save(str(control_png), "PNG")
+            ok_hist = self.histogram_chart.grab().save(str(hist_png), "PNG")
+            cpk_df = self.cpk_tab.table.model().dataframe()
+            written = reporting.write_report(
+                Path(out_dir), df, evaluation["stats"], evaluation["pass_pct"],
+                evaluation["title"], lsl=evaluation["lsl"], usl=evaluation["usl"],
+                cpk_df=cpk_df)
+        except Exception as ex:
+            QApplication.restoreOverrideCursor()
+            log.exception("Report export failed")
+            QMessageBox.critical(self, "Export report",
+                                 f"Report export failed:\n{ex}")
+            return
+        finally:
+            QApplication.restoreOverrideCursor()
+        files = ([control_png] if ok_control else []) + \
+                ([hist_png] if ok_hist else []) + written
+        QMessageBox.information(
+            self, "Export report",
+            "Report files written:\n" + "\n".join(str(p) for p in files))
 
 
 SMOKE_TDF = (
