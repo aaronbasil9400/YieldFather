@@ -27,7 +27,17 @@ The SPC parser produces one `test_results` row per parsed TDF result. Measuremen
 | `RunTimestampFolder` | Ordering timestamp inferred from the folder name. |
 | `Result` | Tester row PASS/FAIL; it is separate from recalculated numeric conformance. |
 
-The parser also preserves source file, tester, program, board/module, and folder metadata. See `OUTPUT_COLUMNS` in [SPC_DASHBOARD.py](../SPC_DASHBOARD.py).
+Folder-context rules (parser v2): when a TDF tree contains the full hierarchy
+`<bin>/<UnitSN>_<RunAttempt>/<step folder>/<timestamp>/...`, unit context comes
+from that ancestor level as before. When the tree starts at the step-folder
+level (no bin and no `<UnitSN>_<RunAttempt>` level below the consolidation
+root), `UnitSN`/`RunAttempt` fall back to parsing the consolidation root's own
+folder name; if it does not match the `<SN>_<run>` pattern, `UnitSN` is the raw
+root name and `RunAttempt` is empty. `FolderBin` remains empty for such trees.
+This affects only source labeling, never measurement values or statistics.
+
+The parser also preserves source file, tester, program, board/module, and
+folder metadata. See `OUTPUT_COLUMNS` in [spc_core/tdf_parser.py](../spc_core/tdf_parser.py).
 
 ## Current KPI definitions
 

@@ -1,0 +1,11 @@
+# Desktop app (spc_app) runtime + build dependency lock.
+# Recorded from the working environment at first successful packaging build
+# (docs/SPC_DESKTOP_APP_PLAN.md Step 4). Do not bump as an incidental change;
+# AGENTS.md rule 8 requires an explicit owner-approved change.
+PySide6==6.11.2
+pyqtgraph==0.14.0
+numpy==2.4.6
+pandas==3.0.3
+
+# Build tooling (not a runtime dependency of the app)
+pyinstaller==6.22.2

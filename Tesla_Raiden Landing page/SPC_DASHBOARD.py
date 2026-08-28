@@ -1,58 +1,39 @@
 #!/usr/bin/env python3
 """
-app.py
-======
-Unified TDF Log Consolidator & Interactive SPC Dashboard.
-Combines data parsing and SQLite compilation with automated analysis.
+SPC_DASHBOARD.py
+================
+Streamlit front end for the Unified TDF Log Consolidator & Interactive SPC
+Dashboard. Parsing, consolidation, queries, and statistics live in the
+import-safe `spc_core` package; this file is a thin UI adapter that adds
+caching and presentation only.
 """
 
-import csv
-import datetime as dt
 import logging
-import os
-import re
-import sqlite3
 import sys
 from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
 
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+
 import theme_utils
+from spc_core import query as core_query
+from spc_core.consolidation import TABLE, run_consolidation
+from spc_core.query import build_where_clause
+from spc_core.stats import compute_stats
 
 st.set_page_config(page_title="Flex - Teradyne UltraFlexPlus Dragon SPC Dashboard", page_icon="📊", layout="wide")
 
-# Setup Logging
 logging.basicConfig(level=logging.WARNING, format="%(levelname)s: %(message)s")
 log = logging.getLogger("tdf_consolidator")
 
 # ----------------------------------------------------------------------------
-# CONSTANTS & CONFIGURATIONS FROM CONSOLIDATOR[span_2](start_span)[span_2](end_span)
-# ----------------------------------------------------------------------------
-FIXED_COLUMNS = [
-    "Result", "Slot", "Subslot", "Instrument", "TestGrp2", "TestGrp1",
-    "TestType", "TestNb", "Channel", "TypeofTest", "ExpVal", "LowLim",
-    "Value", "HighLim", "Units", "PctDelta", "LpCnt",
-]
-N_FIXED = len(FIXED_COLUMNS)
-NUMERIC_COLS = ["ExpVal", "LowLim", "Value", "HighLim", "PctDelta"]
-DEFAULT_DUT_PARTNUMBERS = ["638-249-30", "627-001-30", "627-000-40"]
-
-OUTPUT_COLUMNS = (
-    ["SourceFile", "FolderBin", "RootFolder", "UnitSN", "RunAttempt",
-     "TestStepFolder", "ProductCode", "FolderRev", "TestStep", "ATP",
-     "RunTimestampFolder", "DataFileName", "FileNumber"]
-    + ["TDFVersion", "Tester", "IGXLVersion", "IGXLBuild", "TestDateTime",
-       "SystemType", "ProgramName", "TesterSystemSN"]
-    + ["DUT_SN", "ModuleSN", "ModulePartNum", "ModuleRevDate", "ModuleCalState", "ModuleOptionName"]
-    + FIXED_COLUMNS
-    + ["ExpVal_num", "LowLim_num", "Value_num", "HighLim_num", "PctDelta_num"]
-    + ["TestLabel", "TestParameters"]
-)
-
-# ----------------------------------------------------------------------------
-# CONSTANTS FROM DASHBOARD[span_3](start_span)[span_3](end_span)
+# SLICER CONFIGURATION (UI concern)
 # ----------------------------------------------------------------------------
 PRIMARY_SLICERS = [
     ("UnitSN", "UnitSN"),
@@ -75,260 +56,43 @@ SECONDARY_SLICERS = [
     ("IGXLVersion", "IGXLVersion"), ("SystemType", "SystemType"), ("Units", "Units"),
 ]
 
-TABLE = "test_results"
-
 # ----------------------------------------------------------------------------
-# TDF PARSING ENGINE HELPER METHODS[span_4](start_span)[span_4](end_span)
-# ----------------------------------------------------------------------------
-ROOT_FOLDER_RE = re.compile(r"^(?P<sn>.+?)_(?P<run>\d+)$")
-STEP_FOLDER_RE = re.compile(
-    r"^(?P<product>[A-Za-z0-9]+)_(?P<rev>\d+)_(?P<phase>[A-Za-z]+)_(?P<stage>[A-Za-z]+)_"
-    r"(?P<teststep>[A-Za-z0-9]+)_ATP-(?P<atp>[\d\-]+)$"
-)
-TIMESTAMP_FOLDER_RE = re.compile(r"^(?P<ts>\d{8}_\d{6})$")
-SLOT_ROW_RE = re.compile(r"^\d+\.\d+\t")
-
-def parse_root_folder(name: str):
-    m = ROOT_FOLDER_RE.match(name)
-    return (m.group("sn"), m.group("run")) if m else (name, "")
-
-def parse_step_folder(name: str):
-    m = STEP_FOLDER_RE.match(name)
-    return (m.group("product"), m.group("rev"), m.group("teststep"), m.group("atp")) if m else ("", "", name, "")
-
-def parse_run_timestamp(name: str):
-    m = TIMESTAMP_FOLDER_RE.match(name)
-    if not m: return name, None
-    ts_raw = m.group("ts")
-    try:
-        return ts_raw, dt.datetime.strptime(ts_raw, "%Y%m%d_%H%M%S").isoformat(sep=" ")
-    except ValueError:
-        return ts_raw, None
-
-def find_ancestor_folders(tdf_path: Path, root: Path):
-    parts = tdf_path.relative_to(root).parts[:-1]
-    run_ts = parts[-1] if len(parts) >= 1 else ""
-    step = parts[-2] if len(parts) >= 2 else ""
-    rootf = parts[-3] if len(parts) >= 3 else ""
-    binf = parts[-4] if len(parts) >= 4 else ""
-    return binf, rootf, step, run_ts
-
-def safe_float(s):
-    if s is None or s == "": return None
-    try: return float(s)
-    except ValueError: return None
-
-def parse_tdf_file(path: Path):
-    header_meta = {v: "" for v in HEADER_KEYS.values()}
-    board_cfg, rows = {}, []
-    with open(path, "r", encoding="utf-8", errors="replace", newline="") as f:
-        section = "header"
-        for raw_line in f:
-            line = raw_line.rstrip("\r\n")
-            if section == "header":
-                if line.startswith("Board Configuration:"):
-                    section = "boardcfg"
-                    continue
-                if ":" in line:
-                    key, _, val = line.partition(":")
-                    key = key.strip()
-                    if key in HEADER_KEYS: header_meta[HEADER_KEYS[key]] = val.strip()
-                continue
-            if section == "boardcfg":
-                if line.startswith("P/F\t"):
-                    section = "data"
-                    continue
-                if SLOT_ROW_RE.match(line):
-                    cols = line.split("\t")
-                    slot_part, _, subslot_part = cols[0].partition(".")
-                    board_cfg[(slot_part, subslot_part)] = {
-                        "ModuleSN": cols[2].strip() if len(cols) > 2 else "",
-                        "ModulePartNum": cols[4].strip() if len(cols) > 4 else "",
-                        "ModuleRevDate": cols[3].strip() if len(cols) > 3 else "",
-                        "ModuleCalState": cols[5].strip() if len(cols) > 5 else "",
-                        "ModuleOptionName": cols[1].strip() if len(cols) > 1 else "",
-                    }
-                continue
-            if section == "data":
-                if not line or line.startswith("DIB\t"): continue
-                parts_ = line.split("|", N_FIXED)
-                if len(parts_) < N_FIXED + 1: continue
-                fixed = parts_[:N_FIXED]
-                test_label, _, test_params = parts_[N_FIXED].rpartition("|")
-                row = dict(zip(FIXED_COLUMNS, fixed))
-                row["TestLabel"], row["TestParameters"] = test_label, test_params
-                rows.append(row)
-    return header_meta, board_cfg, rows
-
-HEADER_KEYS = {
-    "TDF Version": "TDFVersion", "Tester": "Tester", "IG-XL VERSION": "IGXLVersion",
-    "IG-XL BUILD": "IGXLBuild", "CURRENT TIME": "TestDateTime", "SYSTEM TYPE": "SystemType",
-    "PROGRAM NAME": "ProgramName", "SYSTEM SERIAL NUMBER": "TesterSystemSN", "FileNumber": "FileNumber",
-}
-
-def is_dut_partnum(partnum: str, dut_partnumbers) -> bool:
-    partnum = (partnum or "").strip()
-    if not partnum: return False
-    return any(partnum == pn or partnum.startswith(pn) for pn in dut_partnumbers if pn.strip())
-
-def iter_output_rows(tdf_path: Path, root: Path, dut_partnumbers):
-    header_meta, board_cfg, data_rows = parse_tdf_file(tdf_path)
-    binf, rootf, step, run_ts_folder = find_ancestor_folders(tdf_path, root)
-    unit_sn, run_attempt = parse_root_folder(rootf)
-    product, folder_rev, test_step, atp = parse_step_folder(step)
-    run_ts_raw, run_ts_iso = parse_run_timestamp(run_ts_folder)
-    file_number = header_meta.get("FileNumber", "").strip() or "1"
-
-    base_meta = {
-        "SourceFile": str(tdf_path), "FolderBin": binf, "RootFolder": rootf, "UnitSN": unit_sn,
-        "RunAttempt": run_attempt, "TestStepFolder": step, "ProductCode": product, "FolderRev": folder_rev,
-        "TestStep": test_step, "ATP": atp, "RunTimestampFolder": run_ts_iso or run_ts_raw,
-        "DataFileName": tdf_path.name, "FileNumber": file_number, "TDFVersion": header_meta.get("TDFVersion", ""),
-        "Tester": header_meta.get("Tester", ""), "IGXLVersion": header_meta.get("IGXLVersion", ""),
-        "IGXLBuild": header_meta.get("IGXLBuild", ""), "TestDateTime": header_meta.get("TestDateTime", "").strip(),
-        "SystemType": header_meta.get("SystemType", ""), "ProgramName": header_meta.get("ProgramName", ""),
-        "TesterSystemSN": header_meta.get("TesterSystemSN", ""),
-    }
-    empty_module = {"ModuleSN": "", "ModulePartNum": "", "ModuleRevDate": "", "ModuleCalState": "", "ModuleOptionName": ""}
-
-    for row in data_rows:
-        mod = board_cfg.get((row["Slot"].strip(), row["Subslot"].strip()), empty_module)
-        out = dict(base_meta)
-        out.update(mod)
-        out["DUT_SN"] = mod["ModuleSN"] if is_dut_partnum(mod.get("ModulePartNum", ""), dut_partnumbers) else ""
-        out.update(row)
-        for c in NUMERIC_COLS: out[f"{c}_num"] = safe_float(row.get(c))
-        yield out
-
-def run_consolidation(root_dir, csv_out, db_out, pass_only=False, fail_only=False):
-    root = Path(root_dir).expanduser().resolve()
-    if not root.is_dir(): raise ValueError(f"Root directory not found: {root}")
-    tdf_files = sorted(root.rglob("*Data*.tdf"))
-    if not tdf_files: return 0, 0
-    
-    Path(csv_out).parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(db_out)
-    cur = conn.cursor()
-    create_sql_cols = [f'"{c}" REAL' if c.endswith("_num") else f'"{c}" TEXT' for c in OUTPUT_COLUMNS]
-    cur.execute(f'DROP TABLE IF EXISTS {TABLE}')
-    cur.execute(f'CREATE TABLE {TABLE} ({", ".join(create_sql_cols)})')
-    for idx_col in ["UnitSN", "TestStep", "TestNb", "Channel", "ModuleSN", "TestLabel", "DUT_SN", "Tester", "FolderBin"]:
-        cur.execute(f'CREATE INDEX IF NOT EXISTS idx_{idx_col} ON {TABLE} ("{idx_col}")')
-    conn.commit()
-
-    insert_sql = f'INSERT INTO {TABLE} ({", ".join(f"""\"{c}\"""" for c in OUTPUT_COLUMNS)}) VALUES ({", ".join("?" for _ in OUTPUT_COLUMNS)})'
-    sqlite_batch = []
-    n_rows = 0
-
-    with open(csv_out, "w", newline="", encoding="utf-8") as fout:
-        writer = csv.DictWriter(fout, fieldnames=OUTPUT_COLUMNS)
-        writer.writeheader()
-        for tdf_path in tdf_files:
-            for out_row in iter_output_rows(tdf_path, root, DEFAULT_DUT_PARTNUMBERS):
-                if pass_only and out_row["Result"].strip().upper() != "PASS": continue
-                if fail_only and out_row["Result"].strip().upper() != "FAIL": continue
-                n_rows += 1
-                writer.writerow(out_row)
-                sqlite_batch.append([out_row.get(c) for c in OUTPUT_COLUMNS])
-                if len(sqlite_batch) >= 5000:
-                    cur.executemany(insert_sql, sqlite_batch)
-                    conn.commit()
-                    sqlite_batch.clear()
-        if sqlite_batch:
-            cur.executemany(insert_sql, sqlite_batch)
-            conn.commit()
-    conn.close()
-    return len(tdf_files), n_rows
-
-# ----------------------------------------------------------------------------
-# DASHBOARD CORE INTERACTIVE ENGINE MODULES[span_5](start_span)[span_5](end_span)
+# CACHED ACCESS TO THE SPC_CORE QUERY LAYER
 # ----------------------------------------------------------------------------
 @st.cache_resource(show_spinner=False)
 def get_connection(db_path: str, _mtime: float):
-    return sqlite3.connect(db_path, check_same_thread=False)
+    return core_query.connect(db_path)
+
 
 @st.cache_data(show_spinner=False)
 def get_columns(db_path: str, _mtime: float):
-    conn = get_connection(db_path, _mtime)
-    return [r[1] for r in conn.execute(f"PRAGMA table_info({TABLE})").fetchall()]
+    return core_query.get_columns(get_connection(db_path, _mtime))
+
 
 @st.cache_data(show_spinner="Loading filter options...")
 def get_distinct_values(db_path: str, _mtime: float, column: str, limit: int = 5000):
-    conn = get_connection(db_path, _mtime)
-    q = f'SELECT DISTINCT "{column}" FROM {TABLE} WHERE "{column}" IS NOT NULL AND "{column}" != "" ORDER BY 1 LIMIT ?'
-    try: return pd.read_sql(q, conn, params=(limit,)).iloc[:, 0].tolist()
-    except Exception: return []
+    return core_query.get_distinct_values(get_connection(db_path, _mtime), column, limit)
+
 
 @st.cache_data(show_spinner="Loading TestNb / TestLabel options...")
-def get_testnb_label_pairs(db_path: str, _mtime: float, limit: int = 20000):
-    conn = get_connection(db_path, _mtime)
-    q = f'SELECT DISTINCT "TestNb", "TestLabel" FROM {TABLE} WHERE "TestNb" IS NOT NULL AND "TestNb" != "" ORDER BY "TestNb" LIMIT ?'
-    return pd.read_sql(q, conn, params=(limit,))
+def get_testnb_label_pairs(db_path: str, _mtime: float, limit: int = None):
+    return core_query.get_testnb_label_pairs(get_connection(db_path, _mtime), limit)
+
 
 @st.cache_data(show_spinner=False)
 def get_dataset_summary(db_path: str, _mtime: float):
     """High-level counts for the sidebar header: total rows plus distinct TestNb/DUT/Unit counts."""
-    conn = get_connection(db_path, _mtime)
-    def count_distinct(col):
-        q = f'SELECT COUNT(DISTINCT "{col}") FROM {TABLE} WHERE "{col}" IS NOT NULL AND "{col}" != ""'
-        return conn.execute(q).fetchone()[0]
-    try:
-        return {
-            "total_rows": conn.execute(f'SELECT COUNT(*) FROM {TABLE}').fetchone()[0],
-            "n_testnb": count_distinct("TestNb"),
-            "n_dut": count_distinct("DUT_SN"),
-            "n_unit": count_distinct("UnitSN"),
-        }
-    except Exception:
-        return None
+    return core_query.get_dataset_summary(get_connection(db_path, _mtime))
 
-def build_where_clause(filters: dict, or_clauses: list = None):
-    """
-    filters: dict of col -> list of allowed values, AND-ed together (existing behavior).
-    or_clauses: list of (sql_fragment, params) tuples, each appended as its own
-                AND-ed clause. Used for the TestNb/TestLabel test-selection block,
-                where the fragment itself may internally OR together a broad
-                "any TestLabel under this TestNb" match with specific fine-control
-                TestNb+TestLabel pairs.
-    """
-    clauses, params = [], []
-    for col, values in filters.items():
-        if not values: continue
-        clauses.append(f'"{col}" IN ({",".join("?" for _ in values)})')
-        params.extend(values)
-    for clause_str, clause_params in (or_clauses or []):
-        if not clause_str: continue
-        clauses.append(clause_str)
-        params.extend(clause_params)
-    return (" AND ".join(clauses), params) if clauses else ("1=1", [])
 
 @st.cache_data(show_spinner="Querying filtered data...")
 def query_filtered(db_path: str, _mtime: float, where_sql: str, params: list, row_cap: int):
-    conn = get_connection(db_path, _mtime)
-    cols = ["Value_num", "LowLim_num", "HighLim_num", "ExpVal_num", "Result", "RunTimestampFolder",
-            "DUT_SN", "UnitSN", "TestStep", "TestNb", "Channel", "Units", "TestLabel", "Tester", "FolderBin"]
-    q = f'SELECT {", ".join(f"""\"{c}\"""" for c in cols)} FROM {TABLE} WHERE {where_sql} ORDER BY "RunTimestampFolder" LIMIT ?'
-    return pd.read_sql(q, conn, params=params + [row_cap])
+    return core_query.query_filtered(get_connection(db_path, _mtime), where_sql, params, row_cap)
 
-def compute_stats(values: np.ndarray, lsl, usl):
-    n = len(values)
-    out = {"N": n, "Mean": np.nan, "StdDev": np.nan, "Min": np.nan, "Max": np.nan, "Cp": np.nan, "Cpk": np.nan, "Sigma_Level": np.nan, "PctOutOfSpec": np.nan}
-    if n == 0: return out
-    out["Mean"], out["Min"], out["Max"] = float(np.mean(values)), float(np.min(values)), float(np.max(values))
-    out["StdDev"] = float(np.std(values, ddof=1)) if n > 1 else 0.0
-    std = out["StdDev"]
-    if std > 0:
-        cpu = (usl - out["Mean"]) / (3 * std) if usl is not None and not np.isnan(usl) else np.nan
-        cpl = (out["Mean"] - lsl) / (3 * std) if lsl is not None and not np.isnan(lsl) else np.nan
-        candidates = [v for v in (cpu, cpl) if not np.isnan(v)]
-        if candidates: out["Cpk"] = min(candidates)
-        if lsl is not None and usl is not None and not np.isnan(lsl) and not np.isnan(usl):
-            out["Cp"] = (usl - lsl) / (6 * std)
-        if not np.isnan(out["Cpk"]): out["Sigma_Level"] = out["Cpk"] * 3
-    if lsl is not None and usl is not None and not np.isnan(lsl) and not np.isnan(usl):
-        out["PctOutOfSpec"] = 100.0 * np.sum((values < lsl) | (values > usl)) / n
-    return out
 
+# ----------------------------------------------------------------------------
+# CHART BUILDERS (Plotly presentation layer)
+# ----------------------------------------------------------------------------
 def build_spc_chart(df: pd.DataFrame, stats: dict, lsl, usl, title: str):
     x, y = list(range(1, len(df) + 1)), df["Value_num"].tolist()
     hover = [f"UnitSN: {u}<br>DUT_SN: {d}<br>Channel: {c}<br>Result: {r}<br>Time: {t}"
@@ -353,6 +117,7 @@ def build_spc_chart(df: pd.DataFrame, stats: dict, lsl, usl, title: str):
     fig.update_layout(title=title, xaxis_title="Sample #", yaxis_title="Measured Value", height=520, showlegend=False)
     return theme_utils.update_plotly_theme(fig)
 
+
 def build_histogram(df: pd.DataFrame, stats: dict, lsl, usl):
     fig = go.Figure(go.Histogram(x=df["Value_num"], nbinsx=30, marker_color="#0284C7"))
     if lsl is not None and not np.isnan(lsl): fig.add_vline(x=lsl, line=dict(color="#EF4444", dash="dot", width=1.8))
@@ -361,14 +126,17 @@ def build_histogram(df: pd.DataFrame, stats: dict, lsl, usl):
     fig.update_layout(title="Distribution", height=420)
     return theme_utils.update_plotly_theme(fig)
 
+
 def kpi_box(label, value, fmt="{:.4g}"):
     display = "N/A" if value is None or (isinstance(value, float) and np.isnan(value)) else fmt.format(value)
     st.metric(label, display)
 
+
 # ----------------------------------------------------------------------------
 # SIDEBAR HEADER (logo/branding, usage guide, dataset summary)
 # ----------------------------------------------------------------------------
-LOGO_PATH = Path(__file__).parent / "assets" / "logo.png"  # drop your own company logo here if you have one
+LOGO_PATH = BASE_DIR / "assets" / "logo.png"  # drop your own company logo here if you have one
+
 
 def render_sidebar_header(summary: dict | None):
     if LOGO_PATH.exists():
@@ -448,8 +216,15 @@ def main():
                     with st.spinner("Processing local logs and refreshing DB indices..."):
                         try:
                             f_count, r_count = run_consolidation(tdf_root, csv_path, db_path)
+                            get_connection.clear()
+                            get_columns.clear()
+                            get_dataset_summary.clear()
+                            get_testnb_label_pairs.clear()
+                            get_distinct_values.clear()
+                            query_filtered.clear()
                             st.success(f"Parsing Complete! Cleaned {r_count} data entries across {f_count} TDF logfiles.")
                         except Exception as ex:
+                            log.exception("Consolidation failed")
                             st.error(f"Execution terminated: {ex}")
 
         st.markdown("---")
@@ -594,6 +369,7 @@ def main():
     with st.expander(f"Raw filtered data ({len(df):,} rows)", expanded=False):
         st.dataframe(df, use_container_width=True, height=600)
         st.download_button("Download filtered data as CSV", df.to_csv(index=False).encode("utf-8"), file_name="filtered_spc_data.csv", mime="text/csv")
+
 
 if __name__ == "__main__":
     main()
